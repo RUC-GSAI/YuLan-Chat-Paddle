@@ -24,6 +24,10 @@ This folder contains evaluation scripts for testing language models using both H
 
 ## Usage
 
+```bash
+mkdir log
+```
+
 ### HuggingFace Evaluation
 ```bash
 # Evaluate on CEVAL benchmark
