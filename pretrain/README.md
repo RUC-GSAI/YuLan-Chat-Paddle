@@ -25,7 +25,7 @@ paddlenlp
 pip install --upgrade --pre paddlenlp
 ```
 
-# Paddle微调流程
+# Paddle预训练流程
 
 - 数据准备：在`data/`下指定预训练的数据集。
 - 配置文件：在`config/`下指定参数配置文件。具体可参考https://paddlenlp.readthedocs.io/zh/latest/llm/docs
