@@ -65,7 +65,7 @@ DATA_MAP = {
 
 class MMLU:
     def __init__(self, tokenizer, max_len):
-        self.tmp = self.load_data("/home/wangyuhao/yulan3/data/mmlu/test")
+        self.tmp = self.load_data("/data/czp/YuLan-Chat-Paddle-main/inference/data/mmlu/test")
         self.data_num = {"STEM":0, "Social Sciences":0, "Humanities":0, "Other":0}
     
         # select data
@@ -74,7 +74,7 @@ class MMLU:
             self.data_num[DATA_MAP[k]] += len(v)
             self.data[k] = self.tmp[k]
 
-        self.examples = self.load_data("/home/wangyuhao/yulan3/data/mmlu/dev")
+        self.examples = self.load_data("/data/czp/YuLan-Chat-Paddle-main/inference/data/mmlu/dev")
         self.logs = []
         self.n_shot = 5
 

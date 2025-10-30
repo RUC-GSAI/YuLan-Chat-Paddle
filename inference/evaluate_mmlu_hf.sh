@@ -1,6 +1,10 @@
-export CUDA_VISIBLE_DEVICES=3
+export CUDA_VISIBLE_DEVICES=1
 
-# python eval/ceval_hf.py --model /home/huyiwen/YuLan-Mini-Instruct | tee log/hf-ceval-0323.log
-python eval/mmlu_hf.py --model /home/huyiwen/YuLan-Mini-Instruct | tee log/hf-mmlu-0323.log
+MODEL_PATH=/home/ubuntu/jiajie/tianshu/finetune_torch/ckpt/nvidia1028/checkpoint-32
 
+mkdir ${MODEL_PATH}/torch_results-test
 
+python3  eval/mmlu_hf.py \
+    --model ${MODEL_PATH} \
+    --save_dir ${MODEL_PATH}/torch_results-test/mmlu \
+&> logs/eval/mmlu_torch-test.log

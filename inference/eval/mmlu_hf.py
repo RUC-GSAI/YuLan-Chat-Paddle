@@ -236,7 +236,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--ntrain", "-k", type=int, default=5)
     parser.add_argument("--ngpu", "-g", type=int, default=1)
-    parser.add_argument("--data_dir", "-d", type=str, default="/home/huyiwen/yulan/data/mmlu")
+    parser.add_argument("--data_dir", "-d", type=str, default="./data/mmlu")
     parser.add_argument("--save_dir", "-s", type=str, default="results")
     parser.add_argument("--dtype", type=str, default="bfloat16")
     parser.add_argument(

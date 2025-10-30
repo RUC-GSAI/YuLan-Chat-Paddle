@@ -2,10 +2,11 @@ import random
 import time
 import numpy as np
 import paddle
+from paddle.distributed import fleet
 # from modeling_phi.configuration_mixformer_sequential import MixFormerSequentialConfig
 # from modeling_phi.modeling_mixformer_sequential import MixFormerSequentialForCausalLM
 import paddle.nn.functional as F
-from paddlenlp.transformers import AutoModelForCausalLM, AutoTokenizer, LlamaForCausalLM
+from paddlenlp.transformers import AutoModelForCausalLM, AutoTokenizer, LlamaForCausalLM, Qwen2ForCausalLM, YulanForCausalLM
 import tasks
 from tqdm import tqdm
 import json
@@ -21,13 +22,31 @@ llm-qwen: Qwen
 
 """
 
-def load_model(model_path, device=None, flash_attn_2=False):
-    # model = LlamaForCausalLM.from_pretrained("/mnt/wangyuhao/yulan3-ckpt/", dtype="bfloat16")
+paddle.set_device('iluvatar_gpu')
 
-    model = AutoModelForCausalLM.from_pretrained(
+def load_model(model_path, device=None, flash_attn_2=False, tensor_parallel_degree=2):
+    strategy = fleet.DistributedStrategy()
+    
+    # self.hcg = fleet.get_hybrid_communicate_group()
+    # self.dp_group = self.hcg.get_data_parallel_group()
+    # self.sharding_group = self.hcg.get_sharding_parallel_group()
+
+    strategy.hybrid_configs = {
+        "dp_degree": 1,
+        "mp_degree": tensor_parallel_degree,
+        "pp_degree": 1,
+        "sharding_degree": 1,
+    }
+    fleet.init(is_collective=True, strategy=strategy)
+    hcg = fleet.get_hybrid_communicate_group()
+
+    model = LlamaForCausalLM.from_pretrained(
+    # model = YulanForCausalLM.from_pretrained(
         model_path,
         dtype='bfloat16',
         use_flash_attention=flash_attn_2,
+        tensor_parallel_degree=tensor_parallel_degree,
+        tensor_parallel_rank=hcg.get_model_parallel_rank(),
     )
     model.eval()
     return model
@@ -279,10 +298,10 @@ def greedy_until(requests, model, tokenizer, max_len, config, disable_tqdm=False
         clean_key = tokenizer.decode(tokenizer.encode(context, add_special_tokens=False).input_ids)
         length = -len(context_enc)
         new_reqs.append((key, clean_key, length))
-
     # step 1: sort
     new_reqs.sort(key=lambda x: x[-1])
     print("get %d request, max len: %d, min len %d"%(len(new_reqs), -new_reqs[0][-1], -new_reqs[-1][-1]))
+    print('max_len = {}'.format(max_len))
 
     # step 2: batch
     cache_res = {}
@@ -301,26 +320,36 @@ def greedy_until(requests, model, tokenizer, max_len, config, disable_tqdm=False
             return_attention_mask=True,
             add_special_tokens=True
         )
+        print(inputs)
+        inputs['input_ids'] = inputs['input_ids'].to('iluvatar_gpu')
+        inputs['attention_mask'] = inputs['attention_mask'].to('iluvatar_gpu')
+        # print(model)
+        print(123456789)
+        
+
         # step 4: call model
         kwargs = {
-            # 'temperature': 0.8,
+            # 'temperature': 0.7,
             # 'top_p': 0.95,
             # "top_k": 50,
             # "repetition_penalty": 1.1,
             # "no_repeat_ngram_size": 64,
             # "max_length": min(inputs['input_ids'].size(1) + max_gen_len, max_len),
             "max_new_tokens": min(max_gen_len, max_len - inputs['input_ids'].shape[1]),
+            # "max_new_tokens": 50,
             "pad_token_id": tokenizer.pad_token_id,
             "eos_token_id": tokenizer.encode(end_token) if end_token else tokenizer.eos_token_id,
             "do_sample": is_sample,
         }
+        print(kwargs)
+        
         outputs = model.generate(
             input_ids = inputs.input_ids,
             attention_mask = inputs.attention_mask,
             # position_ids = inputs.position_ids,
             **kwargs
         )
-
+        print('finish generation')
 
         # step 5: get answer
         output_texts = tokenizer.batch_decode(outputs[0], skip_special_tokens=True)
@@ -328,6 +357,12 @@ def greedy_until(requests, model, tokenizer, max_len, config, disable_tqdm=False
             # response = out_txt[len(key_txt):]
             response = out_txt.split(key_txt)[-1]
             cache_res[in_txt] = response
+            print(response)
+        
+        del inputs
+        # del inputs.input_ids
+        # del inputs.attention_mask
+        paddle.device.cuda.empty_cache()
 
     results = []
     for request in requests:
@@ -360,7 +395,7 @@ def run_model_call(requests, model, tokenizer, max_len, config):
 
     return results
 
-def run_one_model(tasks_list, model_config):
+def run_one_model(args, tasks_list, model_config):
     model_name = model_config["name"]
     print("testing model <%s>"%model_name)
     # load model and tokenizer
@@ -409,8 +444,11 @@ def run_one_model(tasks_list, model_config):
             all_metrics[task_name+"_"+k] = metrics[k]
 
         # write to file for logs
-        output_dir = "./logs/%s"%task_name
-        output_path = "./logs/%s/%s.json"%(task_name, model_name)
+        model_name = 'yulan'
+        output_dir = "%s/%s"%(args.output_dir, task_name)
+        output_path = "%s/%s/%s.json"%(args.output_dir, task_name, model_name)
+        print('output_path:', output_path)
+
         os.makedirs(output_dir, exist_ok=True)
         with open(output_path, 'w', encoding="utf8") as f:
             f.write(json.dumps(logs, indent=4, ensure_ascii=False) + '\n')
@@ -447,6 +485,8 @@ def run_one_model(tasks_list, model_config):
 def get_args():
     parser = argparse.ArgumentParser(description="Process some integers.")
     parser.add_argument('--model', type=str)
+    parser.add_argument('--output_dir', type=str)
+    parser.add_argument('--max_len', default=1024, type=int)
     parser.add_argument('--flash_attn', default=False, action='store_true')
     args = parser.parse_args()
 
@@ -480,7 +520,7 @@ if __name__ == "__main__":
             "load_type": "causal",
             "flash_attn_2": args.flash_attn,
             "size_level": 1, #(<7B)->1, 13B->2, 30B->4, 65B->8
-            "max_seq_length": 2048, # 2K, 8K, 32K
+            "max_seq_length": args.max_len, # 2K, 8K, 32K
         },
         # {
         #     "name": "yulan_chat",
@@ -502,7 +542,7 @@ if __name__ == "__main__":
 
     all_metrics = []
     for model_config in model_list:
-        metrics = run_one_model(tasks_list, model_config)
+        metrics = run_one_model(args, tasks_list, model_config)
         all_metrics.append(metrics)
 
     # write to file

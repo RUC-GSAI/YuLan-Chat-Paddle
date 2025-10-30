@@ -6,6 +6,8 @@ import random
 import paddle
 from paddlenlp.transformers import (
     AutoModelForCausalLM,
+    LlamaForCausalLM,
+    YulanForCausalLM,
     AutoTokenizer,
     PretrainedModel,
     PretrainedTokenizer,
@@ -34,6 +36,7 @@ def parse_argument():
     parser.add_argument(
         "--output_dir", type=str, default="ceval_output", help="output directory"
     )
+    parser.add_argument('--chat_template', default=False, action='store_true')
     return parser.parse_args()
 
 
@@ -161,7 +164,7 @@ class CEval:
             os.mkdir(output_dir)
         self.output_dir = output_dir
 
-    def run(self, shot: int, split: str):
+    def run(self, shot: int, split: str, chat_template):
         results, accs = {}, {}
         cat_acc = {}
         cat_cnt = {}
@@ -170,7 +173,7 @@ class CEval:
         for task_name in self.TASK2DESC:
             print("=" * 100)
             print(f"run task: {task_name}")
-            result, acc, sum_acc, data_cnt = self.run_single_task(task_name, shot, split)
+            result, acc, sum_acc, data_cnt = self.run_single_task(task_name, shot, split, chat_template)
             results[task_name] = result
             accs[task_name] = acc
             cat_name = self.DATA2CAT[task_name]
@@ -195,10 +198,10 @@ class CEval:
         print("Average Acc: {:.1f}".format(average_acc * 100))
 
     @paddle.no_grad()
-    def run_single_task(self, task_name: str, shot: int, split: str):
+    def run_single_task(self, task_name: str, shot: int, split: str, chat_template):
         # dataset = load_dataset(f"/home/huyiwen/yulan/data/hf-ceval/ceval___ceval-exam/{task_name}")
-        # dataset = load_dataset("ceval/ceval-exam")
-        dataset = load_dataset("/home/huyiwen/.cache/huggingface/hub/datasets--ceval--ceval-exam/snapshots/3923b519fd180e689d0961bf3a032ece929742f3/ceval-exam.py", task_name)
+        dataset = load_dataset("ceval/ceval-exam", task_name)
+        # dataset = load_dataset("/home/huyiwen/.cache/huggingface/hub/datasets--ceval--ceval-exam/snapshots/3923b519fd180e689d0961bf3a032ece929742f3/ceval-exam.py", task_name)
         results = []
         acc = 0
         for data in tqdm(dataset[split]):
@@ -208,6 +211,9 @@ class CEval:
                 for i in range(min(shot, len(shuffled))):
                     prompt += "\n" + self.build_example(shuffled[i], with_answer=True)
             prompt += "\n" + self.build_example(data, with_answer=False)
+            if (chat_template == True):
+                prompt = self.tokenizer.apply_chat_template([{"role": "user", "content": prompt}], tokenize=False, add_generation_prompt=True)
+
             inputs = self.tokenizer(prompt, return_tensors="pd")
 
             logits = self.model(**inputs)
@@ -266,16 +272,16 @@ def main():
     paddle.static.default_main_program().random_seed = seed
     args = parse_argument()
 
-    model = AutoModelForCausalLM.from_pretrained(args.model, dtype="bfloat16",
-                                                # use_flash_attention=True,
+    model = LlamaForCausalLM.from_pretrained(args.model, dtype="bfloat16",
+                                                use_flash_attention=True,
                                                 )
     model.eval()
     tokenizer = AutoTokenizer.from_pretrained(args.model, 
                                               use_fast=True, 
-                                              add_bos_token=False, model_max_length=4096, padding_side="right", trust_remote_code=True)
+                                              add_bos_token=True, model_max_length=4096, padding_side="right", trust_remote_code=True)
 
     ceval = CEval(model, tokenizer, args.output_dir)
-    ceval.run(args.shot, args.split)
+    ceval.run(args.shot, args.split, args.chat_template)
 
 
 if __name__ == "__main__":

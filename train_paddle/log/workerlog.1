@@ -1,0 +1,11 @@
+I0724 15:53:21.507468 1193622 init.cc:238] ENV [CUSTOM_DEVICE_ROOT]=/usr/local/lib/python3.10/site-packages/paddle_custom_device
+I0724 15:53:21.507512 1193622 init.cc:146] Try loading custom device libs from: [/usr/local/lib/python3.10/site-packages/paddle_custom_device]
+I0724 15:53:21.581486 1193622 custom_device_load.cc:51] Succeed in loading custom runtime in lib: /usr/local/lib/python3.10/site-packages/paddle_custom_device/libpaddle-iluvatar-gpu.so
+I0724 15:53:21.581522 1193622 custom_device_load.cc:58] Skipped lib [/usr/local/lib/python3.10/site-packages/paddle_custom_device/libpaddle-iluvatar-gpu.so]: no custom engine Plugin symbol in this lib.
+I0724 15:53:21.584700 1193622 custom_kernel.cc:68] Succeed in loading 314 custom kernel(s) from loaded lib(s), will be used like native ones.
+I0724 15:53:21.584841 1193622 init.cc:158] Finished in LoadCustomDevice with libs_path: [/usr/local/lib/python3.10/site-packages/paddle_custom_device]
+I0724 15:53:21.584863 1193622 init.cc:244] CustomDevice: iluvatar_gpu, visible devices count: 4
+Traceback (most recent call last):
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/run_finetune.py", line 23, in <module>
+    from utils.argument import GenerateArgument, ReftArgument
+ModuleNotFoundError: No module named 'utils'

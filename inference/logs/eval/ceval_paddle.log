@@ -1,0 +1,2029 @@
+XCCL /usr/local/lib/python3.10/dist-packages/paddle/base/../libs/libbkcl.so loaded
+[13:22:17][tjdm-p800-vd-xhl-node13.tjdm][2367097:2367097][WARN][BKCL][globals.cpp:259] xccl version: 7b9c31e [rdma] [fix compile issue] build data: May 13 2025 06:07:35
+/usr/local/lib/python3.10/dist-packages/_distutils_hack/__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/jieba/_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+[32m[2025-09-29 13:22:19,578] [    INFO][0m - Loading configuration file /root/ckpts/yulan3_base_xpu_sft/config.json[0m
+[32m[2025-09-29 13:22:19,579] [    INFO][0m - Loading weights file /root/ckpts/yulan3_base_xpu_sft/model_state.pdparams[0m
+[32m[2025-09-29 13:23:10,061] [    INFO][0m - Loaded weights file from disk, setting weights to model.[0m
+W0929 13:23:10.290432 2367097 xpu_context.cc:186] Please NOTE: xpu device: 0
+[32m[2025-09-29 13:24:09,953] [    INFO][0m - All model checkpoint weights were used when initializing LlamaForCausalLM.
+[0m
+[32m[2025-09-29 13:24:09,953] [    INFO][0m - All the weights of LlamaForCausalLM were initialized from the model checkpoint at /root/ckpts/yulan3_base_xpu_sft.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use LlamaForCausalLM for predictions without further training.[0m
+[32m[2025-09-29 13:24:09,955] [    INFO][0m - Loading configuration file /root/ckpts/yulan3_base_xpu_sft/generation_config.json[0m
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:24:10,915] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+====================================================================================================
+run task: high_school_physics
+  0%|          | 0/19 [00:00<?, ?it/s]W0929 13:24:12.682832 2367097 multiply_fwd_func.cc:76] got different data type, run type promotion automatically, this may cause data type been changed.
+Error: solver cache filexpu3_fwd_solver.json not found.
+  5%|▌         | 1/19 [00:00<00:03,  4.62it/s] 11%|█         | 2/19 [00:00<00:03,  5.44it/s] 16%|█▌        | 3/19 [00:00<00:02,  5.80it/s] 21%|██        | 4/19 [00:00<00:02,  5.85it/s] 26%|██▋       | 5/19 [00:00<00:02,  5.86it/s] 32%|███▏      | 6/19 [00:01<00:02,  5.87it/s] 37%|███▋      | 7/19 [00:01<00:01,  6.01it/s] 42%|████▏     | 8/19 [00:01<00:01,  5.95it/s] 47%|████▋     | 9/19 [00:01<00:01,  6.03it/s] 53%|█████▎    | 10/19 [00:01<00:01,  5.99it/s] 58%|█████▊    | 11/19 [00:01<00:01,  6.05it/s] 63%|██████▎   | 12/19 [00:02<00:01,  5.96it/s] 68%|██████▊   | 13/19 [00:02<00:01,  5.91it/s] 74%|███████▎  | 14/19 [00:02<00:00,  5.68it/s] 79%|███████▉  | 15/19 [00:02<00:00,  5.53it/s] 84%|████████▍ | 16/19 [00:02<00:00,  5.42it/s] 89%|████████▉ | 17/19 [00:02<00:00,  5.67it/s] 95%|█████████▍| 18/19 [00:03<00:00,  5.71it/s]100%|██████████| 19/19 [00:03<00:00,  5.73it/s]100%|██████████| 19/19 [00:03<00:00,  5.77it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:24:15,950] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+D B
+C C
+A A
+B B
+B A
+B B
+C A
+C C
+C B
+B A
+A A
+D D
+A A
+B B
+A A
+C A
+B B
+D A
+D A
+save result 0.5789473684210527 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/high_school_physics.json
+====================================================================================================
+run task: fire_engineer
+  0%|          | 0/31 [00:00<?, ?it/s]  3%|▎         | 1/31 [00:00<00:07,  4.07it/s]  6%|▋         | 2/31 [00:00<00:06,  4.31it/s] 10%|▉         | 3/31 [00:00<00:07,  3.85it/s] 13%|█▎        | 4/31 [00:01<00:07,  3.76it/s] 16%|█▌        | 5/31 [00:01<00:06,  3.99it/s] 19%|█▉        | 6/31 [00:01<00:05,  4.29it/s] 23%|██▎       | 7/31 [00:01<00:05,  4.05it/s] 26%|██▌       | 8/31 [00:01<00:05,  4.31it/s] 29%|██▉       | 9/31 [00:02<00:05,  4.08it/s] 32%|███▏      | 10/31 [00:02<00:04,  4.37it/s] 35%|███▌      | 11/31 [00:02<00:04,  4.41it/s] 39%|███▊      | 12/31 [00:02<00:04,  4.13it/s] 42%|████▏     | 13/31 [00:03<00:04,  4.37it/s] 45%|████▌     | 14/31 [00:03<00:03,  4.58it/s] 48%|████▊     | 15/31 [00:03<00:03,  4.38it/s] 52%|█████▏    | 16/31 [00:03<00:03,  4.61it/s] 55%|█████▍    | 17/31 [00:03<00:02,  4.74it/s] 58%|█████▊    | 18/31 [00:04<00:02,  4.86it/s] 61%|██████▏   | 19/31 [00:04<00:02,  4.96it/s] 65%|██████▍   | 20/31 [00:04<00:02,  4.48it/s] 68%|██████▊   | 21/31 [00:04<00:02,  4.64it/s] 71%|███████   | 22/31 [00:04<00:01,  4.76it/s] 74%|███████▍  | 23/31 [00:05<00:01,  4.34it/s] 77%|███████▋  | 24/31 [00:05<00:01,  4.53it/s] 81%|████████  | 25/31 [00:05<00:01,  4.63it/s] 84%|████████▍ | 26/31 [00:05<00:01,  4.78it/s] 87%|████████▋ | 27/31 [00:06<00:00,  4.80it/s] 90%|█████████ | 28/31 [00:06<00:00,  4.83it/s] 94%|█████████▎| 29/31 [00:06<00:00,  4.92it/s] 97%|█████████▋| 30/31 [00:06<00:00,  4.99it/s]100%|██████████| 31/31 [00:06<00:00,  5.04it/s]100%|██████████| 31/31 [00:06<00:00,  4.52it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:24:23,909] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+A A
+B A
+C C
+B A
+D B
+A A
+A A
+B A
+D A
+D A
+C A
+A A
+D A
+B A
+D A
+B A
+A A
+B B
+A A
+C D
+C A
+B B
+D A
+A A
+B B
+C A
+C C
+B A
+B A
+A A
+B B
+save result 0.45161290322580644 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/fire_engineer.json
+====================================================================================================
+run task: computer_network
+  0%|          | 0/19 [00:00<?, ?it/s]  5%|▌         | 1/19 [00:00<00:02,  6.55it/s] 11%|█         | 2/19 [00:00<00:02,  6.41it/s] 16%|█▌        | 3/19 [00:00<00:02,  6.42it/s] 21%|██        | 4/19 [00:00<00:02,  6.48it/s] 26%|██▋       | 5/19 [00:00<00:02,  6.41it/s] 32%|███▏      | 6/19 [00:00<00:02,  6.40it/s] 37%|███▋      | 7/19 [00:01<00:01,  6.43it/s] 42%|████▏     | 8/19 [00:01<00:01,  6.39it/s] 47%|████▋     | 9/19 [00:01<00:01,  6.37it/s] 53%|█████▎    | 10/19 [00:01<00:01,  6.33it/s] 58%|█████▊    | 11/19 [00:01<00:01,  6.51it/s] 63%|██████▎   | 12/19 [00:01<00:01,  6.45it/s] 68%|██████▊   | 13/19 [00:02<00:00,  6.46it/s] 74%|███████▎  | 14/19 [00:02<00:00,  6.48it/s] 79%|███████▉  | 15/19 [00:02<00:00,  6.28it/s] 84%|████████▍ | 16/19 [00:02<00:00,  6.33it/s] 89%|████████▉ | 17/19 [00:02<00:00,  6.50it/s] 95%|█████████▍| 18/19 [00:02<00:00,  6.31it/s]100%|██████████| 19/19 [00:02<00:00,  6.38it/s]100%|██████████| 19/19 [00:02<00:00,  6.40it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:24:27,800] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+C A
+C B
+C A
+C B
+D A
+D A
+C A
+D A
+C A
+D B
+B A
+C A
+B A
+A A
+D B
+C A
+A A
+B A
+C A
+save result 0.10526315789473684 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/computer_network.json
+====================================================================================================
+run task: advanced_mathematics
+  0%|          | 0/19 [00:00<?, ?it/s]  5%|▌         | 1/19 [00:00<00:03,  5.13it/s] 11%|█         | 2/19 [00:00<00:03,  5.02it/s] 16%|█▌        | 3/19 [00:00<00:03,  4.95it/s] 21%|██        | 4/19 [00:00<00:03,  4.31it/s] 26%|██▋       | 5/19 [00:01<00:03,  4.50it/s] 32%|███▏      | 6/19 [00:01<00:02,  4.50it/s] 37%|███▋      | 7/19 [00:01<00:02,  4.16it/s] 42%|████▏     | 8/19 [00:01<00:02,  4.26it/s] 47%|████▋     | 9/19 [00:02<00:02,  4.50it/s] 53%|█████▎    | 10/19 [00:02<00:01,  4.66it/s] 58%|█████▊    | 11/19 [00:02<00:01,  4.27it/s] 63%|██████▎   | 12/19 [00:02<00:01,  4.50it/s] 68%|██████▊   | 13/19 [00:02<00:01,  4.69it/s] 74%|███████▎  | 14/19 [00:03<00:01,  4.45it/s] 79%|███████▉  | 15/19 [00:03<00:00,  4.60it/s] 84%|████████▍ | 16/19 [00:03<00:00,  4.73it/s] 89%|████████▉ | 17/19 [00:03<00:00,  4.33it/s] 95%|█████████▍| 18/19 [00:03<00:00,  4.54it/s]100%|██████████| 19/19 [00:04<00:00,  4.70it/s]100%|██████████| 19/19 [00:04<00:00,  4.54it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:24:33,028] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+B A
+C A
+D A
+A A
+A A
+B A
+B A
+A A
+B A
+A A
+D A
+D A
+A A
+C A
+A A
+B A
+B A
+B A
+B A
+save result 0.3157894736842105 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/advanced_mathematics.json
+====================================================================================================
+run task: logic
+  0%|          | 0/22 [00:00<?, ?it/s]  5%|▍         | 1/22 [00:00<00:11,  1.89it/s]  9%|▉         | 2/22 [00:01<00:10,  1.91it/s] 14%|█▎        | 3/22 [00:01<00:10,  1.89it/s] 18%|█▊        | 4/22 [00:02<00:09,  1.89it/s] 23%|██▎       | 5/22 [00:02<00:08,  1.89it/s] 27%|██▋       | 6/22 [00:03<00:08,  1.84it/s] 32%|███▏      | 7/22 [00:03<00:08,  1.87it/s] 36%|███▋      | 8/22 [00:04<00:07,  1.89it/s] 41%|████      | 9/22 [00:04<00:06,  1.87it/s] 45%|████▌     | 10/22 [00:05<00:06,  1.86it/s] 50%|█████     | 11/22 [00:05<00:05,  1.86it/s] 55%|█████▍    | 12/22 [00:06<00:05,  1.86it/s] 59%|█████▉    | 13/22 [00:06<00:04,  1.88it/s] 64%|██████▎   | 14/22 [00:07<00:04,  1.90it/s] 68%|██████▊   | 15/22 [00:07<00:03,  1.88it/s] 73%|███████▎  | 16/22 [00:08<00:03,  1.88it/s] 77%|███████▋  | 17/22 [00:09<00:02,  1.87it/s] 82%|████████▏ | 18/22 [00:09<00:02,  1.89it/s] 86%|████████▋ | 19/22 [00:10<00:01,  1.91it/s] 91%|█████████ | 20/22 [00:10<00:01,  1.90it/s] 95%|█████████▌| 21/22 [00:11<00:00,  1.90it/s]100%|██████████| 22/22 [00:11<00:00,  1.88it/s]100%|██████████| 22/22 [00:11<00:00,  1.88it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:24:45,704] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+C C
+D D
+D D
+A A
+B A
+C A
+D A
+B A
+B B
+B A
+C C
+A A
+A A
+D A
+B B
+A A
+C A
+D A
+C A
+D D
+D A
+D A
+save result 0.5 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/logic.json
+====================================================================================================
+run task: middle_school_physics
+Generating test split:   0%|          | 0/178 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 178/178 [00:00<00:00, 37340.51 examples/s]
+Generating val split:   0%|          | 0/19 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 19/19 [00:00<00:00, 11860.66 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3301.04 examples/s]
+  0%|          | 0/19 [00:00<?, ?it/s]  5%|▌         | 1/19 [00:00<00:03,  5.02it/s] 11%|█         | 2/19 [00:00<00:03,  5.10it/s] 16%|█▌        | 3/19 [00:00<00:03,  5.11it/s] 21%|██        | 4/19 [00:00<00:02,  5.07it/s] 26%|██▋       | 5/19 [00:00<00:02,  5.09it/s] 32%|███▏      | 6/19 [00:01<00:02,  5.04it/s] 37%|███▋      | 7/19 [00:01<00:02,  4.98it/s] 42%|████▏     | 8/19 [00:01<00:02,  5.02it/s] 47%|████▋     | 9/19 [00:01<00:01,  5.06it/s] 53%|█████▎    | 10/19 [00:01<00:01,  5.11it/s] 58%|█████▊    | 11/19 [00:02<00:01,  4.68it/s] 63%|██████▎   | 12/19 [00:02<00:01,  4.77it/s] 68%|██████▊   | 13/19 [00:02<00:01,  4.87it/s] 74%|███████▎  | 14/19 [00:02<00:01,  4.96it/s] 79%|███████▉  | 15/19 [00:03<00:00,  5.00it/s] 84%|████████▍ | 16/19 [00:03<00:00,  5.00it/s] 89%|████████▉ | 17/19 [00:03<00:00,  5.00it/s] 95%|█████████▍| 18/19 [00:03<00:00,  5.00it/s]100%|██████████| 19/19 [00:03<00:00,  5.03it/s]100%|██████████| 19/19 [00:03<00:00,  4.99it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:24:53,511] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+B B
+C C
+C B
+A A
+C A
+D C
+C A
+C A
+C A
+C C
+D B
+C B
+C B
+D D
+B B
+D B
+A A
+A A
+A A
+save result 0.47368421052631576 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/middle_school_physics.json
+====================================================================================================
+run task: clinical_medicine
+Generating test split:   0%|          | 0/200 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 200/200 [00:00<00:00, 77108.26 examples/s]
+Generating val split:   0%|          | 0/22 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 22/22 [00:00<00:00, 14148.22 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3400.05 examples/s]
+  0%|          | 0/22 [00:00<?, ?it/s]  5%|▍         | 1/22 [00:00<00:04,  4.48it/s]  9%|▉         | 2/22 [00:00<00:04,  4.77it/s] 14%|█▎        | 3/22 [00:00<00:03,  4.94it/s] 18%|█▊        | 4/22 [00:00<00:03,  4.96it/s] 23%|██▎       | 5/22 [00:01<00:03,  5.02it/s] 27%|██▋       | 6/22 [00:01<00:03,  4.82it/s] 32%|███▏      | 7/22 [00:01<00:03,  4.92it/s] 36%|███▋      | 8/22 [00:01<00:02,  4.99it/s] 41%|████      | 9/22 [00:01<00:02,  5.05it/s] 45%|████▌     | 10/22 [00:02<00:02,  5.03it/s] 50%|█████     | 11/22 [00:02<00:02,  5.05it/s] 55%|█████▍    | 12/22 [00:02<00:01,  5.03it/s] 59%|█████▉    | 13/22 [00:02<00:01,  4.69it/s] 64%|██████▎   | 14/22 [00:02<00:01,  4.47it/s] 68%|██████▊   | 15/22 [00:03<00:01,  4.66it/s] 73%|███████▎  | 16/22 [00:03<00:01,  4.80it/s] 77%|███████▋  | 17/22 [00:03<00:01,  4.88it/s] 82%|████████▏ | 18/22 [00:03<00:00,  4.95it/s] 86%|████████▋ | 19/22 [00:03<00:00,  4.99it/s] 91%|█████████ | 20/22 [00:04<00:00,  5.04it/s] 95%|█████████▌| 21/22 [00:04<00:00,  5.06it/s]100%|██████████| 22/22 [00:04<00:00,  5.03it/s]100%|██████████| 22/22 [00:04<00:00,  4.92it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:25:00,927] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+B A
+D C
+C C
+D A
+A A
+B B
+B A
+D A
+B B
+C A
+A A
+C C
+A B
+D A
+C A
+C A
+B A
+D A
+A A
+A A
+C A
+D A
+save result 0.36363636363636365 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/clinical_medicine.json
+====================================================================================================
+run task: probability_and_statistics
+Generating test split:   0%|          | 0/166 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 166/166 [00:00<00:00, 64677.61 examples/s]
+Generating val split:   0%|          | 0/18 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 18/18 [00:00<00:00, 11590.03 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3356.52 examples/s]
+  0%|          | 0/18 [00:00<?, ?it/s]  6%|▌         | 1/18 [00:00<00:04,  3.48it/s] 11%|█         | 2/18 [00:00<00:04,  3.57it/s] 17%|█▋        | 3/18 [00:00<00:04,  3.49it/s] 22%|██▏       | 4/18 [00:01<00:04,  3.48it/s] 28%|██▊       | 5/18 [00:01<00:03,  3.42it/s] 33%|███▎      | 6/18 [00:01<00:03,  3.40it/s] 39%|███▉      | 7/18 [00:02<00:03,  3.44it/s] 44%|████▍     | 8/18 [00:02<00:02,  3.45it/s] 50%|█████     | 9/18 [00:02<00:02,  3.45it/s] 56%|█████▌    | 10/18 [00:02<00:02,  3.43it/s] 61%|██████    | 11/18 [00:03<00:02,  3.40it/s] 67%|██████▋   | 12/18 [00:03<00:01,  3.42it/s] 72%|███████▏  | 13/18 [00:03<00:01,  3.27it/s] 78%|███████▊  | 14/18 [00:04<00:01,  3.19it/s] 83%|████████▎ | 15/18 [00:04<00:00,  3.12it/s] 89%|████████▉ | 16/18 [00:04<00:00,  3.19it/s] 94%|█████████▍| 17/18 [00:05<00:00,  3.10it/s]100%|██████████| 18/18 [00:05<00:00,  3.05it/s]100%|██████████| 18/18 [00:05<00:00,  3.29it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:25:09,282] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+C A
+A A
+C A
+C A
+D A
+D A
+C A
+D B
+D B
+A A
+C A
+C A
+B A
+C A
+B B
+D A
+B A
+C C
+save result 0.2222222222222222 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/probability_and_statistics.json
+====================================================================================================
+run task: ideological_and_moral_cultivation
+Generating test split:   0%|          | 0/172 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 172/172 [00:00<00:00, 61491.67 examples/s]
+Generating val split:   0%|          | 0/19 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 19/19 [00:00<00:00, 9668.99 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3358.67 examples/s]
+  0%|          | 0/19 [00:00<?, ?it/s]  5%|▌         | 1/19 [00:00<00:02,  8.05it/s] 11%|█         | 2/19 [00:00<00:02,  8.03it/s] 16%|█▌        | 3/19 [00:00<00:01,  8.03it/s] 21%|██        | 4/19 [00:00<00:01,  7.85it/s] 26%|██▋       | 5/19 [00:00<00:01,  7.91it/s] 32%|███▏      | 6/19 [00:00<00:01,  8.08it/s] 37%|███▋      | 7/19 [00:00<00:01,  8.19it/s] 42%|████▏     | 8/19 [00:00<00:01,  8.16it/s] 47%|████▋     | 9/19 [00:01<00:01,  8.14it/s] 53%|█████▎    | 10/19 [00:01<00:01,  8.11it/s] 58%|█████▊    | 11/19 [00:01<00:01,  7.92it/s] 63%|██████▎   | 12/19 [00:01<00:00,  7.95it/s] 68%|██████▊   | 13/19 [00:01<00:00,  7.96it/s] 74%|███████▎  | 14/19 [00:01<00:00,  7.98it/s] 79%|███████▉  | 15/19 [00:01<00:00,  8.10it/s] 84%|████████▍ | 16/19 [00:01<00:00,  8.05it/s] 89%|████████▉ | 17/19 [00:02<00:00,  8.05it/s] 95%|█████████▍| 18/19 [00:02<00:00,  8.03it/s]100%|██████████| 19/19 [00:02<00:00,  8.14it/s]100%|██████████| 19/19 [00:02<00:00,  8.05it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:25:14,427] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+C C
+C C
+B A
+C C
+B A
+A A
+B A
+B B
+D D
+A A
+C A
+D D
+D B
+A C
+B A
+D A
+B B
+A A
+A A
+save result 0.5789473684210527 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/ideological_and_moral_cultivation.json
+====================================================================================================
+run task: operating_system
+Generating test split:   0%|          | 0/179 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 179/179 [00:00<00:00, 74890.81 examples/s]
+Generating val split:   0%|          | 0/19 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 19/19 [00:00<00:00, 12471.33 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3290.17 examples/s]
+  0%|          | 0/19 [00:00<?, ?it/s]  5%|▌         | 1/19 [00:00<00:02,  8.37it/s] 11%|█         | 2/19 [00:00<00:02,  8.17it/s] 16%|█▌        | 3/19 [00:00<00:01,  8.11it/s] 21%|██        | 4/19 [00:00<00:01,  8.10it/s] 26%|██▋       | 5/19 [00:00<00:01,  8.10it/s] 32%|███▏      | 6/19 [00:00<00:01,  7.45it/s] 37%|███▋      | 7/19 [00:00<00:01,  7.25it/s] 42%|████▏     | 8/19 [00:01<00:01,  7.54it/s] 47%|████▋     | 9/19 [00:01<00:01,  7.71it/s] 53%|█████▎    | 10/19 [00:01<00:01,  7.90it/s] 58%|█████▊    | 11/19 [00:01<00:00,  8.06it/s] 63%|██████▎   | 12/19 [00:01<00:00,  8.05it/s] 68%|██████▊   | 13/19 [00:01<00:00,  8.16it/s] 74%|███████▎  | 14/19 [00:01<00:00,  8.21it/s] 79%|███████▉  | 15/19 [00:01<00:00,  8.27it/s] 84%|████████▍ | 16/19 [00:01<00:00,  8.32it/s] 89%|████████▉ | 17/19 [00:02<00:00,  8.26it/s] 95%|█████████▍| 18/19 [00:02<00:00,  8.19it/s]100%|██████████| 19/19 [00:02<00:00,  8.22it/s]100%|██████████| 19/19 [00:02<00:00,  8.02it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:25:19,570] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+B A
+D C
+B B
+D B
+A C
+D B
+D B
+A C
+B B
+D C
+A A
+B B
+C A
+D B
+D C
+B B
+B B
+C B
+D A
+save result 0.3157894736842105 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/operating_system.json
+====================================================================================================
+run task: middle_school_mathematics
+Generating test split:   0%|          | 0/177 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 177/177 [00:00<00:00, 69668.90 examples/s]
+Generating val split:   0%|          | 0/19 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 19/19 [00:00<00:00, 12103.85 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3400.05 examples/s]
+  0%|          | 0/19 [00:00<?, ?it/s]  5%|▌         | 1/19 [00:00<00:03,  5.16it/s] 11%|█         | 2/19 [00:00<00:03,  5.31it/s] 16%|█▌        | 3/19 [00:00<00:03,  5.24it/s] 21%|██        | 4/19 [00:00<00:02,  5.16it/s] 26%|██▋       | 5/19 [00:00<00:02,  5.16it/s] 32%|███▏      | 6/19 [00:01<00:02,  5.09it/s] 37%|███▋      | 7/19 [00:01<00:02,  5.16it/s] 42%|████▏     | 8/19 [00:01<00:02,  5.20it/s] 47%|████▋     | 9/19 [00:01<00:01,  5.23it/s] 53%|█████▎    | 10/19 [00:01<00:01,  5.25it/s] 58%|█████▊    | 11/19 [00:02<00:01,  5.22it/s] 63%|██████▎   | 12/19 [00:02<00:01,  4.97it/s] 68%|██████▊   | 13/19 [00:02<00:01,  5.02it/s] 74%|███████▎  | 14/19 [00:02<00:01,  4.68it/s] 79%|███████▉  | 15/19 [00:02<00:00,  4.77it/s] 84%|████████▍ | 16/19 [00:03<00:00,  4.88it/s] 89%|████████▉ | 17/19 [00:03<00:00,  4.95it/s] 95%|█████████▍| 18/19 [00:03<00:00,  5.01it/s]100%|██████████| 19/19 [00:03<00:00,  5.11it/s]100%|██████████| 19/19 [00:03<00:00,  5.07it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:25:26,067] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+D A
+C A
+D A
+D C
+D A
+D A
+B A
+C C
+D B
+B B
+B B
+C A
+A A
+B A
+D A
+A A
+B A
+B A
+A A
+save result 0.3157894736842105 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/middle_school_mathematics.json
+====================================================================================================
+run task: chinese_language_and_literature
+Generating test split:   0%|          | 0/209 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 209/209 [00:00<00:00, 88457.07 examples/s]
+Generating val split:   0%|          | 0/23 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 23/23 [00:00<00:00, 14545.99 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3392.90 examples/s]
+  0%|          | 0/23 [00:00<?, ?it/s]  4%|▍         | 1/23 [00:00<00:03,  6.36it/s]  9%|▊         | 2/23 [00:00<00:03,  6.36it/s] 13%|█▎        | 3/23 [00:00<00:03,  6.40it/s] 17%|█▋        | 4/23 [00:00<00:02,  6.38it/s] 22%|██▏       | 5/23 [00:00<00:02,  6.54it/s] 26%|██▌       | 6/23 [00:00<00:02,  6.50it/s] 30%|███       | 7/23 [00:01<00:02,  6.50it/s] 35%|███▍      | 8/23 [00:01<00:02,  6.62it/s] 39%|███▉      | 9/23 [00:01<00:02,  6.70it/s] 43%|████▎     | 10/23 [00:01<00:01,  6.60it/s] 48%|████▊     | 11/23 [00:01<00:01,  6.52it/s] 52%|█████▏    | 12/23 [00:01<00:01,  6.62it/s] 57%|█████▋    | 13/23 [00:01<00:01,  6.59it/s] 61%|██████    | 14/23 [00:02<00:01,  6.68it/s] 65%|██████▌   | 15/23 [00:02<00:01,  6.74it/s] 70%|██████▉   | 16/23 [00:02<00:01,  6.78it/s] 74%|███████▍  | 17/23 [00:02<00:00,  6.64it/s] 78%|███████▊  | 18/23 [00:02<00:00,  6.56it/s] 83%|████████▎ | 19/23 [00:02<00:00,  6.51it/s] 87%|████████▋ | 20/23 [00:03<00:00,  6.62it/s] 91%|█████████▏| 21/23 [00:03<00:00,  6.69it/s] 96%|█████████▌| 22/23 [00:03<00:00,  6.61it/s]100%|██████████| 23/23 [00:03<00:00,  6.69it/s]100%|██████████| 23/23 [00:03<00:00,  6.60it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:25:32,518] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+D B
+B B
+D A
+C A
+D A
+C A
+B A
+D A
+A B
+D A
+B A
+A A
+D B
+A A
+C A
+C C
+A A
+B B
+C C
+D B
+B C
+A B
+C A
+save result 0.30434782608695654 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/chinese_language_and_literature.json
+====================================================================================================
+run task: electrical_engineer
+Generating test split:   0%|          | 0/339 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 339/339 [00:00<00:00, 130160.11 examples/s]
+Generating val split:   0%|          | 0/37 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 37/37 [00:00<00:00, 23474.40 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3380.32 examples/s]
+  0%|          | 0/37 [00:00<?, ?it/s]  3%|▎         | 1/37 [00:00<00:06,  5.19it/s]  5%|▌         | 2/37 [00:00<00:06,  5.17it/s]  8%|▊         | 3/37 [00:00<00:06,  5.22it/s] 11%|█         | 4/37 [00:00<00:06,  5.28it/s] 14%|█▎        | 5/37 [00:00<00:06,  5.24it/s] 16%|█▌        | 6/37 [00:01<00:05,  5.26it/s] 19%|█▉        | 7/37 [00:01<00:05,  5.20it/s] 22%|██▏       | 8/37 [00:01<00:05,  5.16it/s] 24%|██▍       | 9/37 [00:01<00:05,  5.19it/s] 27%|██▋       | 10/37 [00:01<00:05,  5.17it/s] 30%|██▉       | 11/37 [00:02<00:05,  5.17it/s] 32%|███▏      | 12/37 [00:02<00:04,  5.07it/s] 35%|███▌      | 13/37 [00:02<00:04,  5.08it/s] 38%|███▊      | 14/37 [00:02<00:04,  5.10it/s] 41%|████      | 15/37 [00:02<00:04,  5.09it/s] 43%|████▎     | 16/37 [00:03<00:04,  5.05it/s] 46%|████▌     | 17/37 [00:03<00:03,  5.09it/s] 49%|████▊     | 18/37 [00:03<00:03,  5.14it/s] 51%|█████▏    | 19/37 [00:03<00:03,  5.14it/s] 54%|█████▍    | 20/37 [00:03<00:03,  5.17it/s] 57%|█████▋    | 21/37 [00:04<00:03,  5.24it/s] 59%|█████▉    | 22/37 [00:04<00:02,  5.20it/s] 62%|██████▏   | 23/37 [00:04<00:02,  5.23it/s] 65%|██████▍   | 24/37 [00:04<00:02,  5.21it/s] 68%|██████▊   | 25/37 [00:04<00:02,  5.20it/s] 70%|███████   | 26/37 [00:05<00:02,  5.22it/s] 73%|███████▎  | 27/37 [00:05<00:01,  5.21it/s] 76%|███████▌  | 28/37 [00:05<00:01,  5.26it/s] 78%|███████▊  | 29/37 [00:05<00:01,  5.23it/s] 81%|████████  | 30/37 [00:05<00:01,  5.18it/s] 84%|████████▍ | 31/37 [00:05<00:01,  5.14it/s] 86%|████████▋ | 32/37 [00:06<00:00,  5.15it/s] 89%|████████▉ | 33/37 [00:06<00:00,  5.22it/s] 92%|█████████▏| 34/37 [00:06<00:00,  5.23it/s] 95%|█████████▍| 35/37 [00:06<00:00,  5.21it/s] 97%|█████████▋| 36/37 [00:06<00:00,  5.20it/s]100%|██████████| 37/37 [00:07<00:00,  5.21it/s]100%|██████████| 37/37 [00:07<00:00,  5.18it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:25:42,696] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+D A
+A A
+B B
+C A
+B A
+A A
+C C
+A A
+C B
+D A
+D A
+C A
+A A
+A A
+B B
+D A
+D A
+B B
+B B
+B A
+B A
+D B
+A B
+C A
+A A
+D A
+C A
+C A
+C A
+D A
+D A
+A A
+B B
+B B
+D A
+B A
+B A
+save result 0.3783783783783784 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/electrical_engineer.json
+====================================================================================================
+run task: business_administration
+Generating test split:   0%|          | 0/301 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 301/301 [00:00<00:00, 96535.06 examples/s]
+Generating val split:   0%|          | 0/33 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 33/33 [00:00<00:00, 21254.92 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3249.89 examples/s]
+  0%|          | 0/33 [00:00<?, ?it/s]  3%|▎         | 1/33 [00:00<00:06,  5.13it/s]  6%|▌         | 2/33 [00:00<00:06,  5.15it/s]  9%|▉         | 3/33 [00:00<00:05,  5.15it/s] 12%|█▏        | 4/33 [00:00<00:05,  5.24it/s] 15%|█▌        | 5/33 [00:00<00:05,  5.18it/s] 18%|█▊        | 6/33 [00:01<00:05,  5.10it/s] 21%|██        | 7/33 [00:01<00:05,  5.12it/s] 24%|██▍       | 8/33 [00:01<00:04,  5.12it/s] 27%|██▋       | 9/33 [00:01<00:05,  4.73it/s] 30%|███       | 10/33 [00:01<00:04,  4.99it/s] 33%|███▎      | 11/33 [00:02<00:04,  5.10it/s] 36%|███▋      | 12/33 [00:02<00:04,  5.09it/s] 39%|███▉      | 13/33 [00:02<00:03,  5.11it/s] 42%|████▏     | 14/33 [00:02<00:03,  5.07it/s] 45%|████▌     | 15/33 [00:02<00:03,  5.08it/s] 48%|████▊     | 16/33 [00:03<00:03,  5.18it/s] 52%|█████▏    | 17/33 [00:03<00:03,  5.19it/s] 55%|█████▍    | 18/33 [00:03<00:02,  5.34it/s] 58%|█████▊    | 19/33 [00:03<00:02,  5.28it/s] 61%|██████    | 20/33 [00:03<00:02,  5.31it/s] 64%|██████▎   | 21/33 [00:04<00:02,  5.27it/s] 67%|██████▋   | 22/33 [00:04<00:02,  5.22it/s] 70%|██████▉   | 23/33 [00:04<00:01,  5.20it/s] 73%|███████▎  | 24/33 [00:04<00:01,  5.21it/s] 76%|███████▌  | 25/33 [00:04<00:01,  5.27it/s] 79%|███████▉  | 26/33 [00:05<00:01,  5.18it/s] 82%|████████▏ | 27/33 [00:05<00:01,  5.12it/s] 85%|████████▍ | 28/33 [00:05<00:01,  4.90it/s] 88%|████████▊ | 29/33 [00:05<00:00,  5.00it/s] 91%|█████████ | 30/33 [00:05<00:00,  5.04it/s] 94%|█████████▍| 31/33 [00:06<00:00,  5.08it/s] 97%|█████████▋| 32/33 [00:06<00:00,  5.10it/s]100%|██████████| 33/33 [00:06<00:00,  5.27it/s]100%|██████████| 33/33 [00:06<00:00,  5.14it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:25:51,682] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+B A
+D A
+D C
+C A
+A A
+C B
+B A
+D B
+D A
+B A
+B B
+C A
+A A
+A B
+A B
+C A
+D A
+A A
+C C
+C C
+A C
+C C
+B C
+A B
+B B
+B A
+A A
+B C
+C A
+C A
+B C
+B C
+B B
+save result 0.30303030303030304 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/business_administration.json
+====================================================================================================
+run task: high_school_geography
+Generating test split:   0%|          | 0/178 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 178/178 [00:00<00:00, 71184.79 examples/s]
+Generating val split:   0%|          | 0/19 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 19/19 [00:00<00:00, 11869.49 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3373.25 examples/s]
+  0%|          | 0/19 [00:00<?, ?it/s]  5%|▌         | 1/19 [00:00<00:02,  6.28it/s] 11%|█         | 2/19 [00:00<00:02,  6.36it/s] 16%|█▌        | 3/19 [00:00<00:02,  6.27it/s] 21%|██        | 4/19 [00:00<00:02,  6.34it/s] 26%|██▋       | 5/19 [00:00<00:02,  6.33it/s] 32%|███▏      | 6/19 [00:00<00:02,  5.87it/s] 37%|███▋      | 7/19 [00:01<00:02,  5.96it/s] 42%|████▏     | 8/19 [00:01<00:01,  6.06it/s] 47%|████▋     | 9/19 [00:01<00:01,  6.19it/s] 53%|█████▎    | 10/19 [00:01<00:01,  6.29it/s] 58%|█████▊    | 11/19 [00:01<00:01,  6.33it/s] 63%|██████▎   | 12/19 [00:01<00:01,  6.38it/s] 68%|██████▊   | 13/19 [00:02<00:00,  6.36it/s] 74%|███████▎  | 14/19 [00:02<00:00,  5.94it/s] 79%|███████▉  | 15/19 [00:02<00:00,  6.04it/s] 84%|████████▍ | 16/19 [00:02<00:00,  5.98it/s] 89%|████████▉ | 17/19 [00:02<00:00,  6.13it/s] 95%|█████████▍| 18/19 [00:02<00:00,  6.22it/s]100%|██████████| 19/19 [00:03<00:00,  6.26it/s]100%|██████████| 19/19 [00:03<00:00,  6.18it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:25:57,397] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+A A
+D C
+C C
+D A
+B B
+D B
+C A
+C C
+B C
+A A
+C A
+B B
+B A
+D D
+B B
+D A
+A A
+A B
+B B
+save result 0.5263157894736842 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/high_school_geography.json
+====================================================================================================
+run task: modern_chinese_history
+Generating test split:   0%|          | 0/212 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 212/212 [00:00<00:00, 82978.02 examples/s]
+Generating val split:   0%|          | 0/23 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 23/23 [00:00<00:00, 14364.05 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3292.75 examples/s]
+  0%|          | 0/23 [00:00<?, ?it/s]  4%|▍         | 1/23 [00:00<00:04,  5.12it/s]  9%|▊         | 2/23 [00:00<00:04,  5.12it/s] 13%|█▎        | 3/23 [00:00<00:03,  5.16it/s] 17%|█▋        | 4/23 [00:00<00:03,  5.15it/s] 22%|██▏       | 5/23 [00:00<00:03,  5.12it/s] 26%|██▌       | 6/23 [00:01<00:03,  5.01it/s] 30%|███       | 7/23 [00:01<00:03,  5.08it/s] 35%|███▍      | 8/23 [00:01<00:02,  5.13it/s] 39%|███▉      | 9/23 [00:01<00:02,  5.13it/s] 43%|████▎     | 10/23 [00:01<00:02,  5.13it/s] 48%|████▊     | 11/23 [00:02<00:02,  5.10it/s] 52%|█████▏    | 12/23 [00:02<00:02,  5.11it/s] 57%|█████▋    | 13/23 [00:02<00:01,  5.11it/s] 61%|██████    | 14/23 [00:02<00:01,  5.14it/s] 65%|██████▌   | 15/23 [00:02<00:01,  5.14it/s] 70%|██████▉   | 16/23 [00:03<00:01,  5.19it/s] 74%|███████▍  | 17/23 [00:03<00:01,  5.20it/s] 78%|███████▊  | 18/23 [00:03<00:00,  5.15it/s] 83%|████████▎ | 19/23 [00:03<00:00,  5.15it/s] 87%|████████▋ | 20/23 [00:03<00:00,  4.93it/s] 91%|█████████▏| 21/23 [00:04<00:00,  4.95it/s] 96%|█████████▌| 22/23 [00:04<00:00,  5.03it/s]100%|██████████| 23/23 [00:04<00:00,  4.98it/s]100%|██████████| 23/23 [00:04<00:00,  5.09it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:26:04,469] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+C C
+A A
+D D
+B B
+C C
+C C
+C C
+D C
+D A
+D C
+A A
+D C
+A A
+D A
+D A
+C B
+D D
+C C
+D A
+D D
+D C
+A A
+C C
+save result 0.6086956521739131 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/modern_chinese_history.json
+====================================================================================================
+run task: legal_professional
+Generating test split:   0%|          | 0/215 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 215/215 [00:00<00:00, 78449.36 examples/s]
+Generating val split:   0%|          | 0/23 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 23/23 [00:00<00:00, 14537.22 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 2076.39 examples/s]
+  0%|          | 0/23 [00:00<?, ?it/s]  4%|▍         | 1/23 [00:00<00:08,  2.65it/s]  9%|▊         | 2/23 [00:00<00:07,  2.66it/s] 13%|█▎        | 3/23 [00:01<00:07,  2.71it/s] 17%|█▋        | 4/23 [00:01<00:07,  2.70it/s] 22%|██▏       | 5/23 [00:01<00:06,  2.69it/s] 26%|██▌       | 6/23 [00:02<00:06,  2.69it/s] 30%|███       | 7/23 [00:02<00:05,  2.73it/s] 35%|███▍      | 8/23 [00:02<00:05,  2.71it/s] 39%|███▉      | 9/23 [00:03<00:05,  2.69it/s] 43%|████▎     | 10/23 [00:03<00:04,  2.65it/s] 48%|████▊     | 11/23 [00:04<00:04,  2.65it/s] 52%|█████▏    | 12/23 [00:04<00:04,  2.72it/s] 57%|█████▋    | 13/23 [00:04<00:03,  2.71it/s] 61%|██████    | 14/23 [00:05<00:03,  2.70it/s] 65%|██████▌   | 15/23 [00:05<00:02,  2.77it/s] 70%|██████▉   | 16/23 [00:05<00:02,  2.71it/s] 74%|███████▍  | 17/23 [00:06<00:02,  2.69it/s] 78%|███████▊  | 18/23 [00:06<00:01,  2.69it/s] 83%|████████▎ | 19/23 [00:07<00:01,  2.68it/s] 87%|████████▋ | 20/23 [00:07<00:01,  2.70it/s] 91%|█████████▏| 21/23 [00:07<00:00,  2.77it/s] 96%|█████████▌| 22/23 [00:08<00:00,  2.83it/s]100%|██████████| 23/23 [00:08<00:00,  2.83it/s]100%|██████████| 23/23 [00:08<00:00,  2.72it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:26:15,608] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+D B
+B A
+C B
+D C
+D A
+D B
+D A
+B C
+C A
+B A
+A B
+C C
+B A
+C A
+D B
+D D
+B C
+C A
+C C
+D B
+C B
+C C
+C C
+save result 0.21739130434782608 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/legal_professional.json
+====================================================================================================
+run task: middle_school_geography
+Generating test split:   0%|          | 0/108 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 108/108 [00:00<00:00, 43194.89 examples/s]
+Generating val split:   0%|          | 0/12 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 12/12 [00:00<00:00, 7515.55 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3299.48 examples/s]
+  0%|          | 0/12 [00:00<?, ?it/s]  8%|▊         | 1/12 [00:00<00:01,  6.89it/s] 17%|█▋        | 2/12 [00:00<00:01,  6.46it/s] 25%|██▌       | 3/12 [00:00<00:01,  6.09it/s] 33%|███▎      | 4/12 [00:00<00:01,  6.22it/s] 42%|████▏     | 5/12 [00:00<00:01,  6.25it/s] 50%|█████     | 6/12 [00:00<00:00,  6.26it/s] 58%|█████▊    | 7/12 [00:01<00:00,  6.30it/s] 67%|██████▋   | 8/12 [00:01<00:00,  6.33it/s] 75%|███████▌  | 9/12 [00:01<00:00,  6.13it/s] 83%|████████▎ | 10/12 [00:01<00:00,  6.20it/s] 92%|█████████▏| 11/12 [00:01<00:00,  6.39it/s]100%|██████████| 12/12 [00:01<00:00,  6.53it/s]100%|██████████| 12/12 [00:01<00:00,  6.34it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:26:21,033] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+A A
+B A
+C B
+C A
+C A
+D D
+D A
+B B
+D A
+D A
+D D
+C A
+save result 0.3333333333333333 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/middle_school_geography.json
+====================================================================================================
+run task: middle_school_chemistry
+Generating test split:   0%|          | 0/185 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 185/185 [00:00<00:00, 77906.25 examples/s]
+Generating val split:   0%|          | 0/20 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 20/20 [00:00<00:00, 12569.09 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3339.41 examples/s]
+  0%|          | 0/20 [00:00<?, ?it/s]  5%|▌         | 1/20 [00:00<00:03,  4.85it/s] 10%|█         | 2/20 [00:00<00:03,  4.84it/s] 15%|█▌        | 3/20 [00:00<00:03,  4.90it/s] 20%|██        | 4/20 [00:00<00:03,  4.27it/s] 25%|██▌       | 5/20 [00:01<00:03,  4.00it/s] 30%|███       | 6/20 [00:01<00:03,  4.25it/s] 35%|███▌      | 7/20 [00:01<00:03,  4.14it/s] 40%|████      | 8/20 [00:01<00:02,  4.37it/s] 45%|████▌     | 9/20 [00:02<00:02,  4.26it/s] 50%|█████     | 10/20 [00:02<00:02,  4.33it/s] 55%|█████▌    | 11/20 [00:02<00:02,  4.24it/s] 60%|██████    | 12/20 [00:02<00:01,  4.41it/s] 65%|██████▌   | 13/20 [00:02<00:01,  4.43it/s] 70%|███████   | 14/20 [00:03<00:01,  4.05it/s] 75%|███████▌  | 15/20 [00:03<00:01,  4.29it/s] 80%|████████  | 16/20 [00:03<00:00,  4.34it/s] 85%|████████▌ | 17/20 [00:03<00:00,  4.53it/s] 90%|█████████ | 18/20 [00:04<00:00,  4.33it/s] 95%|█████████▌| 19/20 [00:04<00:00,  4.38it/s]100%|██████████| 20/20 [00:04<00:00,  4.11it/s]100%|██████████| 20/20 [00:04<00:00,  4.29it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:26:28,338] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+D A
+A A
+A B
+C C
+D A
+D D
+D D
+B B
+C C
+B B
+C C
+D C
+D D
+C A
+A C
+C C
+B A
+B C
+D A
+B B
+save result 0.55 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/middle_school_chemistry.json
+====================================================================================================
+run task: high_school_biology
+Generating test split:   0%|          | 0/175 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 175/175 [00:00<00:00, 67724.97 examples/s]
+Generating val split:   0%|          | 0/19 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 19/19 [00:00<00:00, 12220.79 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3370.00 examples/s]
+  0%|          | 0/19 [00:00<?, ?it/s]  5%|▌         | 1/19 [00:00<00:03,  5.27it/s] 11%|█         | 2/19 [00:00<00:03,  5.18it/s] 16%|█▌        | 3/19 [00:00<00:03,  5.12it/s] 21%|██        | 4/19 [00:00<00:02,  5.02it/s] 26%|██▋       | 5/19 [00:00<00:02,  5.06it/s] 32%|███▏      | 6/19 [00:01<00:02,  5.06it/s] 37%|███▋      | 7/19 [00:01<00:02,  5.03it/s] 42%|████▏     | 8/19 [00:01<00:02,  5.04it/s] 47%|████▋     | 9/19 [00:01<00:01,  5.07it/s] 53%|█████▎    | 10/19 [00:01<00:01,  5.13it/s] 58%|█████▊    | 11/19 [00:02<00:01,  5.12it/s] 63%|██████▎   | 12/19 [00:02<00:01,  5.13it/s] 68%|██████▊   | 13/19 [00:02<00:01,  5.09it/s] 74%|███████▎  | 14/19 [00:02<00:00,  5.07it/s] 79%|███████▉  | 15/19 [00:03<00:00,  4.50it/s] 84%|████████▍ | 16/19 [00:03<00:00,  4.68it/s] 89%|████████▉ | 17/19 [00:03<00:00,  4.72it/s] 95%|█████████▍| 18/19 [00:03<00:00,  4.82it/s]100%|██████████| 19/19 [00:03<00:00,  4.93it/s]100%|██████████| 19/19 [00:03<00:00,  4.97it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:26:34,828] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+A A
+C C
+B B
+A A
+A B
+D D
+C D
+B C
+B A
+C C
+D B
+A A
+C D
+D A
+A C
+B A
+A B
+A A
+B B
+save result 0.47368421052631576 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/high_school_biology.json
+====================================================================================================
+run task: high_school_chemistry
+Generating test split:   0%|          | 0/172 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 172/172 [00:00<00:00, 68432.96 examples/s]
+Generating val split:   0%|          | 0/19 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 19/19 [00:00<00:00, 12215.17 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3192.50 examples/s]
+  0%|          | 0/19 [00:00<?, ?it/s]  5%|▌         | 1/19 [00:00<00:03,  5.17it/s] 11%|█         | 2/19 [00:00<00:03,  5.23it/s] 16%|█▌        | 3/19 [00:00<00:03,  5.09it/s] 21%|██        | 4/19 [00:00<00:02,  5.10it/s] 26%|██▋       | 5/19 [00:00<00:02,  5.07it/s] 32%|███▏      | 6/19 [00:01<00:02,  5.28it/s] 37%|███▋      | 7/19 [00:01<00:02,  5.25it/s] 42%|████▏     | 8/19 [00:01<00:02,  5.26it/s] 47%|████▋     | 9/19 [00:01<00:01,  5.21it/s] 53%|█████▎    | 10/19 [00:01<00:01,  5.19it/s] 58%|█████▊    | 11/19 [00:02<00:01,  5.33it/s] 63%|██████▎   | 12/19 [00:02<00:01,  5.24it/s] 68%|██████▊   | 13/19 [00:02<00:01,  5.26it/s] 74%|███████▎  | 14/19 [00:02<00:00,  5.39it/s] 79%|███████▉  | 15/19 [00:02<00:00,  5.32it/s] 84%|████████▍ | 16/19 [00:03<00:00,  5.29it/s] 89%|████████▉ | 17/19 [00:03<00:00,  5.31it/s] 95%|█████████▍| 18/19 [00:03<00:00,  5.25it/s]100%|██████████| 19/19 [00:03<00:00,  5.23it/s]100%|██████████| 19/19 [00:03<00:00,  5.24it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:26:41,168] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+A B
+B A
+C C
+B B
+C C
+D A
+B A
+D A
+D A
+B B
+D A
+A B
+B A
+D B
+D A
+A A
+A C
+B A
+C A
+save result 0.2631578947368421 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/high_school_chemistry.json
+====================================================================================================
+run task: physician
+Generating test split:   0%|          | 0/443 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 443/443 [00:00<00:00, 163635.11 examples/s]
+Generating val split:   0%|          | 0/49 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 49/49 [00:00<00:00, 30808.11 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3273.73 examples/s]
+  0%|          | 0/49 [00:00<?, ?it/s]  2%|▏         | 1/49 [00:00<00:08,  5.84it/s]  4%|▍         | 2/49 [00:00<00:08,  5.79it/s]  6%|▌         | 3/49 [00:00<00:07,  5.77it/s]  8%|▊         | 4/49 [00:00<00:07,  5.79it/s] 10%|█         | 5/49 [00:00<00:07,  5.78it/s] 12%|█▏        | 6/49 [00:01<00:07,  5.78it/s] 14%|█▍        | 7/49 [00:01<00:07,  5.80it/s] 16%|█▋        | 8/49 [00:01<00:06,  5.93it/s] 18%|█▊        | 9/49 [00:01<00:06,  5.89it/s] 20%|██        | 10/49 [00:01<00:06,  5.85it/s] 22%|██▏       | 11/49 [00:01<00:06,  5.83it/s] 24%|██▍       | 12/49 [00:02<00:06,  5.81it/s] 27%|██▋       | 13/49 [00:02<00:06,  5.60it/s] 29%|██▊       | 14/49 [00:02<00:06,  5.66it/s] 31%|███       | 15/49 [00:02<00:05,  5.69it/s] 33%|███▎      | 16/49 [00:02<00:05,  5.85it/s] 35%|███▍      | 17/49 [00:02<00:05,  5.81it/s] 37%|███▋      | 18/49 [00:03<00:05,  5.77it/s] 39%|███▉      | 19/49 [00:03<00:05,  5.91it/s] 41%|████      | 20/49 [00:03<00:04,  5.85it/s] 43%|████▎     | 21/49 [00:03<00:04,  5.86it/s] 45%|████▍     | 22/49 [00:03<00:04,  5.83it/s] 47%|████▋     | 23/49 [00:03<00:04,  5.84it/s] 49%|████▉     | 24/49 [00:04<00:04,  5.81it/s] 51%|█████     | 25/49 [00:04<00:04,  5.79it/s] 53%|█████▎    | 26/49 [00:04<00:03,  5.78it/s] 55%|█████▌    | 27/49 [00:04<00:03,  5.78it/s] 57%|█████▋    | 28/49 [00:04<00:03,  5.79it/s] 59%|█████▉    | 29/49 [00:05<00:03,  5.78it/s] 61%|██████    | 30/49 [00:05<00:03,  5.77it/s] 63%|██████▎   | 31/49 [00:05<00:03,  5.79it/s] 65%|██████▌   | 32/49 [00:05<00:02,  5.76it/s] 67%|██████▋   | 33/49 [00:05<00:02,  5.77it/s] 69%|██████▉   | 34/49 [00:05<00:02,  5.79it/s] 71%|███████▏  | 35/49 [00:06<00:02,  5.81it/s] 73%|███████▎  | 36/49 [00:06<00:02,  5.82it/s] 76%|███████▌  | 37/49 [00:06<00:02,  5.79it/s] 78%|███████▊  | 38/49 [00:06<00:01,  5.67it/s] 80%|███████▉  | 39/49 [00:06<00:01,  5.59it/s] 82%|████████▏ | 40/49 [00:06<00:01,  5.66it/s] 84%|████████▎ | 41/49 [00:07<00:01,  5.71it/s] 86%|████████▌ | 42/49 [00:07<00:01,  5.01it/s] 88%|████████▊ | 43/49 [00:07<00:01,  5.21it/s] 90%|████████▉ | 44/49 [00:07<00:00,  5.19it/s] 92%|█████████▏| 45/49 [00:07<00:00,  5.35it/s] 94%|█████████▍| 46/49 [00:08<00:00,  5.48it/s] 96%|█████████▌| 47/49 [00:08<00:00,  5.56it/s] 98%|█████████▊| 48/49 [00:08<00:00,  5.62it/s]100%|██████████| 49/49 [00:08<00:00,  5.67it/s]100%|██████████| 49/49 [00:08<00:00,  5.71it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:26:52,800] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+A B
+C C
+D A
+A A
+A B
+A C
+A A
+D A
+D C
+C C
+B A
+D A
+A A
+C A
+C C
+D B
+C A
+A A
+D A
+D B
+B A
+B A
+A C
+C A
+D C
+C C
+A C
+B A
+D B
+C C
+C A
+B B
+A A
+D B
+B B
+D A
+B B
+A A
+C C
+B D
+B B
+C C
+D D
+A A
+B B
+B A
+A A
+D C
+D A
+save result 0.42857142857142855 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/physician.json
+====================================================================================================
+run task: high_school_chinese
+Generating test split:   0%|          | 0/178 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 178/178 [00:00<00:00, 66057.88 examples/s]
+Generating val split:   0%|          | 0/19 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 19/19 [00:00<00:00, 12170.40 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3290.17 examples/s]
+  0%|          | 0/19 [00:00<?, ?it/s]  5%|▌         | 1/19 [00:00<00:07,  2.47it/s] 11%|█         | 2/19 [00:00<00:08,  2.11it/s] 16%|█▌        | 3/19 [00:01<00:07,  2.04it/s] 21%|██        | 4/19 [00:01<00:07,  1.99it/s] 26%|██▋       | 5/19 [00:02<00:06,  2.14it/s] 32%|███▏      | 6/19 [00:02<00:05,  2.24it/s] 37%|███▋      | 7/19 [00:03<00:05,  2.09it/s] 42%|████▏     | 8/19 [00:03<00:05,  2.20it/s] 47%|████▋     | 9/19 [00:04<00:04,  2.30it/s] 53%|█████▎    | 10/19 [00:04<00:03,  2.36it/s] 58%|█████▊    | 11/19 [00:04<00:03,  2.39it/s] 63%|██████▎   | 12/19 [00:05<00:03,  2.24it/s] 68%|██████▊   | 13/19 [00:05<00:02,  2.32it/s] 74%|███████▎  | 14/19 [00:06<00:02,  2.18it/s] 79%|███████▉  | 15/19 [00:06<00:01,  2.09it/s] 84%|████████▍ | 16/19 [00:07<00:01,  2.19it/s] 89%|████████▉ | 17/19 [00:07<00:00,  2.08it/s] 95%|█████████▍| 18/19 [00:08<00:00,  2.18it/s]100%|██████████| 19/19 [00:08<00:00,  2.10it/s]100%|██████████| 19/19 [00:08<00:00,  2.18it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:27:04,236] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+C A
+A C
+D A
+D B
+B B
+D A
+A D
+C A
+A B
+B B
+C A
+C A
+C A
+B A
+D A
+C B
+A A
+D B
+D B
+save result 0.15789473684210525 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/high_school_chinese.json
+====================================================================================================
+run task: tax_accountant
+Generating test split:   0%|          | 0/443 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 443/443 [00:00<00:00, 148551.06 examples/s]
+Generating val split:   0%|          | 0/49 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 49/49 [00:00<00:00, 29613.96 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3321.43 examples/s]
+  0%|          | 0/49 [00:00<?, ?it/s]  2%|▏         | 1/49 [00:00<00:13,  3.52it/s]  4%|▍         | 2/49 [00:00<00:13,  3.51it/s]  6%|▌         | 3/49 [00:00<00:14,  3.25it/s]  8%|▊         | 4/49 [00:01<00:13,  3.34it/s] 10%|█         | 5/49 [00:01<00:13,  3.33it/s] 12%|█▏        | 6/49 [00:01<00:12,  3.38it/s] 14%|█▍        | 7/49 [00:02<00:12,  3.41it/s] 16%|█▋        | 8/49 [00:02<00:11,  3.45it/s] 18%|█▊        | 9/49 [00:02<00:11,  3.43it/s] 20%|██        | 10/49 [00:02<00:11,  3.28it/s] 22%|██▏       | 11/49 [00:03<00:11,  3.36it/s] 24%|██▍       | 12/49 [00:03<00:11,  3.36it/s] 27%|██▋       | 13/49 [00:03<00:11,  3.21it/s] 29%|██▊       | 14/49 [00:04<00:11,  3.15it/s] 31%|███       | 15/49 [00:04<00:10,  3.24it/s] 33%|███▎      | 16/49 [00:04<00:09,  3.31it/s] 35%|███▍      | 17/49 [00:05<00:09,  3.37it/s] 37%|███▋      | 18/49 [00:05<00:09,  3.41it/s] 39%|███▉      | 19/49 [00:05<00:08,  3.43it/s] 41%|████      | 20/49 [00:05<00:08,  3.40it/s] 43%|████▎     | 21/49 [00:06<00:08,  3.38it/s] 45%|████▍     | 22/49 [00:06<00:08,  3.37it/s] 47%|████▋     | 23/49 [00:06<00:08,  3.24it/s] 49%|████▉     | 24/49 [00:07<00:07,  3.28it/s] 51%|█████     | 25/49 [00:07<00:07,  3.19it/s] 53%|█████▎    | 26/49 [00:07<00:07,  3.12it/s] 55%|█████▌    | 27/49 [00:08<00:06,  3.22it/s] 57%|█████▋    | 28/49 [00:08<00:06,  3.34it/s] 59%|█████▉    | 29/49 [00:08<00:05,  3.38it/s] 61%|██████    | 30/49 [00:09<00:05,  3.42it/s] 63%|██████▎   | 31/49 [00:09<00:05,  3.28it/s] 65%|██████▌   | 32/49 [00:09<00:05,  3.30it/s] 67%|██████▋   | 33/49 [00:09<00:04,  3.21it/s] 69%|██████▉   | 34/49 [00:10<00:04,  3.29it/s] 71%|███████▏  | 35/49 [00:10<00:04,  3.31it/s] 73%|███████▎  | 36/49 [00:10<00:03,  3.38it/s] 76%|███████▌  | 37/49 [00:11<00:03,  3.36it/s] 78%|███████▊  | 38/49 [00:11<00:03,  3.40it/s] 80%|███████▉  | 39/49 [00:11<00:02,  3.43it/s] 82%|████████▏ | 40/49 [00:11<00:02,  3.42it/s] 84%|████████▎ | 41/49 [00:12<00:02,  3.43it/s] 86%|████████▌ | 42/49 [00:12<00:02,  3.40it/s] 88%|████████▊ | 43/49 [00:12<00:01,  3.44it/s] 90%|████████▉ | 44/49 [00:13<00:01,  3.40it/s] 92%|█████████▏| 45/49 [00:13<00:01,  3.43it/s] 94%|█████████▍| 46/49 [00:13<00:00,  3.50it/s] 96%|█████████▌| 47/49 [00:14<00:00,  3.47it/s] 98%|█████████▊| 48/49 [00:14<00:00,  3.47it/s]100%|██████████| 49/49 [00:14<00:00,  3.48it/s]100%|██████████| 49/49 [00:14<00:00,  3.36it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:27:21,623] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+C C
+B C
+D A
+D C
+D A
+D A
+A A
+D A
+B B
+C A
+D A
+B A
+A A
+B A
+D C
+D A
+B B
+D A
+B B
+C A
+C B
+A A
+D A
+A A
+A A
+B B
+A B
+B A
+B A
+D B
+A B
+B A
+B B
+B B
+B A
+C B
+C C
+B A
+C A
+D A
+C A
+C B
+A A
+D A
+A B
+D A
+D A
+A A
+D A
+save result 0.30612244897959184 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/tax_accountant.json
+====================================================================================================
+run task: high_school_history
+Generating test split:   0%|          | 0/182 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 182/182 [00:00<00:00, 67221.15 examples/s]
+Generating val split:   0%|          | 0/20 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 20/20 [00:00<00:00, 12844.29 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3334.64 examples/s]
+  0%|          | 0/20 [00:00<?, ?it/s]  5%|▌         | 1/20 [00:00<00:04,  3.94it/s] 10%|█         | 2/20 [00:00<00:03,  4.61it/s] 15%|█▌        | 3/20 [00:00<00:03,  4.55it/s] 20%|██        | 4/20 [00:00<00:03,  4.28it/s] 25%|██▌       | 5/20 [00:01<00:03,  4.56it/s] 30%|███       | 6/20 [00:01<00:03,  4.66it/s] 35%|███▌      | 7/20 [00:01<00:02,  4.76it/s] 40%|████      | 8/20 [00:01<00:02,  4.83it/s] 45%|████▌     | 9/20 [00:01<00:02,  4.52it/s] 50%|█████     | 10/20 [00:02<00:02,  4.70it/s] 55%|█████▌    | 11/20 [00:02<00:01,  4.83it/s] 60%|██████    | 12/20 [00:02<00:01,  4.88it/s] 65%|██████▌   | 13/20 [00:02<00:01,  4.87it/s] 70%|███████   | 14/20 [00:03<00:01,  4.40it/s] 75%|███████▌  | 15/20 [00:03<00:01,  4.60it/s] 80%|████████  | 16/20 [00:03<00:00,  4.75it/s] 85%|████████▌ | 17/20 [00:03<00:00,  4.81it/s] 90%|█████████ | 18/20 [00:03<00:00,  4.88it/s] 95%|█████████▌| 19/20 [00:04<00:00,  4.95it/s]100%|██████████| 20/20 [00:04<00:00,  4.95it/s]100%|██████████| 20/20 [00:04<00:00,  4.72it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:27:30,257] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+B B
+A A
+A A
+C C
+B B
+A C
+C C
+C A
+B B
+A A
+C C
+C C
+B A
+B B
+B B
+A A
+A B
+C C
+C C
+D A
+save result 0.75 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/high_school_history.json
+====================================================================================================
+run task: mao_zedong_thought
+Generating test split:   0%|          | 0/219 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 219/219 [00:00<00:00, 90873.82 examples/s]
+Generating val split:   0%|          | 0/24 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 24/24 [00:00<00:00, 15410.79 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3337.82 examples/s]
+  0%|          | 0/24 [00:00<?, ?it/s]  4%|▍         | 1/24 [00:00<00:04,  5.70it/s]  8%|▊         | 2/24 [00:00<00:03,  5.74it/s] 12%|█▎        | 3/24 [00:00<00:03,  5.52it/s] 17%|█▋        | 4/24 [00:00<00:03,  5.38it/s] 21%|██        | 5/24 [00:00<00:03,  5.38it/s] 25%|██▌       | 6/24 [00:01<00:03,  5.49it/s] 29%|██▉       | 7/24 [00:01<00:03,  5.43it/s] 33%|███▎      | 8/24 [00:01<00:02,  5.52it/s] 38%|███▊      | 9/24 [00:01<00:02,  5.57it/s] 42%|████▏     | 10/24 [00:01<00:02,  5.40it/s] 46%|████▌     | 11/24 [00:02<00:02,  5.33it/s] 50%|█████     | 12/24 [00:02<00:02,  5.26it/s] 54%|█████▍    | 13/24 [00:02<00:02,  5.39it/s] 58%|█████▊    | 14/24 [00:02<00:01,  5.48it/s] 62%|██████▎   | 15/24 [00:02<00:01,  5.46it/s] 67%|██████▋   | 16/24 [00:02<00:01,  5.36it/s] 71%|███████   | 17/24 [00:03<00:01,  5.46it/s] 75%|███████▌  | 18/24 [00:03<00:01,  5.53it/s] 79%|███████▉  | 19/24 [00:03<00:00,  5.59it/s] 83%|████████▎ | 20/24 [00:03<00:00,  5.64it/s] 88%|████████▊ | 21/24 [00:03<00:00,  5.56it/s] 92%|█████████▏| 22/24 [00:04<00:00,  5.61it/s] 96%|█████████▌| 23/24 [00:04<00:00,  5.49it/s]100%|██████████| 24/24 [00:04<00:00,  5.38it/s]100%|██████████| 24/24 [00:04<00:00,  5.46it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:27:37,598] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+B B
+D A
+D B
+A B
+A A
+C C
+C B
+A A
+C C
+A A
+D B
+A A
+D A
+A A
+C D
+B B
+C C
+B A
+B B
+B B
+A A
+A A
+C A
+D A
+save result 0.5833333333333334 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/mao_zedong_thought.json
+====================================================================================================
+run task: high_school_mathematics
+Generating test split:   0%|          | 0/166 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 166/166 [00:00<00:00, 66278.39 examples/s]
+Generating val split:   0%|          | 0/18 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 18/18 [00:00<00:00, 11645.45 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3305.20 examples/s]
+  0%|          | 0/18 [00:00<?, ?it/s]  6%|▌         | 1/18 [00:00<00:04,  4.04it/s] 11%|█         | 2/18 [00:00<00:04,  3.76it/s] 17%|█▋        | 3/18 [00:00<00:03,  3.83it/s] 22%|██▏       | 4/18 [00:01<00:03,  3.80it/s] 28%|██▊       | 5/18 [00:01<00:03,  3.67it/s] 33%|███▎      | 6/18 [00:01<00:03,  3.76it/s] 39%|███▉      | 7/18 [00:01<00:02,  3.82it/s] 44%|████▍     | 8/18 [00:02<00:02,  3.74it/s] 50%|█████     | 9/18 [00:02<00:02,  3.82it/s] 56%|█████▌    | 10/18 [00:02<00:02,  3.68it/s] 61%|██████    | 11/18 [00:02<00:01,  3.78it/s] 67%|██████▋   | 12/18 [00:03<00:01,  3.69it/s] 72%|███████▏  | 13/18 [00:03<00:01,  3.67it/s] 78%|███████▊  | 14/18 [00:03<00:01,  3.65it/s] 83%|████████▎ | 15/18 [00:04<00:00,  3.63it/s] 89%|████████▉ | 16/18 [00:04<00:00,  3.61it/s] 94%|█████████▍| 17/18 [00:04<00:00,  3.73it/s]100%|██████████| 18/18 [00:04<00:00,  3.68it/s]100%|██████████| 18/18 [00:04<00:00,  3.72it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:27:45,055] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+C A
+B A
+D A
+C A
+D A
+B A
+D A
+D A
+A A
+C A
+D A
+B A
+A A
+D A
+D A
+A A
+A A
+C A
+save result 0.2222222222222222 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/high_school_mathematics.json
+====================================================================================================
+run task: professional_tour_guide
+Generating test split:   0%|          | 0/266 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 266/266 [00:00<00:00, 106692.63 examples/s]
+Generating val split:   0%|          | 0/29 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 29/29 [00:00<00:00, 18881.53 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3281.41 examples/s]
+  0%|          | 0/29 [00:00<?, ?it/s]  3%|▎         | 1/29 [00:00<00:04,  6.33it/s]  7%|▋         | 2/29 [00:00<00:04,  6.29it/s] 10%|█         | 3/29 [00:00<00:04,  6.33it/s] 14%|█▍        | 4/29 [00:00<00:03,  6.35it/s] 17%|█▋        | 5/29 [00:00<00:03,  6.14it/s] 21%|██        | 6/29 [00:00<00:03,  6.20it/s] 24%|██▍       | 7/29 [00:01<00:03,  6.20it/s] 28%|██▊       | 8/29 [00:01<00:03,  6.26it/s] 31%|███       | 9/29 [00:01<00:03,  6.33it/s] 34%|███▍      | 10/29 [00:01<00:02,  6.35it/s] 38%|███▊      | 11/29 [00:01<00:02,  6.36it/s] 41%|████▏     | 12/29 [00:01<00:02,  6.19it/s] 45%|████▍     | 13/29 [00:02<00:02,  6.22it/s] 48%|████▊     | 14/29 [00:02<00:02,  6.25it/s] 52%|█████▏    | 15/29 [00:02<00:02,  6.33it/s] 55%|█████▌    | 16/29 [00:02<00:02,  6.38it/s] 59%|█████▊    | 17/29 [00:02<00:01,  6.38it/s] 62%|██████▏   | 18/29 [00:02<00:01,  6.41it/s] 66%|██████▌   | 19/29 [00:03<00:01,  6.40it/s] 69%|██████▉   | 20/29 [00:03<00:01,  6.43it/s] 72%|███████▏  | 21/29 [00:03<00:01,  6.42it/s] 76%|███████▌  | 22/29 [00:03<00:01,  6.40it/s] 79%|███████▉  | 23/29 [00:03<00:00,  6.33it/s] 83%|████████▎ | 24/29 [00:03<00:00,  6.28it/s] 86%|████████▌ | 25/29 [00:03<00:00,  6.30it/s] 90%|████████▉ | 26/29 [00:04<00:00,  6.32it/s] 93%|█████████▎| 27/29 [00:04<00:00,  6.37it/s] 97%|█████████▋| 28/29 [00:04<00:00,  6.36it/s]100%|██████████| 29/29 [00:04<00:00,  6.31it/s]100%|██████████| 29/29 [00:04<00:00,  6.32it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:27:52,493] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+C A
+C C
+C A
+B B
+A A
+A B
+D A
+A A
+C C
+A A
+C A
+C A
+C C
+A B
+B A
+A A
+D D
+A A
+D D
+A A
+D B
+B C
+C B
+D A
+B A
+A A
+D B
+C C
+A A
+save result 0.5172413793103449 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/professional_tour_guide.json
+====================================================================================================
+run task: veterinary_medicine
+Generating test split:   0%|          | 0/210 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 210/210 [00:00<00:00, 84465.27 examples/s]
+Generating val split:   0%|          | 0/23 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 23/23 [00:00<00:00, 14714.61 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3380.32 examples/s]
+  0%|          | 0/23 [00:00<?, ?it/s]  4%|▍         | 1/23 [00:00<00:03,  5.80it/s]  9%|▊         | 2/23 [00:00<00:03,  6.02it/s] 13%|█▎        | 3/23 [00:00<00:03,  6.09it/s] 17%|█▋        | 4/23 [00:00<00:03,  6.13it/s] 22%|██▏       | 5/23 [00:00<00:02,  6.25it/s] 26%|██▌       | 6/23 [00:00<00:02,  6.32it/s] 30%|███       | 7/23 [00:01<00:02,  6.16it/s] 35%|███▍      | 8/23 [00:01<00:02,  5.81it/s] 39%|███▉      | 9/23 [00:01<00:02,  5.82it/s] 43%|████▎     | 10/23 [00:01<00:02,  5.82it/s] 48%|████▊     | 11/23 [00:01<00:02,  5.82it/s] 52%|█████▏    | 12/23 [00:02<00:01,  5.92it/s] 57%|█████▋    | 13/23 [00:02<00:01,  6.09it/s] 61%|██████    | 14/23 [00:02<00:01,  5.78it/s] 65%|██████▌   | 15/23 [00:02<00:01,  5.90it/s] 70%|██████▉   | 16/23 [00:02<00:01,  5.97it/s] 74%|███████▍  | 17/23 [00:02<00:00,  6.11it/s] 78%|███████▊  | 18/23 [00:02<00:00,  6.19it/s] 83%|████████▎ | 19/23 [00:03<00:00,  6.19it/s] 87%|████████▋ | 20/23 [00:03<00:00,  5.89it/s] 91%|█████████▏| 21/23 [00:03<00:00,  5.74it/s] 96%|█████████▌| 22/23 [00:03<00:00,  5.77it/s]100%|██████████| 23/23 [00:03<00:00,  5.96it/s]100%|██████████| 23/23 [00:03<00:00,  5.97it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:27:58,934] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+B A
+B A
+C A
+A A
+A A
+B D
+D A
+B C
+C A
+D B
+C C
+B B
+B B
+B B
+D C
+C C
+A B
+C C
+A C
+D B
+A A
+C A
+C A
+save result 0.391304347826087 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/veterinary_medicine.json
+====================================================================================================
+run task: environmental_impact_assessment_engineer
+Generating test split:   0%|          | 0/281 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 281/281 [00:00<00:00, 111251.60 examples/s]
+Generating val split:   0%|          | 0/31 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 31/31 [00:00<00:00, 19514.25 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3362.98 examples/s]
+  0%|          | 0/31 [00:00<?, ?it/s]  3%|▎         | 1/31 [00:00<00:05,  5.00it/s]  6%|▋         | 2/31 [00:00<00:06,  4.68it/s] 10%|▉         | 3/31 [00:00<00:06,  4.06it/s] 13%|█▎        | 4/31 [00:00<00:06,  4.34it/s] 16%|█▌        | 5/31 [00:01<00:06,  4.04it/s] 19%|█▉        | 6/31 [00:01<00:05,  4.36it/s] 23%|██▎       | 7/31 [00:01<00:05,  4.55it/s] 26%|██▌       | 8/31 [00:01<00:04,  4.69it/s] 29%|██▉       | 9/31 [00:01<00:04,  4.83it/s] 32%|███▏      | 10/31 [00:02<00:04,  4.87it/s] 35%|███▌      | 11/31 [00:02<00:04,  4.92it/s] 39%|███▊      | 12/31 [00:02<00:03,  4.99it/s] 42%|████▏     | 13/31 [00:02<00:04,  4.47it/s] 45%|████▌     | 14/31 [00:03<00:03,  4.66it/s] 48%|████▊     | 15/31 [00:03<00:03,  4.78it/s] 52%|█████▏    | 16/31 [00:03<00:03,  4.80it/s] 55%|█████▍    | 17/31 [00:03<00:03,  4.43it/s] 58%|█████▊    | 18/31 [00:03<00:02,  4.59it/s] 61%|██████▏   | 19/31 [00:04<00:02,  4.74it/s] 65%|██████▍   | 20/31 [00:04<00:02,  4.47it/s] 68%|██████▊   | 21/31 [00:04<00:02,  4.58it/s] 71%|███████   | 22/31 [00:04<00:01,  4.66it/s] 74%|███████▍  | 23/31 [00:05<00:01,  4.28it/s] 77%|███████▋  | 24/31 [00:05<00:01,  4.34it/s] 81%|████████  | 25/31 [00:05<00:01,  4.55it/s] 84%|████████▍ | 26/31 [00:05<00:01,  4.38it/s] 87%|████████▋ | 27/31 [00:05<00:00,  4.56it/s] 90%|█████████ | 28/31 [00:06<00:00,  4.69it/s] 94%|█████████▎| 29/31 [00:06<00:00,  4.63it/s] 97%|█████████▋| 30/31 [00:06<00:00,  4.40it/s]100%|██████████| 31/31 [00:06<00:00,  4.58it/s]100%|██████████| 31/31 [00:06<00:00,  4.57it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:28:08,793] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+B A
+B A
+D B
+B C
+B B
+C C
+C B
+A A
+A A
+C B
+C C
+C B
+D B
+A A
+A B
+C C
+D A
+C B
+B A
+C C
+C C
+B A
+B A
+D B
+B A
+D B
+D A
+D A
+A A
+B A
+B A
+save result 0.3225806451612903 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/environmental_impact_assessment_engineer.json
+====================================================================================================
+run task: basic_medicine
+Generating test split:   0%|          | 0/175 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 175/175 [00:00<00:00, 71715.02 examples/s]
+Generating val split:   0%|          | 0/19 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 19/19 [00:00<00:00, 12409.18 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3381.96 examples/s]
+  0%|          | 0/19 [00:00<?, ?it/s]  5%|▌         | 1/19 [00:00<00:02,  6.60it/s] 11%|█         | 2/19 [00:00<00:02,  6.77it/s] 16%|█▌        | 3/19 [00:00<00:02,  6.55it/s] 21%|██        | 4/19 [00:00<00:02,  6.47it/s] 26%|██▋       | 5/19 [00:00<00:02,  6.37it/s] 32%|███▏      | 6/19 [00:00<00:02,  6.38it/s] 37%|███▋      | 7/19 [00:01<00:01,  6.54it/s] 42%|████▏     | 8/19 [00:01<00:01,  6.65it/s] 47%|████▋     | 9/19 [00:01<00:01,  6.56it/s] 53%|█████▎    | 10/19 [00:01<00:01,  6.67it/s] 58%|█████▊    | 11/19 [00:01<00:01,  6.55it/s] 63%|██████▎   | 12/19 [00:01<00:01,  6.49it/s] 68%|██████▊   | 13/19 [00:01<00:00,  6.61it/s] 74%|███████▎  | 14/19 [00:02<00:00,  6.52it/s] 79%|███████▉  | 15/19 [00:02<00:00,  6.63it/s] 84%|████████▍ | 16/19 [00:02<00:00,  6.57it/s] 89%|████████▉ | 17/19 [00:02<00:00,  6.51it/s] 95%|█████████▍| 18/19 [00:02<00:00,  6.42it/s]100%|██████████| 19/19 [00:02<00:00,  6.41it/s]100%|██████████| 19/19 [00:02<00:00,  6.52it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:28:14,096] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+D D
+C C
+D C
+B B
+D B
+C A
+B B
+D C
+B A
+C C
+A A
+C B
+B B
+D C
+D A
+D B
+D A
+B B
+B C
+save result 0.42105263157894735 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/basic_medicine.json
+====================================================================================================
+run task: education_science
+Generating test split:   0%|          | 0/270 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 270/270 [00:00<00:00, 105728.88 examples/s]
+Generating val split:   0%|          | 0/29 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 29/29 [00:00<00:00, 18609.98 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3382.50 examples/s]
+  0%|          | 0/29 [00:00<?, ?it/s]  3%|▎         | 1/29 [00:00<00:04,  6.19it/s]  7%|▋         | 2/29 [00:00<00:04,  6.19it/s] 10%|█         | 3/29 [00:00<00:04,  6.18it/s] 14%|█▍        | 4/29 [00:00<00:04,  6.05it/s] 17%|█▋        | 5/29 [00:00<00:03,  6.13it/s] 21%|██        | 6/29 [00:00<00:03,  6.15it/s] 24%|██▍       | 7/29 [00:01<00:03,  6.16it/s] 28%|██▊       | 8/29 [00:01<00:03,  6.17it/s] 31%|███       | 9/29 [00:01<00:03,  6.18it/s] 34%|███▍      | 10/29 [00:01<00:03,  6.21it/s] 38%|███▊      | 11/29 [00:01<00:02,  6.23it/s] 41%|████▏     | 12/29 [00:01<00:02,  6.24it/s] 45%|████▍     | 13/29 [00:02<00:02,  6.23it/s] 48%|████▊     | 14/29 [00:02<00:02,  6.11it/s] 52%|█████▏    | 15/29 [00:02<00:02,  5.88it/s] 55%|█████▌    | 16/29 [00:02<00:02,  5.88it/s] 59%|█████▊    | 17/29 [00:02<00:02,  5.97it/s] 62%|██████▏   | 18/29 [00:02<00:01,  6.03it/s] 66%|██████▌   | 19/29 [00:03<00:01,  5.95it/s] 69%|██████▉   | 20/29 [00:03<00:01,  5.90it/s] 72%|███████▏  | 21/29 [00:03<00:01,  6.01it/s] 76%|███████▌  | 22/29 [00:03<00:01,  6.06it/s] 79%|███████▉  | 23/29 [00:03<00:01,  5.96it/s] 83%|████████▎ | 24/29 [00:03<00:00,  5.90it/s] 86%|████████▌ | 25/29 [00:04<00:00,  5.98it/s] 90%|████████▉ | 26/29 [00:04<00:00,  5.94it/s] 93%|█████████▎| 27/29 [00:04<00:00,  5.91it/s] 97%|█████████▋| 28/29 [00:04<00:00,  6.01it/s]100%|██████████| 29/29 [00:04<00:00,  5.82it/s]100%|██████████| 29/29 [00:04<00:00,  6.02it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:28:21,507] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+B B
+A C
+B B
+C A
+D C
+D A
+D A
+B B
+A B
+A A
+B A
+D D
+A A
+D C
+C A
+B A
+A A
+B A
+A A
+C C
+B A
+D A
+D B
+D B
+B B
+B B
+B B
+B A
+A A
+save result 0.4482758620689655 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/education_science.json
+====================================================================================================
+run task: urban_and_rural_planner
+Generating test split:   0%|          | 0/418 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 418/418 [00:00<00:00, 159050.99 examples/s]
+Generating val split:   0%|          | 0/46 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 46/46 [00:00<00:00, 29357.58 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3270.16 examples/s]
+  0%|          | 0/46 [00:00<?, ?it/s]  2%|▏         | 1/46 [00:00<00:08,  5.05it/s]  4%|▍         | 2/46 [00:00<00:08,  5.00it/s]  7%|▋         | 3/46 [00:00<00:08,  5.06it/s]  9%|▊         | 4/46 [00:00<00:08,  5.05it/s] 11%|█         | 5/46 [00:00<00:08,  5.03it/s] 13%|█▎        | 6/46 [00:01<00:07,  5.03it/s] 15%|█▌        | 7/46 [00:01<00:07,  5.06it/s] 17%|█▋        | 8/46 [00:01<00:07,  5.08it/s] 20%|█▉        | 9/46 [00:01<00:07,  5.07it/s] 22%|██▏       | 10/46 [00:02<00:08,  4.50it/s] 24%|██▍       | 11/46 [00:02<00:07,  4.65it/s] 26%|██▌       | 12/46 [00:02<00:07,  4.71it/s] 28%|██▊       | 13/46 [00:02<00:06,  4.83it/s] 30%|███       | 14/46 [00:02<00:07,  4.38it/s] 33%|███▎      | 15/46 [00:03<00:06,  4.56it/s] 35%|███▍      | 16/46 [00:03<00:06,  4.68it/s] 37%|███▋      | 17/46 [00:03<00:06,  4.80it/s] 39%|███▉      | 18/46 [00:03<00:05,  4.90it/s] 41%|████▏     | 19/46 [00:03<00:05,  4.97it/s] 43%|████▎     | 20/46 [00:04<00:05,  4.97it/s] 46%|████▌     | 21/46 [00:04<00:05,  4.40it/s] 48%|████▊     | 22/46 [00:04<00:05,  4.29it/s] 50%|█████     | 23/46 [00:04<00:05,  4.49it/s] 52%|█████▏    | 24/46 [00:05<00:05,  4.19it/s] 54%|█████▍    | 25/46 [00:05<00:04,  4.43it/s] 57%|█████▋    | 26/46 [00:05<00:04,  4.05it/s] 59%|█████▊    | 27/46 [00:05<00:04,  4.29it/s] 61%|██████    | 28/46 [00:06<00:04,  4.49it/s] 63%|██████▎   | 29/46 [00:06<00:03,  4.62it/s] 65%|██████▌   | 30/46 [00:06<00:03,  4.76it/s] 67%|██████▋   | 31/46 [00:06<00:03,  4.78it/s] 70%|██████▉   | 32/46 [00:06<00:02,  4.87it/s] 72%|███████▏  | 33/46 [00:07<00:02,  4.92it/s] 74%|███████▍  | 34/46 [00:07<00:02,  4.94it/s] 76%|███████▌  | 35/46 [00:07<00:02,  4.96it/s] 78%|███████▊  | 36/46 [00:07<00:02,  4.98it/s] 80%|████████  | 37/46 [00:07<00:01,  4.99it/s] 83%|████████▎ | 38/46 [00:08<00:01,  5.04it/s] 85%|████████▍ | 39/46 [00:08<00:01,  5.03it/s] 87%|████████▋ | 40/46 [00:08<00:01,  4.45it/s] 89%|████████▉ | 41/46 [00:08<00:01,  4.60it/s] 91%|█████████▏| 42/46 [00:08<00:00,  4.56it/s] 93%|█████████▎| 43/46 [00:09<00:00,  4.69it/s] 96%|█████████▌| 44/46 [00:09<00:00,  4.81it/s] 98%|█████████▊| 45/46 [00:09<00:00,  4.90it/s]100%|██████████| 46/46 [00:09<00:00,  4.94it/s]100%|██████████| 46/46 [00:09<00:00,  4.74it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:28:33,787] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+A A
+B A
+C A
+B B
+D A
+B B
+A C
+D A
+B B
+D A
+B B
+B B
+A A
+C A
+A D
+A A
+A A
+D D
+A A
+B B
+B A
+B B
+B A
+D B
+A A
+B B
+B B
+A A
+C B
+C C
+D A
+B B
+D B
+C A
+D A
+C A
+B A
+A A
+D D
+D B
+D B
+C C
+D B
+B A
+B B
+D B
+save result 0.5 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/urban_and_rural_planner.json
+====================================================================================================
+run task: middle_school_biology
+Generating test split:   0%|          | 0/192 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 192/192 [00:00<00:00, 82157.35 examples/s]
+Generating val split:   0%|          | 0/21 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 21/21 [00:00<00:00, 10762.51 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3345.81 examples/s]
+  0%|          | 0/21 [00:00<?, ?it/s]  5%|▍         | 1/21 [00:00<00:03,  5.72it/s] 10%|▉         | 2/21 [00:00<00:03,  5.53it/s] 14%|█▍        | 3/21 [00:00<00:03,  5.64it/s] 19%|█▉        | 4/21 [00:00<00:03,  5.44it/s] 24%|██▍       | 5/21 [00:00<00:02,  5.34it/s] 29%|██▊       | 6/21 [00:01<00:02,  5.47it/s] 33%|███▎      | 7/21 [00:01<00:02,  5.54it/s] 38%|███▊      | 8/21 [00:01<00:02,  5.36it/s] 43%|████▎     | 9/21 [00:01<00:02,  5.49it/s] 48%|████▊     | 10/21 [00:01<00:01,  5.57it/s] 52%|█████▏    | 11/21 [00:02<00:01,  5.43it/s] 57%|█████▋    | 12/21 [00:02<00:01,  5.32it/s] 62%|██████▏   | 13/21 [00:02<00:01,  5.27it/s] 67%|██████▋   | 14/21 [00:02<00:01,  5.24it/s] 71%|███████▏  | 15/21 [00:02<00:01,  5.38it/s] 76%|███████▌  | 16/21 [00:02<00:00,  5.49it/s] 81%|████████  | 17/21 [00:03<00:00,  5.56it/s] 86%|████████▌ | 18/21 [00:03<00:00,  5.61it/s] 90%|█████████ | 19/21 [00:03<00:00,  5.43it/s] 95%|█████████▌| 20/21 [00:03<00:00,  5.35it/s]100%|██████████| 21/21 [00:03<00:00,  5.37it/s]100%|██████████| 21/21 [00:03<00:00,  5.43it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:28:40,979] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+C C
+B C
+B B
+C C
+D D
+B B
+A C
+C C
+B B
+B C
+B C
+B B
+D C
+C C
+A A
+A B
+C C
+D D
+D A
+C C
+A A
+save result 0.6666666666666666 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/middle_school_biology.json
+====================================================================================================
+run task: plant_protection
+Generating test split:   0%|          | 0/199 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 199/199 [00:00<00:00, 90675.34 examples/s]
+Generating val split:   0%|          | 0/22 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 22/22 [00:00<00:00, 14128.72 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3338.35 examples/s]
+  0%|          | 0/22 [00:00<?, ?it/s]  5%|▍         | 1/22 [00:00<00:03,  6.91it/s]  9%|▉         | 2/22 [00:00<00:03,  6.56it/s] 14%|█▎        | 3/22 [00:00<00:02,  6.48it/s] 18%|█▊        | 4/22 [00:00<00:02,  6.41it/s] 23%|██▎       | 5/22 [00:00<00:02,  6.45it/s] 27%|██▋       | 6/22 [00:00<00:02,  6.43it/s] 32%|███▏      | 7/22 [00:01<00:02,  6.41it/s] 36%|███▋      | 8/22 [00:01<00:02,  6.43it/s] 41%|████      | 9/22 [00:01<00:02,  6.42it/s] 45%|████▌     | 10/22 [00:01<00:01,  6.41it/s] 50%|█████     | 11/22 [00:01<00:01,  6.40it/s] 55%|█████▍    | 12/22 [00:01<00:01,  6.42it/s] 59%|█████▉    | 13/22 [00:02<00:01,  6.41it/s] 64%|██████▎   | 14/22 [00:02<00:01,  6.56it/s] 68%|██████▊   | 15/22 [00:02<00:01,  6.52it/s] 73%|███████▎  | 16/22 [00:02<00:00,  6.51it/s] 77%|███████▋  | 17/22 [00:02<00:00,  6.60it/s] 82%|████████▏ | 18/22 [00:02<00:00,  6.69it/s] 86%|████████▋ | 19/22 [00:02<00:00,  6.75it/s] 91%|█████████ | 20/22 [00:03<00:00,  6.61it/s] 95%|█████████▌| 21/22 [00:03<00:00,  6.56it/s]100%|██████████| 22/22 [00:03<00:00,  6.66it/s]100%|██████████| 22/22 [00:03<00:00,  6.53it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:28:46,894] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+B B
+A A
+A A
+A B
+C C
+D C
+B A
+C A
+A A
+D B
+C C
+C C
+B B
+A A
+B C
+B A
+B B
+A B
+D B
+B B
+B A
+A A
+save result 0.5454545454545454 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/plant_protection.json
+====================================================================================================
+run task: middle_school_history
+Generating test split:   0%|          | 0/207 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 207/207 [00:00<00:00, 90354.97 examples/s]
+Generating val split:   0%|          | 0/22 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 22/22 [00:00<00:00, 14330.59 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3391.25 examples/s]
+  0%|          | 0/22 [00:00<?, ?it/s]  5%|▍         | 1/22 [00:00<00:03,  5.87it/s]  9%|▉         | 2/22 [00:00<00:03,  6.04it/s] 14%|█▎        | 3/22 [00:00<00:03,  5.96it/s] 18%|█▊        | 4/22 [00:00<00:02,  6.14it/s] 23%|██▎       | 5/22 [00:00<00:02,  6.00it/s] 27%|██▋       | 6/22 [00:00<00:02,  6.07it/s] 32%|███▏      | 7/22 [00:01<00:02,  6.10it/s] 36%|███▋      | 8/22 [00:01<00:02,  6.00it/s] 41%|████      | 9/22 [00:01<00:02,  5.94it/s] 45%|████▌     | 10/22 [00:01<00:02,  5.91it/s] 50%|█████     | 11/22 [00:01<00:01,  6.02it/s] 55%|█████▍    | 12/22 [00:02<00:01,  5.94it/s] 59%|█████▉    | 13/22 [00:02<00:01,  5.88it/s] 64%|██████▎   | 14/22 [00:02<00:01,  5.85it/s] 68%|██████▊   | 15/22 [00:02<00:01,  5.95it/s] 73%|███████▎  | 16/22 [00:02<00:01,  5.74it/s] 77%|███████▋  | 17/22 [00:02<00:00,  5.86it/s] 82%|████████▏ | 18/22 [00:03<00:00,  5.96it/s] 86%|████████▋ | 19/22 [00:03<00:00,  6.02it/s] 91%|█████████ | 20/22 [00:03<00:00,  6.07it/s] 95%|█████████▌| 21/22 [00:03<00:00,  6.10it/s]100%|██████████| 22/22 [00:03<00:00,  6.13it/s]100%|██████████| 22/22 [00:03<00:00,  5.99it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:28:53,072] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+D D
+A A
+D B
+C B
+A A
+D B
+B B
+D A
+B B
+B B
+C D
+C C
+D B
+B B
+D D
+D B
+A A
+B B
+A A
+D C
+B A
+D D
+save result 0.5909090909090909 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/middle_school_history.json
+====================================================================================================
+run task: high_school_politics
+Generating test split:   0%|          | 0/176 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 176/176 [00:00<00:00, 67483.09 examples/s]
+Generating val split:   0%|          | 0/19 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 19/19 [00:00<00:00, 12248.97 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3303.12 examples/s]
+  0%|          | 0/19 [00:00<?, ?it/s]  5%|▌         | 1/19 [00:00<00:06,  2.71it/s] 11%|█         | 2/19 [00:00<00:06,  2.66it/s] 16%|█▌        | 3/19 [00:01<00:06,  2.65it/s] 21%|██        | 4/19 [00:01<00:05,  2.66it/s] 26%|██▋       | 5/19 [00:01<00:05,  2.65it/s] 32%|███▏      | 6/19 [00:02<00:04,  2.64it/s] 37%|███▋      | 7/19 [00:02<00:04,  2.62it/s] 42%|████▏     | 8/19 [00:03<00:04,  2.64it/s] 47%|████▋     | 9/19 [00:03<00:03,  2.62it/s] 53%|█████▎    | 10/19 [00:03<00:03,  2.67it/s] 58%|█████▊    | 11/19 [00:04<00:03,  2.64it/s] 63%|██████▎   | 12/19 [00:04<00:02,  2.64it/s] 68%|██████▊   | 13/19 [00:04<00:02,  2.59it/s] 74%|███████▎  | 14/19 [00:05<00:01,  2.62it/s] 79%|███████▉  | 15/19 [00:05<00:01,  2.60it/s] 84%|████████▍ | 16/19 [00:06<00:01,  2.61it/s] 89%|████████▉ | 17/19 [00:06<00:00,  2.62it/s] 95%|█████████▍| 18/19 [00:06<00:00,  2.63it/s]100%|██████████| 19/19 [00:07<00:00,  2.64it/s]100%|██████████| 19/19 [00:07<00:00,  2.63it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:29:02,787] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+C C
+C A
+A A
+C C
+C B
+C C
+A A
+D A
+C C
+B B
+B B
+C C
+B B
+C C
+A B
+C C
+A A
+C A
+C C
+save result 0.7368421052631579 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/high_school_politics.json
+====================================================================================================
+run task: metrology_engineer
+Generating test split:   0%|          | 0/219 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 219/219 [00:00<00:00, 94355.68 examples/s]
+Generating val split:   0%|          | 0/24 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 24/24 [00:00<00:00, 15157.85 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3320.91 examples/s]
+  0%|          | 0/24 [00:00<?, ?it/s]  4%|▍         | 1/24 [00:00<00:04,  5.02it/s]  8%|▊         | 2/24 [00:00<00:04,  5.09it/s] 12%|█▎        | 3/24 [00:00<00:04,  5.11it/s] 17%|█▋        | 4/24 [00:00<00:03,  5.15it/s] 21%|██        | 5/24 [00:00<00:03,  5.18it/s] 25%|██▌       | 6/24 [00:01<00:03,  5.18it/s] 29%|██▉       | 7/24 [00:01<00:03,  5.11it/s] 33%|███▎      | 8/24 [00:01<00:03,  4.72it/s] 38%|███▊      | 9/24 [00:01<00:03,  4.87it/s] 42%|████▏     | 10/24 [00:02<00:02,  4.91it/s] 46%|████▌     | 11/24 [00:02<00:02,  5.01it/s] 50%|█████     | 12/24 [00:02<00:02,  5.04it/s] 54%|█████▍    | 13/24 [00:02<00:02,  4.65it/s] 58%|█████▊    | 14/24 [00:02<00:02,  4.81it/s] 62%|██████▎   | 15/24 [00:03<00:01,  4.88it/s] 67%|██████▋   | 16/24 [00:03<00:01,  4.95it/s] 71%|███████   | 17/24 [00:03<00:01,  4.92it/s] 75%|███████▌  | 18/24 [00:03<00:01,  4.99it/s] 79%|███████▉  | 19/24 [00:03<00:00,  5.04it/s] 83%|████████▎ | 20/24 [00:04<00:00,  5.07it/s] 88%|████████▊ | 21/24 [00:04<00:00,  5.12it/s] 92%|█████████▏| 22/24 [00:04<00:00,  5.15it/s] 96%|█████████▌| 23/24 [00:04<00:00,  5.15it/s]100%|██████████| 24/24 [00:04<00:00,  5.17it/s]100%|██████████| 24/24 [00:04<00:00,  5.02it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:29:11,072] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+D A
+A A
+D A
+D C
+B B
+C C
+B B
+C B
+D A
+C C
+B C
+B B
+D A
+B B
+C A
+C C
+D A
+C A
+B B
+D B
+A A
+A A
+C A
+D B
+save result 0.4583333333333333 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/metrology_engineer.json
+====================================================================================================
+run task: art_studies
+Generating test split:   0%|          | 0/298 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 298/298 [00:00<00:00, 111053.10 examples/s]
+Generating val split:   0%|          | 0/33 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 33/33 [00:00<00:00, 21505.91 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3230.36 examples/s]
+  0%|          | 0/33 [00:00<?, ?it/s]  3%|▎         | 1/33 [00:00<00:05,  6.32it/s]  6%|▌         | 2/33 [00:00<00:04,  6.33it/s]  9%|▉         | 3/33 [00:00<00:04,  6.57it/s] 12%|█▏        | 4/33 [00:00<00:04,  6.48it/s] 15%|█▌        | 5/33 [00:00<00:04,  6.62it/s] 18%|█▊        | 6/33 [00:00<00:04,  6.54it/s] 21%|██        | 7/33 [00:01<00:04,  6.49it/s] 24%|██▍       | 8/33 [00:01<00:03,  6.46it/s] 27%|██▋       | 9/33 [00:01<00:03,  6.41it/s] 30%|███       | 10/33 [00:01<00:03,  6.39it/s] 33%|███▎      | 11/33 [00:01<00:03,  6.42it/s] 36%|███▋      | 12/33 [00:01<00:03,  6.41it/s] 39%|███▉      | 13/33 [00:02<00:03,  6.55it/s] 42%|████▏     | 14/33 [00:02<00:02,  6.53it/s] 45%|████▌     | 15/33 [00:02<00:02,  6.49it/s] 48%|████▊     | 16/33 [00:02<00:02,  6.61it/s] 52%|█████▏    | 17/33 [00:02<00:02,  6.54it/s] 55%|█████▍    | 18/33 [00:02<00:02,  6.50it/s] 58%|█████▊    | 19/33 [00:02<00:02,  6.61it/s] 61%|██████    | 20/33 [00:03<00:01,  6.54it/s] 64%|██████▎   | 21/33 [00:03<00:01,  6.47it/s] 67%|██████▋   | 22/33 [00:03<00:01,  6.59it/s] 70%|██████▉   | 23/33 [00:03<00:01,  6.53it/s] 73%|███████▎  | 24/33 [00:03<00:01,  6.54it/s] 76%|███████▌  | 25/33 [00:03<00:01,  6.49it/s] 79%|███████▉  | 26/33 [00:04<00:01,  6.46it/s] 82%|████████▏ | 27/33 [00:04<00:00,  6.44it/s] 85%|████████▍ | 28/33 [00:04<00:00,  6.42it/s] 88%|████████▊ | 29/33 [00:04<00:00,  6.56it/s] 91%|█████████ | 30/33 [00:04<00:00,  6.51it/s] 94%|█████████▍| 31/33 [00:04<00:00,  6.45it/s] 97%|█████████▋| 32/33 [00:04<00:00,  6.45it/s]100%|██████████| 33/33 [00:05<00:00,  6.36it/s]100%|██████████| 33/33 [00:05<00:00,  6.48it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:29:18,649] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+A A
+A A
+C A
+C A
+A A
+C C
+A A
+A A
+C D
+B B
+C B
+D B
+A A
+A B
+B C
+D B
+B B
+A A
+B B
+A B
+A A
+A A
+D B
+A A
+D A
+B A
+A A
+D A
+A A
+D D
+A A
+C A
+B B
+save result 0.5757575757575758 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/art_studies.json
+====================================================================================================
+run task: college_economics
+Generating test split:   0%|          | 0/497 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 497/497 [00:00<00:00, 183001.41 examples/s]
+Generating val split:   0%|          | 0/55 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 55/55 [00:00<00:00, 34873.28 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3326.17 examples/s]
+  0%|          | 0/55 [00:00<?, ?it/s]  2%|▏         | 1/55 [00:00<00:09,  5.42it/s]  4%|▎         | 2/55 [00:00<00:09,  5.58it/s]  5%|▌         | 3/55 [00:00<00:09,  5.38it/s]  7%|▋         | 4/55 [00:00<00:09,  5.51it/s]  9%|▉         | 5/55 [00:00<00:08,  5.59it/s] 11%|█         | 6/55 [00:01<00:09,  5.44it/s] 13%|█▎        | 7/55 [00:01<00:09,  5.31it/s] 15%|█▍        | 8/55 [00:01<00:08,  5.42it/s] 16%|█▋        | 9/55 [00:01<00:08,  5.30it/s] 18%|█▊        | 10/55 [00:01<00:08,  5.33it/s] 20%|██        | 11/55 [00:02<00:08,  5.36it/s] 22%|██▏       | 12/55 [00:02<00:07,  5.48it/s] 24%|██▎       | 13/55 [00:02<00:07,  5.56it/s] 25%|██▌       | 14/55 [00:02<00:07,  5.65it/s] 27%|██▋       | 15/55 [00:02<00:07,  5.68it/s] 29%|██▉       | 16/55 [00:02<00:06,  5.58it/s] 31%|███       | 17/55 [00:03<00:06,  5.63it/s] 33%|███▎      | 18/55 [00:03<00:06,  5.66it/s] 35%|███▍      | 19/55 [00:03<00:06,  5.71it/s] 36%|███▋      | 20/55 [00:03<00:06,  5.72it/s] 38%|███▊      | 21/55 [00:03<00:05,  5.72it/s] 40%|████      | 22/55 [00:03<00:05,  5.76it/s] 42%|████▏     | 23/55 [00:04<00:05,  5.78it/s] 44%|████▎     | 24/55 [00:04<00:05,  5.79it/s] 45%|████▌     | 25/55 [00:04<00:05,  5.80it/s] 47%|████▋     | 26/55 [00:04<00:05,  5.78it/s] 49%|████▉     | 27/55 [00:04<00:05,  5.57it/s] 51%|█████     | 28/55 [00:05<00:04,  5.62it/s] 53%|█████▎    | 29/55 [00:05<00:04,  5.51it/s] 55%|█████▍    | 30/55 [00:05<00:04,  5.57it/s] 56%|█████▋    | 31/55 [00:05<00:04,  5.63it/s] 58%|█████▊    | 32/55 [00:05<00:04,  5.44it/s] 60%|██████    | 33/55 [00:05<00:03,  5.55it/s] 62%|██████▏   | 34/55 [00:06<00:03,  5.51it/s] 64%|██████▎   | 35/55 [00:06<00:03,  5.59it/s] 65%|██████▌   | 36/55 [00:06<00:03,  5.64it/s] 67%|██████▋   | 37/55 [00:06<00:03,  5.53it/s] 69%|██████▉   | 38/55 [00:06<00:03,  5.59it/s] 71%|███████   | 39/55 [00:06<00:02,  5.63it/s] 73%|███████▎  | 40/55 [00:07<00:02,  5.48it/s] 75%|███████▍  | 41/55 [00:07<00:02,  5.27it/s] 76%|███████▋  | 42/55 [00:07<00:02,  4.56it/s] 78%|███████▊  | 43/55 [00:07<00:02,  4.75it/s] 80%|████████  | 44/55 [00:08<00:02,  4.87it/s] 82%|████████▏ | 45/55 [00:08<00:01,  5.10it/s] 84%|████████▎ | 46/55 [00:08<00:01,  5.29it/s] 85%|████████▌ | 47/55 [00:08<00:01,  5.33it/s] 87%|████████▋ | 48/55 [00:08<00:01,  5.47it/s] 89%|████████▉ | 49/55 [00:08<00:01,  5.56it/s] 91%|█████████ | 50/55 [00:09<00:00,  5.48it/s] 93%|█████████▎| 51/55 [00:09<00:00,  5.46it/s] 95%|█████████▍| 52/55 [00:09<00:00,  5.54it/s] 96%|█████████▋| 53/55 [00:09<00:00,  5.60it/s] 98%|█████████▊| 54/55 [00:09<00:00,  5.65it/s]100%|██████████| 55/55 [00:10<00:00,  5.50it/s]100%|██████████| 55/55 [00:10<00:00,  5.49it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:29:31,121] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+B B
+C A
+D A
+B B
+A A
+D A
+D B
+C C
+A A
+C A
+A A
+B A
+B B
+A A
+B A
+A A
+A A
+C B
+B B
+A B
+C C
+A A
+C A
+A A
+D A
+C A
+A A
+A B
+D D
+A A
+D B
+D B
+A A
+C A
+B A
+B B
+B A
+B B
+C A
+A A
+C A
+A B
+C A
+D C
+A A
+D A
+B B
+B A
+D B
+D A
+B A
+B A
+B B
+C C
+C A
+save result 0.45454545454545453 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/college_economics.json
+====================================================================================================
+run task: college_chemistry
+Generating test split:   0%|          | 0/224 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 224/224 [00:00<00:00, 86194.87 examples/s]
+Generating val split:   0%|          | 0/24 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 24/24 [00:00<00:00, 15312.34 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3313.04 examples/s]
+  0%|          | 0/24 [00:00<?, ?it/s]  4%|▍         | 1/24 [00:00<00:03,  6.49it/s]  8%|▊         | 2/24 [00:00<00:03,  6.06it/s] 12%|█▎        | 3/24 [00:00<00:03,  6.18it/s] 17%|█▋        | 4/24 [00:00<00:03,  6.21it/s] 21%|██        | 5/24 [00:00<00:03,  6.22it/s] 25%|██▌       | 6/24 [00:00<00:02,  6.31it/s] 29%|██▉       | 7/24 [00:01<00:02,  6.27it/s] 33%|███▎      | 8/24 [00:01<00:02,  6.33it/s] 38%|███▊      | 9/24 [00:01<00:02,  6.17it/s] 42%|████▏     | 10/24 [00:01<00:02,  6.18it/s] 46%|████▌     | 11/24 [00:01<00:02,  6.03it/s] 50%|█████     | 12/24 [00:01<00:01,  6.11it/s] 54%|█████▍    | 13/24 [00:02<00:01,  6.03it/s] 58%|█████▊    | 14/24 [00:02<00:01,  6.11it/s] 62%|██████▎   | 15/24 [00:02<00:01,  6.03it/s] 67%|██████▋   | 16/24 [00:02<00:01,  6.16it/s] 71%|███████   | 17/24 [00:02<00:01,  6.21it/s] 75%|███████▌  | 18/24 [00:02<00:00,  6.25it/s] 79%|███████▉  | 19/24 [00:03<00:00,  6.27it/s] 83%|████████▎ | 20/24 [00:03<00:00,  6.24it/s] 88%|████████▊ | 21/24 [00:03<00:00,  6.31it/s] 92%|█████████▏| 22/24 [00:03<00:00,  6.37it/s] 96%|█████████▌| 23/24 [00:03<00:00,  6.40it/s]100%|██████████| 24/24 [00:03<00:00,  6.38it/s]100%|██████████| 24/24 [00:03<00:00,  6.23it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:29:37,884] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+C C
+B A
+C A
+B A
+A A
+D A
+D A
+B A
+D A
+D A
+B A
+C A
+D D
+C A
+C C
+B B
+A A
+C A
+A A
+D A
+B A
+B B
+D B
+A A
+save result 0.375 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/college_chemistry.json
+====================================================================================================
+run task: law
+Generating test split:   0%|          | 0/221 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 221/221 [00:00<00:00, 83855.72 examples/s]
+Generating val split:   0%|          | 0/24 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 24/24 [00:00<00:00, 15215.13 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3303.12 examples/s]
+  0%|          | 0/24 [00:00<?, ?it/s]  4%|▍         | 1/24 [00:00<00:06,  3.62it/s]  8%|▊         | 2/24 [00:00<00:06,  3.62it/s] 12%|█▎        | 3/24 [00:00<00:05,  3.61it/s] 17%|█▋        | 4/24 [00:01<00:05,  3.66it/s] 21%|██        | 5/24 [00:01<00:05,  3.59it/s] 25%|██▌       | 6/24 [00:01<00:05,  3.51it/s] 29%|██▉       | 7/24 [00:01<00:04,  3.63it/s] 33%|███▎      | 8/24 [00:02<00:04,  3.58it/s] 38%|███▊      | 9/24 [00:02<00:04,  3.52it/s] 42%|████▏     | 10/24 [00:02<00:03,  3.85it/s] 46%|████▌     | 11/24 [00:02<00:03,  3.87it/s] 50%|█████     | 12/24 [00:03<00:03,  3.83it/s] 54%|█████▍    | 13/24 [00:03<00:02,  3.73it/s] 58%|█████▊    | 14/24 [00:03<00:02,  3.69it/s] 62%|██████▎   | 15/24 [00:04<00:02,  3.97it/s] 67%|██████▋   | 16/24 [00:04<00:02,  3.82it/s] 71%|███████   | 17/24 [00:04<00:01,  3.75it/s] 75%|███████▌  | 18/24 [00:04<00:01,  3.66it/s] 79%|███████▉  | 19/24 [00:05<00:01,  3.61it/s] 83%|████████▎ | 20/24 [00:05<00:01,  3.61it/s] 88%|████████▊ | 21/24 [00:05<00:00,  3.61it/s] 92%|█████████▏| 22/24 [00:06<00:00,  3.52it/s] 96%|█████████▌| 23/24 [00:06<00:00,  3.48it/s]100%|██████████| 24/24 [00:06<00:00,  3.52it/s]100%|██████████| 24/24 [00:06<00:00,  3.65it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:29:49,019] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+C B
+D A
+D B
+A A
+D B
+D A
+A B
+D B
+A B
+A A
+C B
+C A
+D A
+C A
+B A
+B A
+D A
+B B
+A A
+C B
+D A
+C A
+D A
+C C
+save result 0.20833333333333334 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/law.json
+====================================================================================================
+run task: sports_science
+Generating test split:   0%|          | 0/180 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 180/180 [00:00<00:00, 75907.37 examples/s]
+Generating val split:   0%|          | 0/19 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 19/19 [00:00<00:00, 12233.92 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3189.10 examples/s]
+  0%|          | 0/19 [00:00<?, ?it/s]  5%|▌         | 1/19 [00:00<00:02,  7.50it/s] 11%|█         | 2/19 [00:00<00:02,  7.51it/s] 16%|█▌        | 3/19 [00:00<00:02,  7.52it/s] 21%|██        | 4/19 [00:00<00:02,  7.03it/s] 26%|██▋       | 5/19 [00:00<00:02,  6.87it/s] 32%|███▏      | 6/19 [00:00<00:01,  6.70it/s] 37%|███▋      | 7/19 [00:01<00:01,  6.77it/s] 42%|████▏     | 8/19 [00:01<00:01,  6.81it/s] 47%|████▋     | 9/19 [00:01<00:01,  6.69it/s] 53%|█████▎    | 10/19 [00:01<00:01,  6.76it/s] 58%|█████▊    | 11/19 [00:01<00:01,  6.98it/s] 63%|██████▎   | 12/19 [00:01<00:00,  7.15it/s] 68%|██████▊   | 13/19 [00:01<00:00,  6.71it/s] 74%|███████▎  | 14/19 [00:02<00:00,  6.93it/s] 79%|███████▉  | 15/19 [00:02<00:00,  7.10it/s] 84%|████████▍ | 16/19 [00:02<00:00,  7.23it/s] 89%|████████▉ | 17/19 [00:02<00:00,  6.93it/s] 95%|█████████▍| 18/19 [00:02<00:00,  6.92it/s]100%|██████████| 19/19 [00:02<00:00,  7.09it/s]100%|██████████| 19/19 [00:02<00:00,  6.98it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:29:54,888] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+C A
+C C
+D A
+C C
+D A
+C A
+D B
+C A
+C C
+A A
+C C
+B B
+C A
+D B
+C A
+B A
+C C
+D D
+A A
+save result 0.47368421052631576 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/sports_science.json
+====================================================================================================
+run task: civil_servant
+Generating test split:   0%|          | 0/429 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 429/429 [00:00<00:00, 135524.32 examples/s]
+Generating val split:   0%|          | 0/47 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 47/47 [00:00<00:00, 29493.16 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3330.40 examples/s]
+  0%|          | 0/47 [00:00<?, ?it/s]  2%|▏         | 1/47 [00:00<00:15,  2.96it/s]  4%|▍         | 2/47 [00:00<00:15,  2.99it/s]  6%|▋         | 3/47 [00:01<00:14,  2.98it/s]  9%|▊         | 4/47 [00:01<00:13,  3.11it/s] 11%|█         | 5/47 [00:01<00:13,  3.03it/s] 13%|█▎        | 6/47 [00:01<00:13,  3.12it/s] 15%|█▍        | 7/47 [00:02<00:12,  3.19it/s] 17%|█▋        | 8/47 [00:02<00:12,  3.09it/s] 19%|█▉        | 9/47 [00:02<00:12,  2.94it/s] 21%|██▏       | 10/47 [00:03<00:12,  2.92it/s] 23%|██▎       | 11/47 [00:03<00:12,  2.95it/s] 26%|██▌       | 12/47 [00:03<00:11,  2.97it/s] 28%|██▊       | 13/47 [00:04<00:11,  2.98it/s] 30%|██▉       | 14/47 [00:04<00:11,  2.96it/s] 32%|███▏      | 15/47 [00:04<00:10,  2.97it/s] 34%|███▍      | 16/47 [00:05<00:10,  2.88it/s] 36%|███▌      | 17/47 [00:05<00:10,  2.85it/s] 38%|███▊      | 18/47 [00:06<00:10,  2.80it/s] 40%|████      | 19/47 [00:06<00:09,  2.82it/s] 43%|████▎     | 20/47 [00:06<00:09,  2.88it/s] 45%|████▍     | 21/47 [00:07<00:09,  2.89it/s] 47%|████▋     | 22/47 [00:07<00:08,  2.80it/s] 49%|████▉     | 23/47 [00:07<00:08,  2.94it/s] 51%|█████     | 24/47 [00:08<00:07,  2.95it/s] 53%|█████▎    | 25/47 [00:08<00:07,  2.96it/s] 55%|█████▌    | 26/47 [00:08<00:07,  2.87it/s] 57%|█████▋    | 27/47 [00:09<00:06,  2.90it/s] 60%|█████▉    | 28/47 [00:09<00:06,  2.84it/s] 62%|██████▏   | 29/47 [00:09<00:06,  2.97it/s] 64%|██████▍   | 30/47 [00:10<00:05,  2.88it/s] 66%|██████▌   | 31/47 [00:10<00:05,  2.81it/s] 68%|██████▊   | 32/47 [00:10<00:05,  2.95it/s] 70%|███████   | 33/47 [00:11<00:04,  2.96it/s] 72%|███████▏  | 34/47 [00:11<00:04,  2.95it/s] 74%|███████▍  | 35/47 [00:11<00:03,  3.11it/s] 77%|███████▋  | 36/47 [00:12<00:03,  3.00it/s] 79%|███████▊  | 37/47 [00:12<00:03,  3.14it/s] 81%|████████  | 38/47 [00:12<00:02,  3.06it/s] 83%|████████▎ | 39/47 [00:13<00:02,  3.14it/s] 85%|████████▌ | 40/47 [00:13<00:02,  3.06it/s] 87%|████████▋ | 41/47 [00:13<00:01,  3.02it/s] 89%|████████▉ | 42/47 [00:14<00:01,  2.90it/s] 91%|█████████▏| 43/47 [00:14<00:01,  2.92it/s] 94%|█████████▎| 44/47 [00:14<00:01,  2.95it/s] 96%|█████████▌| 45/47 [00:15<00:00,  2.94it/s] 98%|█████████▊| 46/47 [00:15<00:00,  2.86it/s]100%|██████████| 47/47 [00:15<00:00,  2.81it/s]100%|██████████| 47/47 [00:15<00:00,  2.94it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:30:13,583] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+D A
+D B
+C C
+C A
+A B
+C A
+D A
+C C
+A B
+D A
+C A
+C C
+A B
+A A
+D A
+C A
+A B
+B A
+D C
+D A
+A A
+C A
+C A
+D A
+C A
+C C
+C B
+C C
+D A
+C A
+D C
+A A
+C A
+B A
+B B
+B B
+B B
+C B
+B A
+A A
+D A
+A A
+A A
+D A
+A B
+A A
+D A
+save result 0.3191489361702128 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/civil_servant.json
+====================================================================================================
+run task: college_programming
+Generating test split:   0%|          | 0/342 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 342/342 [00:00<00:00, 109100.39 examples/s]
+Generating val split:   0%|          | 0/37 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 37/37 [00:00<00:00, 20500.56 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3124.95 examples/s]
+  0%|          | 0/37 [00:00<?, ?it/s]  3%|▎         | 1/37 [00:00<00:06,  5.21it/s]  5%|▌         | 2/37 [00:00<00:06,  5.52it/s]  8%|▊         | 3/37 [00:00<00:06,  5.28it/s] 11%|█         | 4/37 [00:00<00:06,  5.24it/s] 14%|█▎        | 5/37 [00:00<00:06,  5.21it/s] 16%|█▌        | 6/37 [00:01<00:05,  5.38it/s] 19%|█▉        | 7/37 [00:01<00:05,  5.25it/s] 22%|██▏       | 8/37 [00:01<00:05,  5.39it/s] 24%|██▍       | 9/37 [00:01<00:05,  5.52it/s] 27%|██▋       | 10/37 [00:01<00:04,  5.58it/s] 30%|██▉       | 11/37 [00:02<00:04,  5.63it/s] 32%|███▏      | 12/37 [00:02<00:04,  5.66it/s] 35%|███▌      | 13/37 [00:02<00:04,  5.57it/s] 38%|███▊      | 14/37 [00:02<00:04,  5.64it/s] 41%|████      | 15/37 [00:02<00:03,  5.68it/s] 43%|████▎     | 16/37 [00:02<00:03,  5.70it/s] 46%|████▌     | 17/37 [00:03<00:03,  5.73it/s] 49%|████▊     | 18/37 [00:03<00:03,  5.74it/s] 51%|█████▏    | 19/37 [00:03<00:03,  5.56it/s] 54%|█████▍    | 20/37 [00:03<00:03,  5.61it/s] 57%|█████▋    | 21/37 [00:03<00:02,  5.46it/s] 59%|█████▉    | 22/37 [00:03<00:02,  5.55it/s] 62%|██████▏   | 23/37 [00:04<00:02,  5.43it/s] 65%|██████▍   | 24/37 [00:04<00:02,  5.53it/s] 68%|██████▊   | 25/37 [00:04<00:02,  5.61it/s] 70%|███████   | 26/37 [00:04<00:02,  5.47it/s] 73%|███████▎  | 27/37 [00:04<00:01,  5.38it/s] 76%|███████▌  | 28/37 [00:05<00:01,  5.32it/s] 78%|███████▊  | 29/37 [00:05<00:01,  5.45it/s] 81%|████████  | 30/37 [00:05<00:01,  5.53it/s] 84%|████████▍ | 31/37 [00:05<00:01,  5.60it/s] 86%|████████▋ | 32/37 [00:05<00:00,  5.64it/s] 89%|████████▉ | 33/37 [00:05<00:00,  5.57it/s] 92%|█████████▏| 34/37 [00:06<00:00,  5.62it/s] 95%|█████████▍| 35/37 [00:06<00:00,  5.56it/s] 97%|█████████▋| 36/37 [00:06<00:00,  5.33it/s]100%|██████████| 37/37 [00:06<00:00,  5.44it/s]100%|██████████| 37/37 [00:06<00:00,  5.51it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:30:23,073] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+B B
+C A
+B A
+B A
+D A
+C A
+C B
+B A
+A A
+C B
+D A
+D A
+D B
+B B
+C A
+D A
+B B
+A A
+C A
+A B
+A A
+D B
+B A
+A D
+B A
+B A
+A A
+D A
+B A
+A A
+C A
+A A
+B A
+B A
+B B
+D A
+A A
+save result 0.2972972972972973 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/college_programming.json
+====================================================================================================
+run task: middle_school_politics
+Generating test split:   0%|          | 0/193 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 193/193 [00:00<00:00, 74884.43 examples/s]
+Generating val split:   0%|          | 0/21 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 21/21 [00:00<00:00, 13624.19 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3295.85 examples/s]
+  0%|          | 0/21 [00:00<?, ?it/s]  5%|▍         | 1/21 [00:00<00:05,  3.67it/s] 10%|▉         | 2/21 [00:00<00:05,  3.46it/s] 14%|█▍        | 3/21 [00:00<00:05,  3.43it/s] 19%|█▉        | 4/21 [00:01<00:04,  3.42it/s] 24%|██▍       | 5/21 [00:01<00:04,  3.41it/s] 29%|██▊       | 6/21 [00:01<00:04,  3.40it/s] 33%|███▎      | 7/21 [00:02<00:04,  3.43it/s] 38%|███▊      | 8/21 [00:02<00:03,  3.40it/s] 43%|████▎     | 9/21 [00:02<00:03,  3.42it/s] 48%|████▊     | 10/21 [00:02<00:03,  3.49it/s] 52%|█████▏    | 11/21 [00:03<00:02,  3.50it/s] 57%|█████▋    | 12/21 [00:03<00:02,  3.46it/s] 62%|██████▏   | 13/21 [00:03<00:02,  3.47it/s] 67%|██████▋   | 14/21 [00:04<00:02,  3.47it/s] 71%|███████▏  | 15/21 [00:04<00:01,  3.49it/s] 76%|███████▌  | 16/21 [00:04<00:01,  3.48it/s] 81%|████████  | 17/21 [00:04<00:01,  3.48it/s] 86%|████████▌ | 18/21 [00:05<00:00,  3.48it/s] 90%|█████████ | 19/21 [00:05<00:00,  3.48it/s] 95%|█████████▌| 20/21 [00:05<00:00,  3.49it/s]100%|██████████| 21/21 [00:06<00:00,  3.49it/s]100%|██████████| 21/21 [00:06<00:00,  3.47it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:30:31,889] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+B A
+C C
+A A
+B B
+A A
+C C
+A A
+D A
+B B
+C A
+A A
+D A
+D C
+B B
+C C
+C A
+A A
+A A
+B B
+D A
+C C
+save result 0.6666666666666666 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/middle_school_politics.json
+====================================================================================================
+run task: teacher_qualification
+Generating test split:   0%|          | 0/399 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 399/399 [00:00<00:00, 154641.22 examples/s]
+Generating val split:   0%|          | 0/44 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 44/44 [00:00<00:00, 27818.72 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3304.68 examples/s]
+  0%|          | 0/44 [00:00<?, ?it/s]  2%|▏         | 1/44 [00:00<00:07,  5.84it/s]  5%|▍         | 2/44 [00:00<00:07,  5.76it/s]  7%|▋         | 3/44 [00:00<00:07,  5.54it/s]  9%|▉         | 4/44 [00:00<00:07,  5.38it/s] 11%|█▏        | 5/44 [00:00<00:07,  5.36it/s] 14%|█▎        | 6/44 [00:01<00:07,  5.28it/s] 16%|█▌        | 7/44 [00:01<00:06,  5.30it/s] 18%|█▊        | 8/44 [00:01<00:06,  5.44it/s] 20%|██        | 9/44 [00:01<00:06,  5.53it/s] 23%|██▎       | 10/44 [00:01<00:06,  5.41it/s] 25%|██▌       | 11/44 [00:02<00:05,  5.53it/s] 27%|██▋       | 12/44 [00:02<00:05,  5.62it/s] 30%|██▉       | 13/44 [00:02<00:05,  5.56it/s] 32%|███▏      | 14/44 [00:02<00:05,  5.63it/s] 34%|███▍      | 15/44 [00:02<00:05,  5.69it/s] 36%|███▋      | 16/44 [00:02<00:05,  5.52it/s] 39%|███▊      | 17/44 [00:03<00:04,  5.60it/s] 41%|████      | 18/44 [00:03<00:04,  5.46it/s] 43%|████▎     | 19/44 [00:03<00:04,  5.37it/s] 45%|████▌     | 20/44 [00:03<00:04,  5.30it/s] 48%|████▊     | 21/44 [00:03<00:04,  5.26it/s] 50%|█████     | 22/44 [00:04<00:04,  5.43it/s] 52%|█████▏    | 23/44 [00:04<00:03,  5.53it/s] 55%|█████▍    | 24/44 [00:04<00:03,  5.41it/s] 57%|█████▋    | 25/44 [00:04<00:03,  5.50it/s] 59%|█████▉    | 26/44 [00:04<00:03,  5.29it/s] 61%|██████▏   | 27/44 [00:04<00:03,  5.42it/s] 64%|██████▎   | 28/44 [00:05<00:02,  5.52it/s] 66%|██████▌   | 29/44 [00:05<00:02,  5.59it/s] 68%|██████▊   | 30/44 [00:05<00:02,  5.63it/s] 70%|███████   | 31/44 [00:05<00:02,  5.65it/s] 73%|███████▎  | 32/44 [00:05<00:02,  5.71it/s] 75%|███████▌  | 33/44 [00:05<00:01,  5.74it/s] 77%|███████▋  | 34/44 [00:06<00:01,  5.73it/s] 80%|███████▉  | 35/44 [00:06<00:01,  5.54it/s] 82%|████████▏ | 36/44 [00:06<00:01,  5.60it/s] 84%|████████▍ | 37/44 [00:06<00:01,  5.66it/s] 86%|████████▋ | 38/44 [00:06<00:01,  5.69it/s] 89%|████████▊ | 39/44 [00:07<00:00,  5.71it/s] 91%|█████████ | 40/44 [00:07<00:00,  5.50it/s] 93%|█████████▎| 41/44 [00:07<00:00,  5.41it/s] 95%|█████████▌| 42/44 [00:07<00:00,  5.41it/s] 98%|█████████▊| 43/44 [00:07<00:00,  5.54it/s]100%|██████████| 44/44 [00:07<00:00,  5.46it/s]100%|██████████| 44/44 [00:07<00:00,  5.51it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:30:43,018] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+C B
+B B
+A A
+A A
+D A
+B B
+D C
+C C
+D D
+C C
+B B
+B A
+A A
+C C
+D D
+D B
+A A
+B A
+B C
+A A
+A A
+D A
+A A
+D A
+B B
+A B
+B B
+C C
+A A
+A A
+C C
+B B
+D D
+C B
+B A
+D B
+D A
+C C
+A A
+B B
+B C
+A A
+A A
+C A
+save result 0.6363636363636364 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/teacher_qualification.json
+====================================================================================================
+run task: computer_architecture
+Generating test split:   0%|          | 0/193 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 193/193 [00:00<00:00, 78615.20 examples/s]
+Generating val split:   0%|          | 0/21 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 21/21 [00:00<00:00, 13624.19 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3333.57 examples/s]
+  0%|          | 0/21 [00:00<?, ?it/s]  5%|▍         | 1/21 [00:00<00:03,  5.24it/s] 10%|▉         | 2/21 [00:00<00:03,  5.20it/s] 14%|█▍        | 3/21 [00:00<00:03,  5.11it/s] 19%|█▉        | 4/21 [00:00<00:03,  5.09it/s] 24%|██▍       | 5/21 [00:01<00:03,  4.85it/s] 29%|██▊       | 6/21 [00:01<00:03,  4.91it/s] 33%|███▎      | 7/21 [00:01<00:02,  4.96it/s] 38%|███▊      | 8/21 [00:01<00:02,  4.99it/s] 43%|████▎     | 9/21 [00:01<00:02,  5.02it/s] 48%|████▊     | 10/21 [00:01<00:02,  5.08it/s] 52%|█████▏    | 11/21 [00:02<00:01,  5.08it/s] 57%|█████▋    | 12/21 [00:02<00:01,  5.11it/s] 62%|██████▏   | 13/21 [00:02<00:01,  5.14it/s] 67%|██████▋   | 14/21 [00:02<00:01,  5.15it/s] 71%|███████▏  | 15/21 [00:02<00:01,  5.16it/s] 76%|███████▌  | 16/21 [00:03<00:00,  5.18it/s] 81%|████████  | 17/21 [00:03<00:00,  5.17it/s] 86%|████████▌ | 18/21 [00:03<00:00,  5.14it/s] 90%|█████████ | 19/21 [00:03<00:00,  5.11it/s] 95%|█████████▌| 20/21 [00:03<00:00,  5.10it/s]100%|██████████| 21/21 [00:04<00:00,  5.09it/s]100%|██████████| 21/21 [00:04<00:00,  5.08it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:30:49,617] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+B A
+A A
+B B
+C B
+A A
+B A
+B A
+D A
+D A
+C A
+B B
+B A
+B B
+C A
+D A
+A A
+A B
+B A
+A A
+D A
+A A
+save result 0.38095238095238093 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/computer_architecture.json
+====================================================================================================
+run task: college_physics
+Generating test split:   0%|          | 0/176 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 176/176 [00:00<00:00, 72693.01 examples/s]
+Generating val split:   0%|          | 0/19 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 19/19 [00:00<00:00, 12239.56 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3328.28 examples/s]
+  0%|          | 0/19 [00:00<?, ?it/s]  5%|▌         | 1/19 [00:00<00:03,  5.00it/s] 11%|█         | 2/19 [00:00<00:04,  4.07it/s] 16%|█▌        | 3/19 [00:00<00:04,  3.84it/s] 21%|██        | 4/19 [00:01<00:03,  3.87it/s] 26%|██▋       | 5/19 [00:01<00:03,  3.93it/s] 32%|███▏      | 6/19 [00:01<00:03,  4.21it/s] 37%|███▋      | 7/19 [00:01<00:02,  4.16it/s] 42%|████▏     | 8/19 [00:01<00:02,  4.36it/s] 47%|████▋     | 9/19 [00:02<00:02,  4.09it/s] 53%|█████▎    | 10/19 [00:02<00:02,  4.08it/s] 58%|█████▊    | 11/19 [00:02<00:01,  4.07it/s] 63%|██████▎   | 12/19 [00:02<00:01,  4.32it/s] 68%|██████▊   | 13/19 [00:03<00:01,  4.08it/s] 74%|███████▎  | 14/19 [00:03<00:01,  4.28it/s] 79%|███████▉  | 15/19 [00:03<00:00,  4.06it/s] 84%|████████▍ | 16/19 [00:03<00:00,  4.18it/s] 89%|████████▉ | 17/19 [00:04<00:00,  4.11it/s] 95%|█████████▍| 18/19 [00:04<00:00,  4.31it/s]100%|██████████| 19/19 [00:04<00:00,  4.07it/s]100%|██████████| 19/19 [00:04<00:00,  4.13it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:30:57,510] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+A A
+B A
+C A
+C A
+C B
+D A
+A A
+A A
+B B
+A B
+C B
+C A
+C A
+C A
+D A
+D B
+B A
+B A
+C A
+save result 0.21052631578947367 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/college_physics.json
+====================================================================================================
+run task: discrete_mathematics
+Generating test split:   0%|          | 0/153 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 153/153 [00:00<00:00, 63386.85 examples/s]
+Generating val split:   0%|          | 0/16 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 16/16 [00:00<00:00, 10181.89 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3286.04 examples/s]
+  0%|          | 0/16 [00:00<?, ?it/s]  6%|▋         | 1/16 [00:00<00:01,  7.55it/s] 12%|█▎        | 2/16 [00:00<00:01,  7.52it/s] 19%|█▉        | 3/16 [00:00<00:01,  6.93it/s] 25%|██▌       | 4/16 [00:00<00:01,  6.76it/s] 31%|███▏      | 5/16 [00:00<00:01,  6.70it/s] 38%|███▊      | 6/16 [00:00<00:01,  7.09it/s] 44%|████▍     | 7/16 [00:00<00:01,  7.22it/s] 50%|█████     | 8/16 [00:01<00:01,  7.33it/s] 56%|█████▋    | 9/16 [00:01<00:00,  7.41it/s] 62%|██████▎   | 10/16 [00:01<00:00,  7.44it/s] 69%|██████▉   | 11/16 [00:01<00:00,  7.60it/s] 75%|███████▌  | 12/16 [00:01<00:00,  7.21it/s] 81%|████████▏ | 13/16 [00:01<00:00,  6.92it/s] 88%|████████▊ | 14/16 [00:01<00:00,  6.91it/s] 94%|█████████▍| 15/16 [00:02<00:00,  7.21it/s]100%|██████████| 16/16 [00:02<00:00,  7.34it/s]100%|██████████| 16/16 [00:02<00:00,  7.20it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:31:02,245] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+B A
+A B
+D A
+C B
+D B
+D A
+A A
+B A
+A A
+A A
+C B
+A B
+D A
+D B
+A B
+D A
+save result 0.1875 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/discrete_mathematics.json
+====================================================================================================
+run task: marxism
+Generating test split:   0%|          | 0/179 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 179/179 [00:00<00:00, 79054.48 examples/s]
+Generating val split:   0%|          | 0/19 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 19/19 [00:00<00:00, 12469.38 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3231.86 examples/s]
+  0%|          | 0/19 [00:00<?, ?it/s]  5%|▌         | 1/19 [00:00<00:03,  5.75it/s] 11%|█         | 2/19 [00:00<00:02,  5.81it/s] 16%|█▌        | 3/19 [00:00<00:02,  5.83it/s] 21%|██        | 4/19 [00:00<00:02,  5.84it/s] 26%|██▋       | 5/19 [00:00<00:02,  5.84it/s] 32%|███▏      | 6/19 [00:01<00:02,  5.81it/s] 37%|███▋      | 7/19 [00:01<00:02,  5.83it/s] 42%|████▏     | 8/19 [00:01<00:01,  5.83it/s] 47%|████▋     | 9/19 [00:01<00:01,  5.83it/s] 53%|█████▎    | 10/19 [00:01<00:01,  5.60it/s] 58%|█████▊    | 11/19 [00:01<00:01,  5.67it/s] 63%|██████▎   | 12/19 [00:02<00:01,  5.69it/s] 68%|██████▊   | 13/19 [00:02<00:01,  5.85it/s] 74%|███████▎  | 14/19 [00:02<00:00,  5.84it/s] 79%|███████▉  | 15/19 [00:02<00:00,  5.85it/s] 84%|████████▍ | 16/19 [00:02<00:00,  5.85it/s] 89%|████████▉ | 17/19 [00:02<00:00,  5.83it/s] 95%|█████████▍| 18/19 [00:03<00:00,  5.95it/s]100%|██████████| 19/19 [00:03<00:00,  5.90it/s]100%|██████████| 19/19 [00:03<00:00,  5.82it/s]
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2025-09-29 13:31:08,234] [   ERROR] load.py:1367 - `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'ceval/ceval-exam' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+D A
+C B
+C B
+C C
+A B
+B B
+D A
+A B
+C A
+B B
+B A
+D A
+A A
+A A
+C C
+B B
+D D
+C C
+A A
+save result 0.5263157894736842 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/marxism.json
+====================================================================================================
+run task: accountant
+Generating test split:   0%|          | 0/443 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 443/443 [00:00<00:00, 158932.23 examples/s]
+Generating val split:   0%|          | 0/49 [00:00<?, ? examples/s]Generating val split: 100%|██████████| 49/49 [00:00<00:00, 29729.62 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3352.23 examples/s]
+  0%|          | 0/49 [00:00<?, ?it/s]  2%|▏         | 1/49 [00:00<00:13,  3.58it/s]  4%|▍         | 2/49 [00:00<00:13,  3.48it/s]  6%|▌         | 3/49 [00:00<00:12,  3.72it/s]  8%|▊         | 4/49 [00:01<00:11,  3.81it/s] 10%|█         | 5/49 [00:01<00:11,  3.89it/s] 12%|█▏        | 6/49 [00:01<00:11,  3.80it/s] 14%|█▍        | 7/49 [00:01<00:11,  3.69it/s] 16%|█▋        | 8/49 [00:02<00:11,  3.59it/s] 18%|█▊        | 9/49 [00:02<00:11,  3.59it/s] 20%|██        | 10/49 [00:02<00:10,  3.60it/s] 22%|██▏       | 11/49 [00:03<00:10,  3.57it/s] 24%|██▍       | 12/49 [00:03<00:10,  3.50it/s] 27%|██▋       | 13/49 [00:03<00:10,  3.53it/s] 29%|██▊       | 14/49 [00:03<00:09,  3.65it/s] 31%|███       | 15/49 [00:04<00:09,  3.63it/s] 33%|███▎      | 16/49 [00:04<00:09,  3.58it/s] 35%|███▍      | 17/49 [00:04<00:08,  3.59it/s] 37%|███▋      | 18/49 [00:04<00:08,  3.55it/s] 39%|███▉      | 19/49 [00:05<00:08,  3.56it/s] 41%|████      | 20/49 [00:05<00:08,  3.48it/s] 43%|████▎     | 21/49 [00:05<00:08,  3.43it/s] 45%|████▍     | 22/49 [00:06<00:07,  3.60it/s] 47%|████▋     | 23/49 [00:06<00:07,  3.60it/s] 49%|████▉     | 24/49 [00:06<00:06,  3.70it/s] 51%|█████     | 25/49 [00:06<00:07,  3.43it/s] 53%|█████▎    | 26/49 [00:07<00:07,  3.25it/s] 55%|█████▌    | 27/49 [00:07<00:06,  3.31it/s] 57%|█████▋    | 28/49 [00:07<00:06,  3.39it/s] 59%|█████▉    | 29/49 [00:08<00:05,  3.49it/s] 61%|██████    | 30/49 [00:08<00:05,  3.53it/s] 63%|██████▎   | 31/49 [00:08<00:05,  3.52it/s] 65%|██████▌   | 32/49 [00:08<00:04,  3.55it/s] 67%|██████▋   | 33/49 [00:09<00:04,  3.55it/s] 69%|██████▉   | 34/49 [00:09<00:04,  3.53it/s] 71%|███████▏  | 35/49 [00:09<00:03,  3.52it/s] 73%|███████▎  | 36/49 [00:10<00:03,  3.67it/s] 76%|███████▌  | 37/49 [00:10<00:03,  3.61it/s] 78%|███████▊  | 38/49 [00:10<00:02,  3.73it/s] 80%|███████▉  | 39/49 [00:10<00:02,  3.70it/s] 82%|████████▏ | 40/49 [00:11<00:02,  3.58it/s] 84%|████████▎ | 41/49 [00:11<00:02,  3.52it/s] 86%|████████▌ | 42/49 [00:11<00:02,  3.35it/s] 88%|████████▊ | 43/49 [00:12<00:01,  3.51it/s] 90%|████████▉ | 44/49 [00:12<00:01,  3.50it/s] 92%|█████████▏| 45/49 [00:12<00:01,  3.53it/s] 94%|█████████▍| 46/49 [00:12<00:00,  3.51it/s] 96%|█████████▌| 47/49 [00:13<00:00,  3.54it/s] 98%|█████████▊| 48/49 [00:13<00:00,  3.53it/s]100%|██████████| 49/49 [00:13<00:00,  3.67it/s]100%|██████████| 49/49 [00:13<00:00,  3.56it/s]
+D D
+C C
+D A
+A A
+C C
+A B
+C A
+C A
+B B
+C A
+A B
+D A
+B A
+A A
+D C
+B B
+C A
+A A
+C A
+C A
+D A
+D A
+D A
+D A
+D A
+C A
+C A
+D A
+B A
+A A
+D A
+A A
+C B
+B B
+C C
+D C
+B A
+C C
+B B
+A A
+D C
+A A
+D A
+B A
+C A
+A A
+A A
+D B
+D B
+save result 0.3673469387755102 to /root/ckpts/yulan3_base_xpu_sft/results/ceval/accountant.json
+STEM: 36.3
+Other: 39.8
+Humanity: 45.9
+Social Science: 51.6
+Average Acc: 42.1

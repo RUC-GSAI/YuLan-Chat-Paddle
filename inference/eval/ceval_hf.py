@@ -9,6 +9,7 @@ import torch
 from datasets import load_dataset
 from transformers import (
     AutoModelForCausalLM,
+    LlamaForCausalLM,
     AutoTokenizer,
     PreTrainedModel,
     PreTrainedTokenizerBase,
@@ -192,7 +193,8 @@ class CEval:
     @torch.no_grad()
     def run_single_task(self, task_name: str, shot: int, split: str):
         # dataset = load_dataset(f"/home/huyiwen/yulan/data/hf-ceval/ceval___ceval-exam/{task_name}")
-        dataset = load_dataset("/home/huyiwen/.cache/huggingface/hub/datasets--ceval--ceval-exam/snapshots/3923b519fd180e689d0961bf3a032ece929742f3/ceval-exam.py", task_name)
+        dataset = load_dataset("ceval/ceval-exam", task_name)
+        # dataset = load_dataset("/home/huyiwen/.cache/huggingface/hub/datasets--ceval--ceval-exam/snapshots/3923b519fd180e689d0961bf3a032ece929742f3/ceval-exam.py", task_name)
         results = []
         acc = 0
         for data in tqdm(dataset[split]):
@@ -202,7 +204,8 @@ class CEval:
                 for i in range(min(shot, len(shuffled))):
                     prompt += "\n" + self.build_example(shuffled[i], with_answer=True)
             prompt += "\n" + self.build_example(data, with_answer=False)
-            input_ids = self.tokenizer.encode(prompt, return_tensors="pt").cuda()
+            # input_ids = self.tokenizer.encode(prompt, return_tensors="pt").cuda()
+            input_ids = self.tokenizer.encode(prompt, return_tensors="pt").to('cuda')
 
             logits = self.model(
                     input_ids=input_ids,
@@ -254,7 +257,7 @@ def main():
     torch.cuda.manual_seed_all(seed)
     args = parse_argument()
 
-    model = AutoModelForCausalLM.from_pretrained(
+    model = LlamaForCausalLM.from_pretrained(
         args.model,
         trust_remote_code=True,
         device_map="auto",
@@ -269,6 +272,9 @@ def main():
         add_eos_token=False,
         padding_side="left",
     )
+    print('Finish Loading Model and Tokenizer')
+    print(model)
+
     ceval = CEval(model, tokenizer, args.output_dir)
     ceval.run(args.shot, args.split)
 

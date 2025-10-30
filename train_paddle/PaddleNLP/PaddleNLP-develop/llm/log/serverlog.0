@@ -1,0 +1,424 @@
+/usr/local/lib/python3.10/site-packages/paddle/utils/cpp_extension/extension_utils.py:715: UserWarning: No ccache found. Please be aware that recompiling all source files may be required. You can download and install ccache from: https://github.com/ccache/ccache/blob/master/doc/INSTALL.md
+  warnings.warn(warning_message)
+I0824 23:40:54.414642 3115661 init.cc:238] ENV [CUSTOM_DEVICE_ROOT]=/usr/local/lib/python3.10/site-packages/paddle_custom_device
+I0824 23:40:54.414731 3115661 init.cc:146] Try loading custom device libs from: [/usr/local/lib/python3.10/site-packages/paddle_custom_device]
+I0824 23:40:54.585953 3115661 custom_device_load.cc:51] Succeed in loading custom runtime in lib: /usr/local/lib/python3.10/site-packages/paddle_custom_device/libpaddle-iluvatar-gpu.so
+I0824 23:40:54.586024 3115661 custom_device_load.cc:58] Skipped lib [/usr/local/lib/python3.10/site-packages/paddle_custom_device/libpaddle-iluvatar-gpu.so]: no custom engine Plugin symbol in this lib.
+I0824 23:40:54.591430 3115661 custom_kernel.cc:68] Succeed in loading 314 custom kernel(s) from loaded lib(s), will be used like native ones.
+I0824 23:40:54.591697 3115661 init.cc:158] Finished in LoadCustomDevice with libs_path: [/usr/local/lib/python3.10/site-packages/paddle_custom_device]
+I0824 23:40:54.591740 3115661 init.cc:244] CustomDevice: iluvatar_gpu, visible devices count: 16
+/usr/local/lib/python3.10/site-packages/_distutils_hack/__init__.py:26: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+[33m[2025-08-24 23:40:58,128] [ WARNING][0m - evaluation_strategy reset to IntervalStrategy.STEPS for do_eval is True. you can also set evaluation_strategy='epoch'.[0m
+/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/training_args.py:1193: UserWarning: We set `distributed_dataloader` to False if tp_degree <= 1 and pp_degree <= 1
+  warnings.warn("We set `distributed_dataloader` to False if tp_degree <= 1 and pp_degree <= 1")
+[2025-08-24 23:40:58,130] [    INFO] distributed_strategy.py:333 - distributed strategy initialized
+======================= Modified FLAGS detected =======================
+FLAGS(name='FLAGS_enable_pir_in_executor', current_value=True, default_value=False)
+=======================================================================
+Traceback (most recent call last):
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/llm/run_pretrain_new.py", line 598, in <module>
+    main()
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/llm/run_pretrain_new.py", line 354, in main
+    model_args, data_args, training_args = parser.parse_json_file_and_cmd_lines()
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/argparser.py", line 324, in parse_json_file_and_cmd_lines
+    return self.common_parse(args, return_remaining_strings)
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/argparser.py", line 249, in common_parse
+    obj = dtype(**inputs)
+  File "<string>", line 155, in __init__
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/llm/run_pretrain_new.py", line 88, in __post_init__
+    super().__post_init__()
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/training_args.py", line 1544, in __post_init__
+    fleet.init(is_collective=True, strategy=strategy)
+  File "/usr/local/lib/python3.10/site-packages/paddle/distributed/fleet/fleet.py", line 337, in init
+    paddle.distributed.init_parallel_env()
+  File "/usr/local/lib/python3.10/site-packages/paddle/distributed/parallel.py", line 1085, in init_parallel_env
+    _check_var_exists("PADDLE_TRAINER_ID")
+  File "/usr/local/lib/python3.10/site-packages/paddle/distributed/parallel.py", line 956, in _check_var_exists
+    raise ValueError(
+ValueError: paddle.distributed initialize error, environment variable PADDLE_TRAINER_ID is needed, but not set.
+/usr/local/lib/python3.10/site-packages/paddle/utils/cpp_extension/extension_utils.py:715: UserWarning: No ccache found. Please be aware that recompiling all source files may be required. You can download and install ccache from: https://github.com/ccache/ccache/blob/master/doc/INSTALL.md
+  warnings.warn(warning_message)
+I0824 23:42:25.170183 3116330 init.cc:238] ENV [CUSTOM_DEVICE_ROOT]=/usr/local/lib/python3.10/site-packages/paddle_custom_device
+I0824 23:42:25.170249 3116330 init.cc:146] Try loading custom device libs from: [/usr/local/lib/python3.10/site-packages/paddle_custom_device]
+I0824 23:42:25.340373 3116330 custom_device_load.cc:51] Succeed in loading custom runtime in lib: /usr/local/lib/python3.10/site-packages/paddle_custom_device/libpaddle-iluvatar-gpu.so
+I0824 23:42:25.340457 3116330 custom_device_load.cc:58] Skipped lib [/usr/local/lib/python3.10/site-packages/paddle_custom_device/libpaddle-iluvatar-gpu.so]: no custom engine Plugin symbol in this lib.
+I0824 23:42:25.345103 3116330 custom_kernel.cc:68] Succeed in loading 314 custom kernel(s) from loaded lib(s), will be used like native ones.
+I0824 23:42:25.345394 3116330 init.cc:158] Finished in LoadCustomDevice with libs_path: [/usr/local/lib/python3.10/site-packages/paddle_custom_device]
+I0824 23:42:25.345438 3116330 init.cc:244] CustomDevice: iluvatar_gpu, visible devices count: 16
+/usr/local/lib/python3.10/site-packages/_distutils_hack/__init__.py:26: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+[33m[2025-08-24 23:42:29,225] [ WARNING][0m - evaluation_strategy reset to IntervalStrategy.STEPS for do_eval is True. you can also set evaluation_strategy='epoch'.[0m
+/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/training_args.py:1193: UserWarning: We set `distributed_dataloader` to False if tp_degree <= 1 and pp_degree <= 1
+  warnings.warn("We set `distributed_dataloader` to False if tp_degree <= 1 and pp_degree <= 1")
+[2025-08-24 23:42:29,227] [    INFO] distributed_strategy.py:333 - distributed strategy initialized
+======================= Modified FLAGS detected =======================
+FLAGS(name='FLAGS_enable_pir_in_executor', current_value=True, default_value=False)
+=======================================================================
+Traceback (most recent call last):
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/llm/run_pretrain_new.py", line 598, in <module>
+    main()
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/llm/run_pretrain_new.py", line 354, in main
+    model_args, data_args, training_args = parser.parse_json_file_and_cmd_lines()
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/argparser.py", line 324, in parse_json_file_and_cmd_lines
+    return self.common_parse(args, return_remaining_strings)
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/argparser.py", line 249, in common_parse
+    obj = dtype(**inputs)
+  File "<string>", line 155, in __init__
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/llm/run_pretrain_new.py", line 88, in __post_init__
+    super().__post_init__()
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/training_args.py", line 1544, in __post_init__
+    fleet.init(is_collective=True, strategy=strategy)
+  File "/usr/local/lib/python3.10/site-packages/paddle/distributed/fleet/fleet.py", line 337, in init
+    paddle.distributed.init_parallel_env()
+  File "/usr/local/lib/python3.10/site-packages/paddle/distributed/parallel.py", line 1085, in init_parallel_env
+    _check_var_exists("PADDLE_TRAINER_ID")
+  File "/usr/local/lib/python3.10/site-packages/paddle/distributed/parallel.py", line 956, in _check_var_exists
+    raise ValueError(
+ValueError: paddle.distributed initialize error, environment variable PADDLE_TRAINER_ID is needed, but not set.
+/usr/local/lib/python3.10/site-packages/paddle/utils/cpp_extension/extension_utils.py:715: UserWarning: No ccache found. Please be aware that recompiling all source files may be required. You can download and install ccache from: https://github.com/ccache/ccache/blob/master/doc/INSTALL.md
+  warnings.warn(warning_message)
+I0824 23:43:06.150104 3116719 init.cc:238] ENV [CUSTOM_DEVICE_ROOT]=/usr/local/lib/python3.10/site-packages/paddle_custom_device
+I0824 23:43:06.150190 3116719 init.cc:146] Try loading custom device libs from: [/usr/local/lib/python3.10/site-packages/paddle_custom_device]
+I0824 23:43:06.319907 3116719 custom_device_load.cc:51] Succeed in loading custom runtime in lib: /usr/local/lib/python3.10/site-packages/paddle_custom_device/libpaddle-iluvatar-gpu.so
+I0824 23:43:06.320001 3116719 custom_device_load.cc:58] Skipped lib [/usr/local/lib/python3.10/site-packages/paddle_custom_device/libpaddle-iluvatar-gpu.so]: no custom engine Plugin symbol in this lib.
+I0824 23:43:06.325479 3116719 custom_kernel.cc:68] Succeed in loading 314 custom kernel(s) from loaded lib(s), will be used like native ones.
+I0824 23:43:06.325760 3116719 init.cc:158] Finished in LoadCustomDevice with libs_path: [/usr/local/lib/python3.10/site-packages/paddle_custom_device]
+I0824 23:43:06.325807 3116719 init.cc:244] CustomDevice: iluvatar_gpu, visible devices count: 16
+/usr/local/lib/python3.10/site-packages/_distutils_hack/__init__.py:26: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+[33m[2025-08-24 23:43:09,838] [ WARNING][0m - evaluation_strategy reset to IntervalStrategy.STEPS for do_eval is True. you can also set evaluation_strategy='epoch'.[0m
+/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/training_args.py:1193: UserWarning: We set `distributed_dataloader` to False if tp_degree <= 1 and pp_degree <= 1
+  warnings.warn("We set `distributed_dataloader` to False if tp_degree <= 1 and pp_degree <= 1")
+[2025-08-24 23:43:09,839] [    INFO] distributed_strategy.py:333 - distributed strategy initialized
+======================= Modified FLAGS detected =======================
+FLAGS(name='FLAGS_enable_pir_in_executor', current_value=True, default_value=False)
+=======================================================================
+Traceback (most recent call last):
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/llm/run_pretrain_new.py", line 598, in <module>
+    main()
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/llm/run_pretrain_new.py", line 354, in main
+    model_args, data_args, training_args = parser.parse_json_file_and_cmd_lines()
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/argparser.py", line 324, in parse_json_file_and_cmd_lines
+    return self.common_parse(args, return_remaining_strings)
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/argparser.py", line 249, in common_parse
+    obj = dtype(**inputs)
+  File "<string>", line 155, in __init__
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/llm/run_pretrain_new.py", line 88, in __post_init__
+    super().__post_init__()
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/training_args.py", line 1544, in __post_init__
+    fleet.init(is_collective=True, strategy=strategy)
+  File "/usr/local/lib/python3.10/site-packages/paddle/distributed/fleet/fleet.py", line 337, in init
+    paddle.distributed.init_parallel_env()
+  File "/usr/local/lib/python3.10/site-packages/paddle/distributed/parallel.py", line 1086, in init_parallel_env
+    _check_var_exists("PADDLE_CURRENT_ENDPOINT")
+  File "/usr/local/lib/python3.10/site-packages/paddle/distributed/parallel.py", line 956, in _check_var_exists
+    raise ValueError(
+ValueError: paddle.distributed initialize error, environment variable PADDLE_CURRENT_ENDPOINT is needed, but not set.
+/usr/local/lib/python3.10/site-packages/paddle/utils/cpp_extension/extension_utils.py:715: UserWarning: No ccache found. Please be aware that recompiling all source files may be required. You can download and install ccache from: https://github.com/ccache/ccache/blob/master/doc/INSTALL.md
+  warnings.warn(warning_message)
+I0916 14:20:23.882114 2535054 init.cc:238] ENV [CUSTOM_DEVICE_ROOT]=/usr/local/lib/python3.10/site-packages/paddle_custom_device
+I0916 14:20:23.882141 2535054 init.cc:146] Try loading custom device libs from: [/usr/local/lib/python3.10/site-packages/paddle_custom_device]
+I0916 14:20:23.990456 2535054 custom_device_load.cc:51] Succeed in loading custom runtime in lib: /usr/local/lib/python3.10/site-packages/paddle_custom_device/libpaddle-iluvatar-gpu.so
+I0916 14:20:23.990489 2535054 custom_device_load.cc:58] Skipped lib [/usr/local/lib/python3.10/site-packages/paddle_custom_device/libpaddle-iluvatar-gpu.so]: no custom engine Plugin symbol in this lib.
+I0916 14:20:23.993958 2535054 custom_kernel.cc:68] Succeed in loading 314 custom kernel(s) from loaded lib(s), will be used like native ones.
+I0916 14:20:23.994110 2535054 init.cc:158] Finished in LoadCustomDevice with libs_path: [/usr/local/lib/python3.10/site-packages/paddle_custom_device]
+I0916 14:20:23.994130 2535054 init.cc:244] CustomDevice: iluvatar_gpu, visible devices count: 16
+/usr/local/lib/python3.10/site-packages/_distutils_hack/__init__.py:26: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/utils/pdc_sdk.py:22: DeprecationWarning: The distutils package is deprecated and slated for removal in Python 3.12. Use setuptools or check PEP 632 for potential alternatives
+  from distutils.dir_util import copy_tree
+/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/server/http_router/router.py:30: PydanticDeprecatedSince20: `pydantic.config.Extra` is deprecated, use literal values instead (e.g. `extra='allow'`). Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  class RequestBase(BaseModel, extra=Extra.forbid):
+[33m[2025-09-16 14:20:28,916] [ WARNING][0m - evaluation_strategy reset to IntervalStrategy.STEPS for do_eval is True. you can also set evaluation_strategy='epoch'.[0m
+/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/training_args.py:1193: UserWarning: We set `distributed_dataloader` to False if tp_degree <= 1 and pp_degree <= 1
+  warnings.warn("We set `distributed_dataloader` to False if tp_degree <= 1 and pp_degree <= 1")
+[2025-09-16 14:20:28,917] [    INFO] distributed_strategy.py:333 - distributed strategy initialized
+======================= Modified FLAGS detected =======================
+FLAGS(name='FLAGS_enable_pir_in_executor', current_value=True, default_value=False)
+=======================================================================
+Traceback (most recent call last):
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/llm/run_pretrain_new.py", line 598, in <module>
+    main()
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/llm/run_pretrain_new.py", line 354, in main
+    model_args, data_args, training_args = parser.parse_json_file_and_cmd_lines()
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/argparser.py", line 324, in parse_json_file_and_cmd_lines
+    return self.common_parse(args, return_remaining_strings)
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/argparser.py", line 249, in common_parse
+    obj = dtype(**inputs)
+  File "<string>", line 155, in __init__
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/llm/run_pretrain_new.py", line 88, in __post_init__
+    super().__post_init__()
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/training_args.py", line 1544, in __post_init__
+    fleet.init(is_collective=True, strategy=strategy)
+  File "/usr/local/lib/python3.10/site-packages/paddle/distributed/fleet/fleet.py", line 337, in init
+    paddle.distributed.init_parallel_env()
+  File "/usr/local/lib/python3.10/site-packages/paddle/distributed/parallel.py", line 1085, in init_parallel_env
+    _check_var_exists("PADDLE_TRAINER_ID")
+  File "/usr/local/lib/python3.10/site-packages/paddle/distributed/parallel.py", line 956, in _check_var_exists
+    raise ValueError(
+ValueError: paddle.distributed initialize error, environment variable PADDLE_TRAINER_ID is needed, but not set.
+/usr/local/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmps0k56r_8'>
+  _warnings.warn(warn_message, ResourceWarning)
+/usr/local/lib/python3.10/site-packages/paddle/utils/cpp_extension/extension_utils.py:715: UserWarning: No ccache found. Please be aware that recompiling all source files may be required. You can download and install ccache from: https://github.com/ccache/ccache/blob/master/doc/INSTALL.md
+  warnings.warn(warning_message)
+I0916 14:53:45.454958 2536120 init.cc:238] ENV [CUSTOM_DEVICE_ROOT]=/usr/local/lib/python3.10/site-packages/paddle_custom_device
+I0916 14:53:45.454984 2536120 init.cc:146] Try loading custom device libs from: [/usr/local/lib/python3.10/site-packages/paddle_custom_device]
+I0916 14:53:45.558022 2536120 custom_device_load.cc:51] Succeed in loading custom runtime in lib: /usr/local/lib/python3.10/site-packages/paddle_custom_device/libpaddle-iluvatar-gpu.so
+I0916 14:53:45.558045 2536120 custom_device_load.cc:58] Skipped lib [/usr/local/lib/python3.10/site-packages/paddle_custom_device/libpaddle-iluvatar-gpu.so]: no custom engine Plugin symbol in this lib.
+I0916 14:53:45.561657 2536120 custom_kernel.cc:68] Succeed in loading 314 custom kernel(s) from loaded lib(s), will be used like native ones.
+I0916 14:53:45.561821 2536120 init.cc:158] Finished in LoadCustomDevice with libs_path: [/usr/local/lib/python3.10/site-packages/paddle_custom_device]
+I0916 14:53:45.561838 2536120 init.cc:244] CustomDevice: iluvatar_gpu, visible devices count: 16
+/usr/local/lib/python3.10/site-packages/_distutils_hack/__init__.py:26: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/utils/pdc_sdk.py:22: DeprecationWarning: The distutils package is deprecated and slated for removal in Python 3.12. Use setuptools or check PEP 632 for potential alternatives
+  from distutils.dir_util import copy_tree
+/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/server/http_router/router.py:30: PydanticDeprecatedSince20: `pydantic.config.Extra` is deprecated, use literal values instead (e.g. `extra='allow'`). Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  class RequestBase(BaseModel, extra=Extra.forbid):
+[33m[2025-09-16 14:53:50,497] [ WARNING][0m - evaluation_strategy reset to IntervalStrategy.STEPS for do_eval is True. you can also set evaluation_strategy='epoch'.[0m
+/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/training_args.py:1193: UserWarning: We set `distributed_dataloader` to False if tp_degree <= 1 and pp_degree <= 1
+  warnings.warn("We set `distributed_dataloader` to False if tp_degree <= 1 and pp_degree <= 1")
+[2025-09-16 14:53:50,498] [    INFO] distributed_strategy.py:333 - distributed strategy initialized
+======================= Modified FLAGS detected =======================
+FLAGS(name='FLAGS_enable_pir_in_executor', current_value=True, default_value=False)
+=======================================================================
+Traceback (most recent call last):
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/llm/run_pretrain_new.py", line 598, in <module>
+    main()
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/llm/run_pretrain_new.py", line 354, in main
+    model_args, data_args, training_args = parser.parse_json_file_and_cmd_lines()
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/argparser.py", line 324, in parse_json_file_and_cmd_lines
+    return self.common_parse(args, return_remaining_strings)
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/argparser.py", line 249, in common_parse
+    obj = dtype(**inputs)
+  File "<string>", line 155, in __init__
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/llm/run_pretrain_new.py", line 88, in __post_init__
+    super().__post_init__()
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/training_args.py", line 1544, in __post_init__
+    fleet.init(is_collective=True, strategy=strategy)
+  File "/usr/local/lib/python3.10/site-packages/paddle/distributed/fleet/fleet.py", line 337, in init
+    paddle.distributed.init_parallel_env()
+  File "/usr/local/lib/python3.10/site-packages/paddle/distributed/parallel.py", line 1218, in init_parallel_env
+    other_endpoints.remove(strategy.current_endpoint)
+ValueError: list.remove(x): x not in list
+/usr/local/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmpfayd220n'>
+  _warnings.warn(warn_message, ResourceWarning)
+/usr/local/lib/python3.10/site-packages/paddle/utils/cpp_extension/extension_utils.py:715: UserWarning: No ccache found. Please be aware that recompiling all source files may be required. You can download and install ccache from: https://github.com/ccache/ccache/blob/master/doc/INSTALL.md
+  warnings.warn(warning_message)
+I0916 16:58:43.916651 2539198 init.cc:238] ENV [CUSTOM_DEVICE_ROOT]=/usr/local/lib/python3.10/site-packages/paddle_custom_device
+I0916 16:58:43.916677 2539198 init.cc:146] Try loading custom device libs from: [/usr/local/lib/python3.10/site-packages/paddle_custom_device]
+I0916 16:58:44.021435 2539198 custom_device_load.cc:51] Succeed in loading custom runtime in lib: /usr/local/lib/python3.10/site-packages/paddle_custom_device/libpaddle-iluvatar-gpu.so
+I0916 16:58:44.021469 2539198 custom_device_load.cc:58] Skipped lib [/usr/local/lib/python3.10/site-packages/paddle_custom_device/libpaddle-iluvatar-gpu.so]: no custom engine Plugin symbol in this lib.
+I0916 16:58:44.024765 2539198 custom_kernel.cc:68] Succeed in loading 314 custom kernel(s) from loaded lib(s), will be used like native ones.
+I0916 16:58:44.024912 2539198 init.cc:158] Finished in LoadCustomDevice with libs_path: [/usr/local/lib/python3.10/site-packages/paddle_custom_device]
+I0916 16:58:44.024931 2539198 init.cc:244] CustomDevice: iluvatar_gpu, visible devices count: 16
+/usr/local/lib/python3.10/site-packages/_distutils_hack/__init__.py:26: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/utils/pdc_sdk.py:22: DeprecationWarning: The distutils package is deprecated and slated for removal in Python 3.12. Use setuptools or check PEP 632 for potential alternatives
+  from distutils.dir_util import copy_tree
+/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/server/http_router/router.py:30: PydanticDeprecatedSince20: `pydantic.config.Extra` is deprecated, use literal values instead (e.g. `extra='allow'`). Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  class RequestBase(BaseModel, extra=Extra.forbid):
+[33m[2025-09-16 16:58:49,102] [ WARNING][0m - evaluation_strategy reset to IntervalStrategy.STEPS for do_eval is True. you can also set evaluation_strategy='epoch'.[0m
+/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/training_args.py:1193: UserWarning: We set `distributed_dataloader` to False if tp_degree <= 1 and pp_degree <= 1
+  warnings.warn("We set `distributed_dataloader` to False if tp_degree <= 1 and pp_degree <= 1")
+[2025-09-16 16:58:49,103] [    INFO] distributed_strategy.py:333 - distributed strategy initialized
+======================= Modified FLAGS detected =======================
+FLAGS(name='FLAGS_enable_pir_in_executor', current_value=True, default_value=False)
+=======================================================================
+Traceback (most recent call last):
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/llm/run_pretrain_new.py", line 598, in <module>
+    main()
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/llm/run_pretrain_new.py", line 354, in main
+    model_args, data_args, training_args = parser.parse_json_file_and_cmd_lines()
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/argparser.py", line 324, in parse_json_file_and_cmd_lines
+    return self.common_parse(args, return_remaining_strings)
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/argparser.py", line 249, in common_parse
+    obj = dtype(**inputs)
+  File "<string>", line 155, in __init__
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/llm/run_pretrain_new.py", line 88, in __post_init__
+    super().__post_init__()
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/training_args.py", line 1544, in __post_init__
+    fleet.init(is_collective=True, strategy=strategy)
+  File "/usr/local/lib/python3.10/site-packages/paddle/distributed/fleet/fleet.py", line 337, in init
+    paddle.distributed.init_parallel_env()
+  File "/usr/local/lib/python3.10/site-packages/paddle/distributed/parallel.py", line 1218, in init_parallel_env
+    other_endpoints.remove(strategy.current_endpoint)
+ValueError: list.remove(x): x not in list
+/usr/local/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmprzw9e_5d'>
+  _warnings.warn(warn_message, ResourceWarning)
+/usr/local/lib/python3.10/site-packages/paddle/utils/cpp_extension/extension_utils.py:715: UserWarning: No ccache found. Please be aware that recompiling all source files may be required. You can download and install ccache from: https://github.com/ccache/ccache/blob/master/doc/INSTALL.md
+  warnings.warn(warning_message)
+I0916 17:01:03.630589 2539468 init.cc:238] ENV [CUSTOM_DEVICE_ROOT]=/usr/local/lib/python3.10/site-packages/paddle_custom_device
+I0916 17:01:03.630630 2539468 init.cc:146] Try loading custom device libs from: [/usr/local/lib/python3.10/site-packages/paddle_custom_device]
+I0916 17:01:03.736960 2539468 custom_device_load.cc:51] Succeed in loading custom runtime in lib: /usr/local/lib/python3.10/site-packages/paddle_custom_device/libpaddle-iluvatar-gpu.so
+I0916 17:01:03.736999 2539468 custom_device_load.cc:58] Skipped lib [/usr/local/lib/python3.10/site-packages/paddle_custom_device/libpaddle-iluvatar-gpu.so]: no custom engine Plugin symbol in this lib.
+I0916 17:01:03.740283 2539468 custom_kernel.cc:68] Succeed in loading 314 custom kernel(s) from loaded lib(s), will be used like native ones.
+I0916 17:01:03.740433 2539468 init.cc:158] Finished in LoadCustomDevice with libs_path: [/usr/local/lib/python3.10/site-packages/paddle_custom_device]
+I0916 17:01:03.740458 2539468 init.cc:244] CustomDevice: iluvatar_gpu, visible devices count: 16
+/usr/local/lib/python3.10/site-packages/_distutils_hack/__init__.py:26: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/utils/pdc_sdk.py:22: DeprecationWarning: The distutils package is deprecated and slated for removal in Python 3.12. Use setuptools or check PEP 632 for potential alternatives
+  from distutils.dir_util import copy_tree
+/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/server/http_router/router.py:30: PydanticDeprecatedSince20: `pydantic.config.Extra` is deprecated, use literal values instead (e.g. `extra='allow'`). Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  class RequestBase(BaseModel, extra=Extra.forbid):
+[33m[2025-09-16 17:01:08,912] [ WARNING][0m - evaluation_strategy reset to IntervalStrategy.STEPS for do_eval is True. you can also set evaluation_strategy='epoch'.[0m
+/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/training_args.py:1193: UserWarning: We set `distributed_dataloader` to False if tp_degree <= 1 and pp_degree <= 1
+  warnings.warn("We set `distributed_dataloader` to False if tp_degree <= 1 and pp_degree <= 1")
+[2025-09-16 17:01:08,913] [    INFO] distributed_strategy.py:333 - distributed strategy initialized
+======================= Modified FLAGS detected =======================
+FLAGS(name='FLAGS_enable_pir_in_executor', current_value=True, default_value=False)
+=======================================================================
+Traceback (most recent call last):
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/llm/run_pretrain_new.py", line 598, in <module>
+    main()
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/llm/run_pretrain_new.py", line 354, in main
+    model_args, data_args, training_args = parser.parse_json_file_and_cmd_lines()
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/argparser.py", line 324, in parse_json_file_and_cmd_lines
+    return self.common_parse(args, return_remaining_strings)
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/argparser.py", line 249, in common_parse
+    obj = dtype(**inputs)
+  File "<string>", line 155, in __init__
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/llm/run_pretrain_new.py", line 88, in __post_init__
+    super().__post_init__()
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/training_args.py", line 1544, in __post_init__
+    fleet.init(is_collective=True, strategy=strategy)
+  File "/usr/local/lib/python3.10/site-packages/paddle/distributed/fleet/fleet.py", line 337, in init
+    paddle.distributed.init_parallel_env()
+  File "/usr/local/lib/python3.10/site-packages/paddle/distributed/parallel.py", line 1218, in init_parallel_env
+    other_endpoints.remove(strategy.current_endpoint)
+ValueError: list.remove(x): x not in list
+/usr/local/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmpkxetqckd'>
+  _warnings.warn(warn_message, ResourceWarning)
+/usr/local/lib/python3.10/site-packages/paddle/utils/cpp_extension/extension_utils.py:715: UserWarning: No ccache found. Please be aware that recompiling all source files may be required. You can download and install ccache from: https://github.com/ccache/ccache/blob/master/doc/INSTALL.md
+  warnings.warn(warning_message)
+I0916 17:02:25.414108 2539734 init.cc:238] ENV [CUSTOM_DEVICE_ROOT]=/usr/local/lib/python3.10/site-packages/paddle_custom_device
+I0916 17:02:25.414132 2539734 init.cc:146] Try loading custom device libs from: [/usr/local/lib/python3.10/site-packages/paddle_custom_device]
+I0916 17:02:25.517968 2539734 custom_device_load.cc:51] Succeed in loading custom runtime in lib: /usr/local/lib/python3.10/site-packages/paddle_custom_device/libpaddle-iluvatar-gpu.so
+I0916 17:02:25.517998 2539734 custom_device_load.cc:58] Skipped lib [/usr/local/lib/python3.10/site-packages/paddle_custom_device/libpaddle-iluvatar-gpu.so]: no custom engine Plugin symbol in this lib.
+I0916 17:02:25.521293 2539734 custom_kernel.cc:68] Succeed in loading 314 custom kernel(s) from loaded lib(s), will be used like native ones.
+I0916 17:02:25.521453 2539734 init.cc:158] Finished in LoadCustomDevice with libs_path: [/usr/local/lib/python3.10/site-packages/paddle_custom_device]
+I0916 17:02:25.521472 2539734 init.cc:244] CustomDevice: iluvatar_gpu, visible devices count: 16
+/usr/local/lib/python3.10/site-packages/_distutils_hack/__init__.py:26: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/utils/pdc_sdk.py:22: DeprecationWarning: The distutils package is deprecated and slated for removal in Python 3.12. Use setuptools or check PEP 632 for potential alternatives
+  from distutils.dir_util import copy_tree
+/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/server/http_router/router.py:30: PydanticDeprecatedSince20: `pydantic.config.Extra` is deprecated, use literal values instead (e.g. `extra='allow'`). Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  class RequestBase(BaseModel, extra=Extra.forbid):
+[33m[2025-09-16 17:02:30,506] [ WARNING][0m - evaluation_strategy reset to IntervalStrategy.STEPS for do_eval is True. you can also set evaluation_strategy='epoch'.[0m
+/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/training_args.py:1193: UserWarning: We set `distributed_dataloader` to False if tp_degree <= 1 and pp_degree <= 1
+  warnings.warn("We set `distributed_dataloader` to False if tp_degree <= 1 and pp_degree <= 1")
+[2025-09-16 17:02:30,507] [    INFO] distributed_strategy.py:333 - distributed strategy initialized
+======================= Modified FLAGS detected =======================
+FLAGS(name='FLAGS_enable_pir_in_executor', current_value=True, default_value=False)
+=======================================================================
+Traceback (most recent call last):
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/llm/run_pretrain_new.py", line 598, in <module>
+    main()
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/llm/run_pretrain_new.py", line 354, in main
+    model_args, data_args, training_args = parser.parse_json_file_and_cmd_lines()
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/argparser.py", line 324, in parse_json_file_and_cmd_lines
+    return self.common_parse(args, return_remaining_strings)
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/argparser.py", line 249, in common_parse
+    obj = dtype(**inputs)
+  File "<string>", line 155, in __init__
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/llm/run_pretrain_new.py", line 88, in __post_init__
+    super().__post_init__()
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/training_args.py", line 1544, in __post_init__
+    fleet.init(is_collective=True, strategy=strategy)
+  File "/usr/local/lib/python3.10/site-packages/paddle/distributed/fleet/fleet.py", line 337, in init
+    paddle.distributed.init_parallel_env()
+  File "/usr/local/lib/python3.10/site-packages/paddle/distributed/parallel.py", line 1218, in init_parallel_env
+    other_endpoints.remove(strategy.current_endpoint)
+ValueError: list.remove(x): x not in list
+/usr/local/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmp_czcgvbb'>
+  _warnings.warn(warn_message, ResourceWarning)
+/usr/local/lib/python3.10/site-packages/paddle/utils/cpp_extension/extension_utils.py:715: UserWarning: No ccache found. Please be aware that recompiling all source files may be required. You can download and install ccache from: https://github.com/ccache/ccache/blob/master/doc/INSTALL.md
+  warnings.warn(warning_message)
+I0917 22:08:19.842063 2550326 init.cc:238] ENV [CUSTOM_DEVICE_ROOT]=/usr/local/lib/python3.10/site-packages/paddle_custom_device
+I0917 22:08:19.842092 2550326 init.cc:146] Try loading custom device libs from: [/usr/local/lib/python3.10/site-packages/paddle_custom_device]
+I0917 22:08:19.945931 2550326 custom_device_load.cc:51] Succeed in loading custom runtime in lib: /usr/local/lib/python3.10/site-packages/paddle_custom_device/libpaddle-iluvatar-gpu.so
+I0917 22:08:19.945960 2550326 custom_device_load.cc:58] Skipped lib [/usr/local/lib/python3.10/site-packages/paddle_custom_device/libpaddle-iluvatar-gpu.so]: no custom engine Plugin symbol in this lib.
+I0917 22:08:19.949227 2550326 custom_kernel.cc:68] Succeed in loading 314 custom kernel(s) from loaded lib(s), will be used like native ones.
+I0917 22:08:19.949384 2550326 init.cc:158] Finished in LoadCustomDevice with libs_path: [/usr/local/lib/python3.10/site-packages/paddle_custom_device]
+I0917 22:08:19.949407 2550326 init.cc:244] CustomDevice: iluvatar_gpu, visible devices count: 16
+/usr/local/lib/python3.10/site-packages/_distutils_hack/__init__.py:26: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/utils/pdc_sdk.py:22: DeprecationWarning: The distutils package is deprecated and slated for removal in Python 3.12. Use setuptools or check PEP 632 for potential alternatives
+  from distutils.dir_util import copy_tree
+/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/server/http_router/router.py:30: PydanticDeprecatedSince20: `pydantic.config.Extra` is deprecated, use literal values instead (e.g. `extra='allow'`). Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  class RequestBase(BaseModel, extra=Extra.forbid):
+[33m[2025-09-17 22:08:24,913] [ WARNING][0m - evaluation_strategy reset to IntervalStrategy.STEPS for do_eval is True. you can also set evaluation_strategy='epoch'.[0m
+/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/training_args.py:1193: UserWarning: We set `distributed_dataloader` to False if tp_degree <= 1 and pp_degree <= 1
+  warnings.warn("We set `distributed_dataloader` to False if tp_degree <= 1 and pp_degree <= 1")
+[2025-09-17 22:08:24,914] [    INFO] distributed_strategy.py:333 - distributed strategy initialized
+======================= Modified FLAGS detected =======================
+FLAGS(name='FLAGS_enable_pir_in_executor', current_value=True, default_value=False)
+=======================================================================
+Traceback (most recent call last):
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/llm/run_pretrain_new.py", line 598, in <module>
+    main()
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/llm/run_pretrain_new.py", line 354, in main
+    model_args, data_args, training_args = parser.parse_json_file_and_cmd_lines()
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/argparser.py", line 324, in parse_json_file_and_cmd_lines
+    return self.common_parse(args, return_remaining_strings)
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/argparser.py", line 249, in common_parse
+    obj = dtype(**inputs)
+  File "<string>", line 155, in __init__
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/llm/run_pretrain_new.py", line 88, in __post_init__
+    super().__post_init__()
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/training_args.py", line 1544, in __post_init__
+    fleet.init(is_collective=True, strategy=strategy)
+  File "/usr/local/lib/python3.10/site-packages/paddle/distributed/fleet/fleet.py", line 337, in init
+    paddle.distributed.init_parallel_env()
+  File "/usr/local/lib/python3.10/site-packages/paddle/distributed/parallel.py", line 1085, in init_parallel_env
+    _check_var_exists("PADDLE_TRAINER_ID")
+  File "/usr/local/lib/python3.10/site-packages/paddle/distributed/parallel.py", line 956, in _check_var_exists
+    raise ValueError(
+ValueError: paddle.distributed initialize error, environment variable PADDLE_TRAINER_ID is needed, but not set.
+/usr/local/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmp4opahfmb'>
+  _warnings.warn(warn_message, ResourceWarning)
+/usr/local/lib/python3.10/site-packages/paddle/utils/cpp_extension/extension_utils.py:715: UserWarning: No ccache found. Please be aware that recompiling all source files may be required. You can download and install ccache from: https://github.com/ccache/ccache/blob/master/doc/INSTALL.md
+  warnings.warn(warning_message)
+I0917 22:11:20.556783 2550584 init.cc:238] ENV [CUSTOM_DEVICE_ROOT]=/usr/local/lib/python3.10/site-packages/paddle_custom_device
+I0917 22:11:20.556813 2550584 init.cc:146] Try loading custom device libs from: [/usr/local/lib/python3.10/site-packages/paddle_custom_device]
+I0917 22:11:20.661424 2550584 custom_device_load.cc:51] Succeed in loading custom runtime in lib: /usr/local/lib/python3.10/site-packages/paddle_custom_device/libpaddle-iluvatar-gpu.so
+I0917 22:11:20.661460 2550584 custom_device_load.cc:58] Skipped lib [/usr/local/lib/python3.10/site-packages/paddle_custom_device/libpaddle-iluvatar-gpu.so]: no custom engine Plugin symbol in this lib.
+I0917 22:11:20.664764 2550584 custom_kernel.cc:68] Succeed in loading 314 custom kernel(s) from loaded lib(s), will be used like native ones.
+I0917 22:11:20.664916 2550584 init.cc:158] Finished in LoadCustomDevice with libs_path: [/usr/local/lib/python3.10/site-packages/paddle_custom_device]
+I0917 22:11:20.664935 2550584 init.cc:244] CustomDevice: iluvatar_gpu, visible devices count: 16
+/usr/local/lib/python3.10/site-packages/_distutils_hack/__init__.py:26: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/utils/pdc_sdk.py:22: DeprecationWarning: The distutils package is deprecated and slated for removal in Python 3.12. Use setuptools or check PEP 632 for potential alternatives
+  from distutils.dir_util import copy_tree
+/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/server/http_router/router.py:30: PydanticDeprecatedSince20: `pydantic.config.Extra` is deprecated, use literal values instead (e.g. `extra='allow'`). Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  class RequestBase(BaseModel, extra=Extra.forbid):
+[33m[2025-09-17 22:11:25,777] [ WARNING][0m - evaluation_strategy reset to IntervalStrategy.STEPS for do_eval is True. you can also set evaluation_strategy='epoch'.[0m
+/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/training_args.py:1193: UserWarning: We set `distributed_dataloader` to False if tp_degree <= 1 and pp_degree <= 1
+  warnings.warn("We set `distributed_dataloader` to False if tp_degree <= 1 and pp_degree <= 1")
+[2025-09-17 22:11:25,778] [    INFO] distributed_strategy.py:333 - distributed strategy initialized
+======================= Modified FLAGS detected =======================
+FLAGS(name='FLAGS_enable_pir_in_executor', current_value=True, default_value=False)
+=======================================================================
+Traceback (most recent call last):
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/llm/run_pretrain_new.py", line 598, in <module>
+    main()
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/llm/run_pretrain_new.py", line 354, in main
+    model_args, data_args, training_args = parser.parse_json_file_and_cmd_lines()
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/argparser.py", line 324, in parse_json_file_and_cmd_lines
+    return self.common_parse(args, return_remaining_strings)
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/argparser.py", line 249, in common_parse
+    obj = dtype(**inputs)
+  File "<string>", line 155, in __init__
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/llm/run_pretrain_new.py", line 88, in __post_init__
+    super().__post_init__()
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/training_args.py", line 1544, in __post_init__
+    fleet.init(is_collective=True, strategy=strategy)
+  File "/usr/local/lib/python3.10/site-packages/paddle/distributed/fleet/fleet.py", line 337, in init
+    paddle.distributed.init_parallel_env()
+  File "/usr/local/lib/python3.10/site-packages/paddle/distributed/parallel.py", line 1085, in init_parallel_env
+    _check_var_exists("PADDLE_TRAINER_ID")
+  File "/usr/local/lib/python3.10/site-packages/paddle/distributed/parallel.py", line 956, in _check_var_exists
+    raise ValueError(
+ValueError: paddle.distributed initialize error, environment variable PADDLE_TRAINER_ID is needed, but not set.
+/usr/local/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmpuutbknu7'>
+  _warnings.warn(warn_message, ResourceWarning)

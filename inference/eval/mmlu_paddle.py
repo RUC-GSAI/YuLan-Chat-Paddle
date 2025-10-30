@@ -6,7 +6,7 @@ import paddle
 import numpy as np
 import pandas as pd
 from categories import subcategories, categories
-from paddlenlp.transformers import AutoTokenizer, AutoModelForCausalLM
+from paddlenlp.transformers import AutoTokenizer, AutoModelForCausalLM, YulanForCausalLM, LlamaForCausalLM
 import time
 from tqdm import tqdm
 choices = ["A", "B", "C", "D"]
@@ -100,6 +100,7 @@ def eval(args, subject, model, tokenizer, dev_df, test_df):
         )
         ppl = paddle.exp(nll).item()
 
+        print(f'Prediction: {pred}; Label: {label}')
         cor = pred == label
         cors.append(cor)
         all_probs.append(probs)
@@ -124,8 +125,8 @@ def main(args):
 
     tokenizer = AutoTokenizer.from_pretrained(args.model, 
                                               use_fast=True, 
-                                              add_bos_token=False, model_max_length=4096, padding_side="right", trust_remote_code=True)
-    model = AutoModelForCausalLM.from_pretrained(args.model, dtype=args.dtype,
+                                              add_bos_token=True, model_max_length=4096, padding_side="right", trust_remote_code=True)
+    model = LlamaForCausalLM.from_pretrained(args.model, dtype="bfloat16",
                                                  use_flash_attention=True,
                                                 #  low_cpu_mem_usage=True
                                                  )
@@ -233,7 +234,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--ntrain", "-k", type=int, default=5)
     parser.add_argument("--ngpu", "-g", type=int, default=1)
-    parser.add_argument("--data_dir", "-d", type=str, default="/home/huyiwen/yulan/data/mmlu")
+    parser.add_argument("--data_dir", "-d", type=str, default="./data/mmlu")
     parser.add_argument("--save_dir", "-s", type=str, default="results")
     parser.add_argument("--dtype", type=str, default="bfloat16")
     parser.add_argument(

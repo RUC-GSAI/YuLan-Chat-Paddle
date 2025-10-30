@@ -1,0 +1,36 @@
+I0724 15:52:24.006166 1188546 init.cc:238] ENV [CUSTOM_DEVICE_ROOT]=/usr/local/lib/python3.10/site-packages/paddle_custom_device
+I0724 15:52:24.006222 1188546 init.cc:146] Try loading custom device libs from: [/usr/local/lib/python3.10/site-packages/paddle_custom_device]
+I0724 15:52:24.102603 1188546 custom_device_load.cc:51] Succeed in loading custom runtime in lib: /usr/local/lib/python3.10/site-packages/paddle_custom_device/libpaddle-iluvatar-gpu.so
+I0724 15:52:24.102640 1188546 custom_device_load.cc:58] Skipped lib [/usr/local/lib/python3.10/site-packages/paddle_custom_device/libpaddle-iluvatar-gpu.so]: no custom engine Plugin symbol in this lib.
+I0724 15:52:24.105716 1188546 custom_kernel.cc:68] Succeed in loading 314 custom kernel(s) from loaded lib(s), will be used like native ones.
+I0724 15:52:24.105850 1188546 init.cc:158] Finished in LoadCustomDevice with libs_path: [/usr/local/lib/python3.10/site-packages/paddle_custom_device]
+I0724 15:52:24.105875 1188546 init.cc:244] CustomDevice: iluvatar_gpu, visible devices count: 16
+Traceback (most recent call last):
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/run_finetune.py", line 23, in <module>
+    from utils.argument import GenerateArgument, ReftArgument
+ModuleNotFoundError: No module named 'utils'
+I0724 15:53:21.512416 1193616 init.cc:238] ENV [CUSTOM_DEVICE_ROOT]=/usr/local/lib/python3.10/site-packages/paddle_custom_device
+I0724 15:53:21.512452 1193616 init.cc:146] Try loading custom device libs from: [/usr/local/lib/python3.10/site-packages/paddle_custom_device]
+I0724 15:53:21.585058 1193616 custom_device_load.cc:51] Succeed in loading custom runtime in lib: /usr/local/lib/python3.10/site-packages/paddle_custom_device/libpaddle-iluvatar-gpu.so
+I0724 15:53:21.585090 1193616 custom_device_load.cc:58] Skipped lib [/usr/local/lib/python3.10/site-packages/paddle_custom_device/libpaddle-iluvatar-gpu.so]: no custom engine Plugin symbol in this lib.
+I0724 15:53:21.588207 1193616 custom_kernel.cc:68] Succeed in loading 314 custom kernel(s) from loaded lib(s), will be used like native ones.
+I0724 15:53:21.588351 1193616 init.cc:158] Finished in LoadCustomDevice with libs_path: [/usr/local/lib/python3.10/site-packages/paddle_custom_device]
+I0724 15:53:21.588377 1193616 init.cc:244] CustomDevice: iluvatar_gpu, visible devices count: 4
+Traceback (most recent call last):
+  File "/data/czp/YuLan-Chat-Paddle-main/finetune/run_finetune.py", line 23, in <module>
+    from utils.argument import GenerateArgument, ReftArgument
+ModuleNotFoundError: No module named 'utils'
+
+
+--------------------------------------
+C++ Traceback (most recent call last):
+--------------------------------------
+No stack trace in paddle, may be caused by external reasons.
+
+----------------------
+Error Message Summary:
+----------------------
+FatalError: `Termination signal` is detected by the operating system.
+  [TimeInfo: *** Aborted at 1753343602 (unix time) try "date -d @1753343602" if you are using GNU date ***]
+  [SignalInfo: *** SIGTERM (@0x1235d2) received by PID 1193616 (TID 0x7f117c1c9740) from PID 1193426 ***]
+

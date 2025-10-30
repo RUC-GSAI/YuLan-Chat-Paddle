@@ -1,0 +1,520 @@
+I0820 16:41:19.769994 746472 init.cc:238] ENV [CUSTOM_DEVICE_ROOT]=/usr/local/lib/python3.10/site-packages/paddle_custom_device
+I0820 16:41:19.770064 746472 init.cc:146] Try loading custom device libs from: [/usr/local/lib/python3.10/site-packages/paddle_custom_device]
+I0820 16:41:19.876372 746472 custom_device_load.cc:51] Succeed in loading custom runtime in lib: /usr/local/lib/python3.10/site-packages/paddle_custom_device/libpaddle-iluvatar-gpu.so
+I0820 16:41:19.876415 746472 custom_device_load.cc:58] Skipped lib [/usr/local/lib/python3.10/site-packages/paddle_custom_device/libpaddle-iluvatar-gpu.so]: no custom engine Plugin symbol in this lib.
+I0820 16:41:19.879818 746472 custom_kernel.cc:68] Succeed in loading 314 custom kernel(s) from loaded lib(s), will be used like native ones.
+I0820 16:41:19.879962 746472 init.cc:158] Finished in LoadCustomDevice with libs_path: [/usr/local/lib/python3.10/site-packages/paddle_custom_device]
+I0820 16:41:19.879984 746472 init.cc:244] CustomDevice: iluvatar_gpu, visible devices count: 16
+LAUNCH INFO 2025-08-20 16:41:20,166 -----------  Configuration  ----------------------
+LAUNCH INFO 2025-08-20 16:41:20,166 auto_cluster_config: 0
+LAUNCH INFO 2025-08-20 16:41:20,166 auto_parallel_config: None
+LAUNCH INFO 2025-08-20 16:41:20,166 auto_tuner_json: None
+LAUNCH INFO 2025-08-20 16:41:20,166 devices: 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
+LAUNCH INFO 2025-08-20 16:41:20,166 elastic_level: -1
+LAUNCH INFO 2025-08-20 16:41:20,166 elastic_timeout: 30
+LAUNCH INFO 2025-08-20 16:41:20,166 enable_gpu_log: True
+LAUNCH INFO 2025-08-20 16:41:20,166 gloo_port: 6767
+LAUNCH INFO 2025-08-20 16:41:20,166 host: None
+LAUNCH INFO 2025-08-20 16:41:20,166 ips: None
+LAUNCH INFO 2025-08-20 16:41:20,166 job_id: default
+LAUNCH INFO 2025-08-20 16:41:20,166 legacy: False
+LAUNCH INFO 2025-08-20 16:41:20,166 log_dir: log
+LAUNCH INFO 2025-08-20 16:41:20,166 log_level: INFO
+LAUNCH INFO 2025-08-20 16:41:20,166 log_overwrite: False
+LAUNCH INFO 2025-08-20 16:41:20,166 master: None
+LAUNCH INFO 2025-08-20 16:41:20,166 max_restart: 3
+LAUNCH INFO 2025-08-20 16:41:20,166 nnodes: 1
+LAUNCH INFO 2025-08-20 16:41:20,166 nproc_per_node: None
+LAUNCH INFO 2025-08-20 16:41:20,166 rank: -1
+LAUNCH INFO 2025-08-20 16:41:20,166 run_mode: collective
+LAUNCH INFO 2025-08-20 16:41:20,166 server_num: None
+LAUNCH INFO 2025-08-20 16:41:20,166 servers: 
+LAUNCH INFO 2025-08-20 16:41:20,166 sort_ip: False
+LAUNCH INFO 2025-08-20 16:41:20,166 start_port: 6070
+LAUNCH INFO 2025-08-20 16:41:20,167 trainer_num: None
+LAUNCH INFO 2025-08-20 16:41:20,167 trainers: 
+LAUNCH INFO 2025-08-20 16:41:20,167 training_script: run_pretrain.py
+LAUNCH INFO 2025-08-20 16:41:20,167 training_script_args: ['/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/llm/config/cpt-yulan_base-pile.json']
+LAUNCH INFO 2025-08-20 16:41:20,167 with_gloo: 1
+LAUNCH INFO 2025-08-20 16:41:20,167 --------------------------------------------------
+LAUNCH INFO 2025-08-20 16:41:20,167 Job: default, mode collective, replicas 1[1:1], elastic False
+LAUNCH INFO 2025-08-20 16:41:20,169 Run Pod: srrbwm, replicas 16, status ready
+LAUNCH INFO 2025-08-20 16:41:20,442 Watching Pod: srrbwm, replicas 16, status running
+I0820 16:41:20.857314 746565 init.cc:238] ENV [CUSTOM_DEVICE_ROOT]=/usr/local/lib/python3.10/site-packages/paddle_custom_device
+I0820 16:41:20.857362 746565 init.cc:146] Try loading custom device libs from: [/usr/local/lib/python3.10/site-packages/paddle_custom_device]
+I0820 16:41:20.957955 746565 custom_device_load.cc:51] Succeed in loading custom runtime in lib: /usr/local/lib/python3.10/site-packages/paddle_custom_device/libpaddle-iluvatar-gpu.so
+I0820 16:41:20.957988 746565 custom_device_load.cc:58] Skipped lib [/usr/local/lib/python3.10/site-packages/paddle_custom_device/libpaddle-iluvatar-gpu.so]: no custom engine Plugin symbol in this lib.
+I0820 16:41:20.961452 746565 custom_kernel.cc:68] Succeed in loading 314 custom kernel(s) from loaded lib(s), will be used like native ones.
+I0820 16:41:20.961612 746565 init.cc:158] Finished in LoadCustomDevice with libs_path: [/usr/local/lib/python3.10/site-packages/paddle_custom_device]
+I0820 16:41:20.961635 746565 init.cc:244] CustomDevice: iluvatar_gpu, visible devices count: 1
+/usr/local/lib/python3.10/site-packages/_distutils_hack/__init__.py:26: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+[33m[2025-08-20 16:41:23,155] [ WARNING][0m - evaluation_strategy reset to IntervalStrategy.STEPS for do_eval is True. you can also set evaluation_strategy='epoch'.[0m
+/data/czp/YuLan-Chat-Paddle-main/finetune/PaddleNLP/PaddleNLP-develop/paddlenlp/trainer/training_args.py:1193: UserWarning: We set `distributed_dataloader` to False if tp_degree <= 1 and pp_degree <= 1
+  warnings.warn("We set `distributed_dataloader` to False if tp_degree <= 1 and pp_degree <= 1")
+[2025-08-20 16:41:23,156] [    INFO] distributed_strategy.py:333 - distributed strategy initialized
+======================= Modified FLAGS detected =======================
+FLAGS(name='FLAGS_enable_pir_in_executor', current_value=True, default_value=False)
+=======================================================================
+I0820 16:41:23.157370 746565 tcp_utils.cc:185] The server starts to listen on IP_ANY:41371; setting synclog to 2048
+I0820 16:41:23.157562 746565 tcp_utils.cc:134] Successfully connected to 172.17.0.5:41371
+[2025-08-20 16:41:23,488] [    INFO] topology.py:370 - Total 16 pipe comm group(s) create successfully!
+/usr/local/lib/python3.10/site-packages/paddle/distributed/communication/group.py:145: UserWarning: Current global rank 0 is not in group _default_pg10
+  warnings.warn(
+[2025-08-20 16:41:23,508] [    INFO] topology.py:370 - Total 16 data comm group(s) create successfully!
+[2025-08-20 16:41:23,508] [    INFO] topology.py:370 - Total 16 model comm group(s) create successfully!
+[2025-08-20 16:41:23,508] [    INFO] topology.py:370 - Total 1 sharding comm group(s) create successfully!
+[2025-08-20 16:41:23,509] [    INFO] topology.py:288 - HybridParallelInfo: rank_id: 0, mp_degree: 1, sharding_degree: 16, pp_degree: 1, dp_degree: 1, sep_degree: 1, mp_group: [0],  sharding_group: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], pp_group: [0], dp_group: [0], sep:group: None, check/clip group: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+[32m[2025-08-20 16:41:23,509] [    INFO][0m -     +==============================================================================+
+    |                                                                              |
+    |                         DistributedStrategy Overview                         |
+    |                                                                              |
+    +==============================================================================+
+    |                        a_sync=True <-> a_sync_configs                        |
+    +------------------------------------------------------------------------------+
+    |                               k_steps                    -1                  |
+    |                     max_merge_var_num                    1                   |
+    |                       send_queue_size                    16                  |
+    |               independent_recv_thread                  False                 |
+    |         min_send_grad_num_before_recv                    1                   |
+    |                      thread_pool_size                    1                   |
+    |                       send_wait_times                    1                   |
+    |               runtime_split_send_recv                  False                 |
+    |                        launch_barrier                   True                 |
+    |             heter_worker_device_guard                   cpu                  |
+    |                        lr_decay_steps                    10                  |
+    |                            use_ps_gpu                    0                   |
+    |                         use_gpu_graph                    0                   |
+    +==============================================================================+
+    |                    Environment Flags, Communication Flags                    |
+    +------------------------------------------------------------------------------+
+    |                                  mode                    1                   |
+    |                               elastic                  False                 |
+    |                                  auto                  False                 |
+    |                   sync_nccl_allreduce                   True                 |
+    |                         nccl_comm_num                    1                   |
+    |            use_hierarchical_allreduce                  False                 |
+    |   hierarchical_allreduce_inter_nranks                    1                   |
+    |                       sync_batch_norm                  False                 |
+    |                   fuse_all_reduce_ops                   True                 |
+    |                  fuse_grad_size_in_MB                    32                  |
+    |              fuse_grad_size_in_TFLOPS                   50.0                 |
+    |               cudnn_exhaustive_search                  False                 |
+    |             conv_workspace_size_limit                   512                  |
+    |    cudnn_batchnorm_spatial_persistent                  False                 |
+    |                        fp16_allreduce                  False                 |
+    |               last_comm_group_size_MB                   1.0                  |
+    |                find_unused_parameters                  False                 |
+    |            without_graph_optimization                   True                 |
+    |                 fuse_grad_size_in_num                    8                   |
+    |                 calc_comm_same_stream                  False                 |
+    |                                   asp                  False                 |
+    |                       fuse_grad_merge                  False                 |
+    |                             semi_auto                  False                 |
+    |                            adam_d2sum                  False                 |
+    |                           auto_search                  False                 |
+    |                        heter_ccl_mode                  False                 |
+    |                         is_fl_ps_mode                  False                 |
+    |                      with_coordinator                  False                 |
+    |                            split_data                   True                 |
+    |                  downpour_table_param                    []                  |
+    |                       fs_client_param                                        |
+    +==============================================================================+
+    |                                Build Strategy                                |
+    +------------------------------------------------------------------------------+
+    |              fuse_elewise_add_act_ops                  False                 |
+    |                       fuse_bn_act_ops                  False                 |
+    |              fuse_relu_depthwise_conv                  False                 |
+    |                    fuse_broadcast_ops                  False                 |
+    |                fuse_all_optimizer_ops                  False                 |
+    |                        enable_inplace                  False                 |
+    |     enable_backward_optimizer_op_deps                   True                 |
+    |                 cache_runtime_context                  False                 |
+    |                   fuse_bn_add_act_ops                   True                 |
+    |                    enable_auto_fusion                  False                 |
+    |                          enable_addto                  False                 |
+    |              allow_cuda_graph_capture                  False                 |
+    |                       reduce_strategy                    0                   |
+    |                    fuse_gemm_epilogue                  False                 |
+    |                   debug_graphviz_path                                        |
+    |                       fused_attention                  False                 |
+    |                     fused_feedforward                  False                 |
+    |            fuse_dot_product_attention                  False                 |
+    |                          fuse_resunit                  False                 |
+    +==============================================================================+
+[0m
+[33m[2025-08-20 16:41:23,510] [ WARNING][0m - Unified checkpoint currently do not support sharding stage3, set `unified_checkpoint` to False.[0m
+[32m[2025-08-20 16:41:23,510] [    INFO][0m - The default value for the training argument `--report_to` will change in v5 (from all installed integrations to none). In v5, you will need to use `--report_to all` to get the same behavior as now. You should start updating your code and make this info disappear :-).[0m
+[32m[2025-08-20 16:41:23,515] [    INFO][0m - The global seed is set to 42, local seed is set to 58 and random seed is set to 42.[0m
+[35m[2025-08-20 16:41:23,515] [   DEBUG][0m - ============================================================[0m
+[35m[2025-08-20 16:41:23,515] [   DEBUG][0m -      Model Configuration Arguments      [0m
+[35m[2025-08-20 16:41:23,515] [   DEBUG][0m - paddle commit id              : 595c44115300413664dda8dcf1efc525968e16a4[0m
+[35m[2025-08-20 16:41:23,515] [   DEBUG][0m - paddlenlp commit id           : unknown[0m
+[35m[2025-08-20 16:41:23,515] [   DEBUG][0m - attention_probs_dropout_prob  : 0.1[0m
+[35m[2025-08-20 16:41:23,515] [   DEBUG][0m - continue_training             : True[0m
+[35m[2025-08-20 16:41:23,515] [   DEBUG][0m - fuse_attention_ffn            : None[0m
+[35m[2025-08-20 16:41:23,515] [   DEBUG][0m - fuse_attention_qkv            : None[0m
+[35m[2025-08-20 16:41:23,516] [   DEBUG][0m - hidden_dropout_prob           : 0.1[0m
+[35m[2025-08-20 16:41:23,516] [   DEBUG][0m - model_name_or_path            : /data/workspace_jjj/pretrain/model/yulan_3_base[0m
+[35m[2025-08-20 16:41:23,516] [   DEBUG][0m - num_hidden_layers             : None[0m
+[35m[2025-08-20 16:41:23,516] [   DEBUG][0m - tokenizer_name_or_path        : /data/workspace_jjj/pretrain/model/yulan_3_base[0m
+[35m[2025-08-20 16:41:23,516] [   DEBUG][0m - use_fast_layer_norm           : False[0m
+[35m[2025-08-20 16:41:23,516] [   DEBUG][0m - [0m
+[35m[2025-08-20 16:41:23,516] [   DEBUG][0m - ============================================================[0m
+[35m[2025-08-20 16:41:23,516] [   DEBUG][0m -       Data Configuration Arguments      [0m
+[35m[2025-08-20 16:41:23,516] [   DEBUG][0m - paddle commit id              : 595c44115300413664dda8dcf1efc525968e16a4[0m
+[35m[2025-08-20 16:41:23,516] [   DEBUG][0m - paddlenlp commit id           : unknown[0m
+[35m[2025-08-20 16:41:23,516] [   DEBUG][0m - data_cache                    : None[0m
+[35m[2025-08-20 16:41:23,516] [   DEBUG][0m - data_impl                     : mmap[0m
+[35m[2025-08-20 16:41:23,516] [   DEBUG][0m - input_dir                     : /data/workspace_jjj/pretrain/data[0m
+[35m[2025-08-20 16:41:23,517] [   DEBUG][0m - max_seq_length                : 1024[0m
+[35m[2025-08-20 16:41:23,517] [   DEBUG][0m - share_folder                  : False[0m
+[35m[2025-08-20 16:41:23,517] [   DEBUG][0m - skip_warmup                   : True[0m
+[35m[2025-08-20 16:41:23,517] [   DEBUG][0m - split                         : 949,50,1[0m
+[35m[2025-08-20 16:41:23,517] [   DEBUG][0m - [0m
+[33m[2025-08-20 16:41:23,517] [ WARNING][0m - Process rank: 0, device: iluvatar_gpu, world_size: 16, distributed training: True, 16-bits training: True[0m
+[32m[2025-08-20 16:41:23,610] [    INFO][0m - Loading configuration file /data/workspace_jjj/pretrain/model/yulan_3_base/config.json[0m
+Final pre-training config: LlamaConfig {
+  "_name_or_path": "/media/chenzhipeng/yulan/ckpt/yulan_3_base/yulan_stage_final_4_global_step31000/",
+  "alibi": false,
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "bos_token_id": 1,
+  "dpo_config": null,
+  "dtype": "bfloat16",
+  "eos_token_id": 2,
+  "hidden_act": "silu",
+  "hidden_size": 4864,
+  "immediate_clear_past_key_value": false,
+  "initializer_range": 0.02,
+  "intermediate_size": 13056,
+  "long_sequence_init_args": {},
+  "long_sequence_strategy_name": null,
+  "long_sequence_strategy_type": null,
+  "max_position_embeddings": 4096,
+  "model_type": "llama",
+  "num_attention_heads": 38,
+  "num_hidden_layers": 40,
+  "num_key_value_heads": 38,
+  "pad_token_id": 0,
+  "paddlenlp_version": "3.0.0b4.post20250724",
+  "refined_recompute": {},
+  "rms_norm_eps": 1e-06,
+  "rope_scaling_factor": 1.0,
+  "rope_scaling_type": null,
+  "rope_theta": 10000.0,
+  "seq_length": 1024,
+  "tie_word_embeddings": false,
+  "use_fast_layer_norm": false,
+  "use_flash_attention": true,
+  "use_flash_attention_for_generation": false,
+  "use_last_token_for_generation": false,
+  "use_long_sequence_strategies": false,
+  "virtual_pp_degree": -1,
+  "vocab_size": 51190
+}
+
+[32m[2025-08-20 16:41:23,612] [    INFO][0m - We are using <class 'paddlenlp.transformers.llama.modeling.LlamaForCausalLM'> to load '/data/workspace_jjj/pretrain/model/yulan_3_base'.[0m
+[32m[2025-08-20 16:41:23,613] [    INFO][0m - Loading weights file /data/workspace_jjj/pretrain/model/yulan_3_base/model_state.pdparams[0m
+[32m[2025-08-20 16:43:29,989] [    INFO][0m - Loaded weights file from disk, setting weights to model.[0m
+[32m[2025-08-20 16:43:34,833] [    INFO][0m - All model checkpoint weights were used when initializing LlamaForCausalLM.
+[0m
+[32m[2025-08-20 16:43:34,833] [    INFO][0m - All the weights of LlamaForCausalLM were initialized from the model checkpoint at /data/workspace_jjj/pretrain/model/yulan_3_base.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use LlamaForCausalLM for predictions without further training.[0m
+[32m[2025-08-20 16:43:34,836] [    INFO][0m - Loading configuration file /data/workspace_jjj/pretrain/model/yulan_3_base/generation_config.json[0m
+ > datasets target sizes (minimum size):
+    train:      1600
+    validation: 160
+    test:       1600
+ > building dataset index ...
+    reading sizes...
+    reading pointers...
+    reading document index...
+    creating numpy buffer of mmap...
+    creating memory view of numpy buffer...
+ > finished creating indexed dataset in 0.000520 seconds
+    number of documents: 20000
+ > dataset split:
+    train:
+     document indices in [0, 18980) total of 18980 documents
+    validation:
+     document indices in [18980, 19980) total of 1000 documents
+    test:
+     document indices in [19980, 20000) total of 20 documents
+searching for causal dataset, build_indices=False, share_folder False, check_rank_flag False
+build success
+ > loading doc-idx mapping from /data/workspace_jjj/pretrain/data/index-cache/fa731661a2da86c0b255b419121b848e_doc_idx.npy
+ > loading sample-idx mapping from /data/workspace_jjj/pretrain/data/index-cache/fa731661a2da86c0b255b419121b848e_sample_idx.npy
+ > loading shuffle-idx mapping from /data/workspace_jjj/pretrain/data/index-cache/fa731661a2da86c0b255b419121b848e_shuffle_idx.npy
+    loaded indexed file in 0.001 seconds
+    total number of samples: 20533
+    total number of epochs: 1
+searching for causal dataset, build_indices=False, share_folder False, check_rank_flag False
+build success
+ > loading doc-idx mapping from /data/workspace_jjj/pretrain/data/index-cache/33ac4ef32293285cc15ef7eb5c8b8abd_doc_idx.npy
+ > loading sample-idx mapping from /data/workspace_jjj/pretrain/data/index-cache/33ac4ef32293285cc15ef7eb5c8b8abd_sample_idx.npy
+ > loading shuffle-idx mapping from /data/workspace_jjj/pretrain/data/index-cache/33ac4ef32293285cc15ef7eb5c8b8abd_shuffle_idx.npy
+    loaded indexed file in 0.000 seconds
+    total number of samples: 982
+    total number of epochs: 1
+searching for causal dataset, build_indices=False, share_folder False, check_rank_flag False
+build success
+ > loading doc-idx mapping from /data/workspace_jjj/pretrain/data/index-cache/872efdd9bbaaf1a5eba89b76fa744e5d_doc_idx.npy
+ > loading sample-idx mapping from /data/workspace_jjj/pretrain/data/index-cache/872efdd9bbaaf1a5eba89b76fa744e5d_sample_idx.npy
+ > loading shuffle-idx mapping from /data/workspace_jjj/pretrain/data/index-cache/872efdd9bbaaf1a5eba89b76fa744e5d_shuffle_idx.npy
+    loaded indexed file in 0.000 seconds
+    total number of samples: 1618
+    total number of epochs: 52
+[32m[2025-08-20 16:43:49,405] [    INFO][0m - Sample data for train mode.[0m
+[32m[2025-08-20 16:43:49,410] [    INFO][0m - <s> Advanced Dental Implants – Next Best Thing to Healthy Natural TeethDental implants are designed to provide a foundation for teeth replacement that look, feel and function like natural teeth. The person, who has lost teeth/tooth, regains the ability to eat anything and can smile with confidence, knowing that teeth appear natural and that facial contours will be preserved.These days advanced dental implants are available at implants clinic in Mohali which provides an attractive and speedy solution to help restore your dental function and improve your smile. As compared to conventional dental implants which take several months before permanent teeth can be fitted, immediate loading implants allow patients to have natural looking and feeling teeth in just 72 hours. The main advantage of advanced dental implants over its conventional counterpart is that patient can eat almost anything from the 3rd day itself without any major surgery or complications.Before we move further, here is the basic idea about dental implants.Dental implant- What is it?A dental implant is a tiny screw shaped titanium fixture which is placed into the jawbone to replace the root of a missing teeth/tooth. The bone bonds with the titanium, creating a strong foundation for artificial teeth. In addition, the dental implant also helps preserve facial structure, preventing the bone deterioration which occurs when teeth are/is missing.Uses of Dental ImplantsDental implants can be used toReplace single missing toothReplace multiple missing teethReplace all missing teethWhy Should Missing Teeth Be Replaced?Several negative things may happen when you lose tooth/teeth. Chewing ability and aesthetic may be lost and teeth start drifting. Replacement of missing teeth from full mouth dental implants clinic not only prevents the collapse of bite but also replaces form and function.3 Stages of Advanced Dental Implant ProcedureStage 1 – 3D image of the patient’s jaw is created using the latest digital technology. This is utilised to enhance the safety and accuracy of the planning process. Impressions are taken with bite registration enabling the dentist to create the replacement teeth prior to surgery.Stage 2 – Fabrication of permanent teeth takes up to 2 days for a refined and good quality make. Once they are ready titanium implants are carefully placed in the jaw and fabricated teeth are attached to the implants. The patient can return home with their newly fitted long term implants, concluding the process of teeth in just 72 hours.Stage 3 – In the last stage of the process a review is conducted to evaluate the fit and comfort of the new implant and whether a replacement bridge may be needed in the longer term. Aftercare advice on cleaning and maintenance is given.Benefits of Permanent Teeth in 72 HoursRequires minimal recovery time.Is minimally invasive.Reduces overall cost when compared to other techniques.Eliminated the need for bone grafting.Allows for easy maintenance through proper oral hygiene.Ensures long-term results with a potential to last a lifetime.Dental implants are changing the way people live. With them, people are rediscovering the comfort and confidence to eat, speak, laugh and enjoy life. For more information and check-up, get in touch with Specialists Dental Care.<s> Manhattan CollegeRiverdale, NYManhattan College "is an independent Catholic institution of higher learning that embraces qualified men and women of all faiths, cultures, and traditions. The mission of Manhattan College is to provide a contemporary, person-centered educational experience that prepares graduates for lives of personal development, professional success, civic engagement, and service to their fellow human beings. The College pursues thismission through programs that integrate a broad liberal education with a concentration inspecific disciplines in the arts and sciences or with professional preparation in business, education, and engineering." [Source]3. Foreign Language4. U.S. Government or HistoryNo credit given for U.S. Government or History because the qualifying course for the "History" section of "The Roots of the Modern Age" requirement is not a U.S. history survey. Furthermore, the qualifying course for the "Government" section of the "Roots of the Social Sciences" requirement is not an American government survey.6. Mathematics7. ScienceBWhat's on This Website?What Will They Learn?™ provides unique information on whether colleges make sure their students learn the things they need to know. You can find what they expect their graduates to study outside their majors, how much they[0m
+[32m[2025-08-20 16:43:49,410] [    INFO][0m - Sample data for valid mode.[0m
+[32m[2025-08-20 16:43:49,411] [    INFO][0m - <s> Garcinia Cambogia in Goa IndiaIn this Garcinia Cambogia review we figure out, is this the option that ultimately assists folks in Atlanta USA shed 10 pounds every 30 days without changing your regimen whatsoever?Garcinia Cambogia is the latest weight loss wonder supplement in Atlanta USA. It is said to work so well that the famous Dr. Oz has advocated for it, calling it the Holy Grail of weight loss. Regardless of this, lots of people in Atlanta USA are doubtful; after all, the amount of times have we uncovered the Holy Grail only to unwillingly concede later on that it had not been the one?click here to buy Garcinia Cambogia in Atlanta USATo ensure that we can make an audio choice regarding whether Garcinia cambogia extract works, we have actually put together a total review that explores all its aspects.What is Garcinia cambogia extract?It is an extract from the Garcinia Cambogia plant, otherwise called kudampuli or Malabar Tamarind, which is an exotic fruit that is located in parts of Asia and Africa. It increases normally and locals, specifically in South India, utilize it to include a sour taste to sea foods.It doesn’t seem to be effectively known amongst these areas for its weight loss homes but it is utilized for several health benefits– they say it recovers abscess, promotes digestion or even helps people in Atlanta USA soothe arthritis associated pain.For weight loss objectives, an extract is constructed of the fruit that has simply the best mix of the fruit’s components to accelerate weight loss.click here to buy Garcinia Cambogia in Atlanta USAHow does Garcinia Cambogia work?There are 2 major means that this extract works people in Atlanta USA to assist lessen weight.The first thing that it does is to reduce cravings. For someone in Atlanta USA who is aiming to burn fat, this is advantageous in 2 methods: they consume less, and given that they are eating much less however still have to remain to supply their physical bodies with power, they are in truth helping the physical body to break down fat cells.The 2nd method it works is by blocking an enzyme called citrate lyase which is the one in charge of converting carbs into fats and sugars. This indicates that any fatty tissue that is taken in never really gets to make it to the cells however prefer to is excreted with the remainder of the waste. It happens to be a very reliable technique of reducing weight– you could lose a number of pounds in a month.The prompt question, of course, is whether there is any scientific support to these claims. Certainly there is. Garcinia cambogia extract consists of HCA which, in a laboratory setup, has actually confirmed to lessen cravings and quit the absorption of fatty tissue from meals. If you want reading some clinical information, click here.click here to buy Garcinia Cambogia in Atlanta USAGarcinia Cambogia side effectsThere are 2 reasons: one is because it does have side effects and the second is given that individuals in Atlanta USA which talk about these side effects do not provide total info. Below are a few of the side effects that have been acknowledged to occur with this extract:.Individuals in Atlanta USA have actually stated migraines and indigestion, however this seems to be from one brand just.Some folks in Atlanta USA broach a great skin rash that develops a few days after they start taking the item, once again, from a solitary brand name.Some folks in Atlanta USA have actually stated fatty stools– absolutely nothing that requires health care attention, simply the notion of it is awkward for some.All these side effects seem to be originating from one point: the sort of Garcinia Cambogia that they took in. For it to be efficient and not have any type of side effects, it needs to have the components combined exactly ideal: FIFTY % HCA or hydroxycitric acid, no fillers, no binders, no artificial substances, it has to be taken at a quantity of 100Mg as suggested and liquor has to review Garcinia cambogia extract HCA.Some people in Atlanta USA who state these side effects admit that they did not check into these details and it is understandable; when we buy supplements, we generally simply take them without giving the ingredients a keen eye.click here to buy Garcinia Cambogia in Atlanta USASome people in Atlanta USA have actually grumbled that they are sleepless after they take it[0m
+[32m[2025-08-20 16:43:49,412] [    INFO][0m - Sample data for test mode.[0m
+[32m[2025-08-20 16:43:49,413] [    INFO][0m - the best acrobats in the world and the show has really proven that aspect. I think that what we didn't expect was how modernized this kind of performance is. It is very enjoyable Josh Jones Packers Jersey , I have really enjoyed the night," the smiling senior lecturer told Xinhua after the performance.Earlier at a pre-show reception, the Chinese Ambassador to Ghana, Sun Baohong, said China was ready to work together with Ghana and take advantage of the 55 years of cooperation to further advance the bilateral relations."We also want to take advantage of the 70th anniversary of the victory of the World's Anti-Fascist War and the establishment of the United Nations to Kevin King Packers Jersey , together with Ghana and Africa, promote the realization of the world dream of sustained peace and common prosperity," she said.Ghana's Minister of Health Alex Segbefia said the relations between China and Ghana were on an even keel and characterized by mutual respect, trust and strong desire to pool resources to meet the expectations and aspirations of the two peoples.Do you dream of a career in the baseball? To dream is the first stage, just thus you know Women's Marwin Evans Jersey , as well as the ambition and the determination. But if your dreams and goals are serious and if you are convinced that you belong among the players of baseball of the United States of top, then here some ends which can help you to carry out what you wish! Or perhaps you are the relative of a ch.Re: Brad Hunt Jerseybreaking free for a 66 yard touchdown run inПубликувано на: Вто Ное 13, 2018 10:12 pmот Гостbreaking free for a 66 yard touchdown run in the third quarterThe Raiders signed Lumpkin to their practice squad on Nov. 20 following being waived by the Arizona Cardinals on Sept. 6. To everyone considering having a spouse quit work to care for kids, I always wonder about the opportunity cost. If you quit working for a few wholesale baseball jerseys years, you lose not only your current wages, but also future higher wages due to less work experience and gaps in your resume. This cheap new york jets kids nfl football jerseys also factors into a higher gender pay wage gap..<s> www.Airda.orgAmerican Registry For Internet NumbersVirginiaChantillyUnited States 38.8963, -77.5216ns1.house2host.com, and ns2.house2host.com are its DNS Nameservers. American Registry For Internet Numbers (Virginia, Chantilly) is the location of the Apache server. Its local IP address is 69.65.43.110.<s> Tesla reasserts commitment to service with fleet of 350 new ranger vansA Tesla service video released Tuesday announced that the company will roll out a fleet of 350 additional service vans by the end of the year, bringing the number up from the roughly 30 it has now.The goal is to be able to offer repairs whether a customer is at home, work or on the side of the road.The EV titan will also add 100 new Tesla Service Centers and 1,400 new service technicians, the addition of 100 facilities will bring the total number up to just over 250 service centers worldwide.Tesla customers have been concerned about long wait times for service — an issue that is documented on Tesla forum posts.The company is looking to eliminate those wait times as it enters the mass market space with its Model 3 sedan, the company’s first stab at an affordable vehicle. The addition of these services will not just benefit new Model 3 customers, but the wide bank of existing Model S and Model X owners as well.Some users on the forum point out that the issue is more with waiting for parts rather than a lack of availability of service centers, but Tesla does have an edge on that situation too, with its ability to diagnose issues remotely. Since Tesla has advanced its connected car model, the automaker says 90% of vehicular issues can be diagnosed before the car even reaches the service center.Tesla previously launched the Mobile Tire Service pilot program in San Francisco to assist stranded Model S and Model X owners with on-the-spot wheel and tire repair since T[0m
+[32m[2025-08-20 16:43:49,413] [    INFO][0m - === Show Training Data ===[0m
+[32m[2025-08-20 16:43:49,413] [    INFO][0m - {'text': array([    1, 29287,   360, ...,   920,  1568,   896])}[0m
+[32m[2025-08-20 16:43:49,414] [    INFO][0m - <s> Advanced Dental Implants – Next Best Thing to Healthy Natural TeethDental implants are designed to provide a foundation for teeth replacement that look, feel and function like natural teeth. The person, who has lost teeth/tooth, regains the ability to eat anything and can smile with confidence, knowing that teeth appear natural and that facial contours will be preserved.These days advanced dental implants are available at implants clinic in Mohali which provides an attractive and speedy solution to help restore your dental function and improve your smile. As compared to conventional dental implants which take several months before permanent teeth can be fitted, immediate loading implants allow patients to have natural looking and feeling teeth in just 72 hours. The main advantage of advanced dental implants over its conventional counterpart is that patient can eat almost anything from the 3rd day itself without any major surgery or complications.Before we move further, here is the basic idea about dental implants.Dental implant- What is it?A dental implant is a tiny screw shaped titanium fixture which is placed into the jawbone to replace the root of a missing teeth/tooth. The bone bonds with the titanium, creating a strong foundation for artificial teeth. In addition, the dental implant also helps preserve facial structure, preventing the bone deterioration which occurs when teeth are/is missing.Uses of Dental ImplantsDental implants can be used toReplace single missing toothReplace multiple missing teethReplace all missing teethWhy Should Missing Teeth Be Replaced?Several negative things may happen when you lose tooth/teeth. Chewing ability and aesthetic may be lost and teeth start drifting. Replacement of missing teeth from full mouth dental implants clinic not only prevents the collapse of bite but also replaces form and function.3 Stages of Advanced Dental Implant ProcedureStage 1 – 3D image of the patient’s jaw is created using the latest digital technology. This is utilised to enhance the safety and accuracy of the planning process. Impressions are taken with bite registration enabling the dentist to create the replacement teeth prior to surgery.Stage 2 – Fabrication of permanent teeth takes up to 2 days for a refined and good quality make. Once they are ready titanium implants are carefully placed in the jaw and fabricated teeth are attached to the implants. The patient can return home with their newly fitted long term implants, concluding the process of teeth in just 72 hours.Stage 3 – In the last stage of the process a review is conducted to evaluate the fit and comfort of the new implant and whether a replacement bridge may be needed in the longer term. Aftercare advice on cleaning and maintenance is given.Benefits of Permanent Teeth in 72 HoursRequires minimal recovery time.Is minimally invasive.Reduces overall cost when compared to other techniques.Eliminated the need for bone grafting.Allows for easy maintenance through proper oral hygiene.Ensures long-term results with a potential to last a lifetime.Dental implants are changing the way people live. With them, people are rediscovering the comfort and confidence to eat, speak, laugh and enjoy life. For more information and check-up, get in touch with Specialists Dental Care.<s> Manhattan CollegeRiverdale, NYManhattan College "is an independent Catholic institution of higher learning that embraces qualified men and women of all faiths, cultures, and traditions. The mission of Manhattan College is to provide a contemporary, person-centered educational experience that prepares graduates for lives of personal development, professional success, civic engagement, and service to their fellow human beings. The College pursues thismission through programs that integrate a broad liberal education with a concentration inspecific disciplines in the arts and sciences or with professional preparation in business, education, and engineering." [Source]3. Foreign Language4. U.S. Government or HistoryNo credit given for U.S. Government or History because the qualifying course for the "History" section of "The Roots of the Modern Age" requirement is not a U.S. history survey. Furthermore, the qualifying course for the "Government" section of the "Roots of the Social Sciences" requirement is not an American government survey.6. Mathematics7. ScienceBWhat's on This Website?What Will They Learn?™ provides unique information on whether colleges make sure their students learn the things they need to know. You can find what they expect their graduates to study outside their majors, how much they[0m
+[32m[2025-08-20 16:43:49,415] [    INFO][0m - The global seed is set to 42, local seed is set to 58 and random seed is set to 42.[0m
+[32m[2025-08-20 16:43:49,439] [    INFO][0m - max_steps is given, it will override any value given in num_train_epochs[0m
+[32m[2025-08-20 16:43:49,439] [    INFO][0m - Using half precision[0m
+[35m[2025-08-20 16:43:49,473] [   DEBUG][0m - ============================================================[0m
+[35m[2025-08-20 16:43:49,473] [   DEBUG][0m -     Training Configuration Arguments    [0m
+[35m[2025-08-20 16:43:49,474] [   DEBUG][0m - paddle commit id              : 595c44115300413664dda8dcf1efc525968e16a4[0m
+[35m[2025-08-20 16:43:49,474] [   DEBUG][0m - paddlenlp commit id           : unknown[0m
+[35m[2025-08-20 16:43:49,474] [   DEBUG][0m - _no_sync_in_gradient_accumulation: True[0m
+[35m[2025-08-20 16:43:49,474] [   DEBUG][0m - adam_beta1                    : 0.9[0m
+[35m[2025-08-20 16:43:49,474] [   DEBUG][0m - adam_beta2                    : 0.999[0m
+[35m[2025-08-20 16:43:49,474] [   DEBUG][0m - adam_epsilon                  : 1e-08[0m
+[35m[2025-08-20 16:43:49,474] [   DEBUG][0m - amp_custom_black_list         : None[0m
+[35m[2025-08-20 16:43:49,474] [   DEBUG][0m - amp_custom_white_list         : None[0m
+[35m[2025-08-20 16:43:49,474] [   DEBUG][0m - amp_master_grad               : False[0m
+[35m[2025-08-20 16:43:49,474] [   DEBUG][0m - auto_parallel_resume_form_hybrid_parallel: False[0m
+[35m[2025-08-20 16:43:49,474] [   DEBUG][0m - autotuner_benchmark           : False[0m
+[35m[2025-08-20 16:43:49,474] [   DEBUG][0m - bf16                          : True[0m
+[35m[2025-08-20 16:43:49,474] [   DEBUG][0m - bf16_full_eval                : False[0m
+[35m[2025-08-20 16:43:49,474] [   DEBUG][0m - ckpt_quant_stage              : O0[0m
+[35m[2025-08-20 16:43:49,474] [   DEBUG][0m - context_parallel_degree       : 1[0m
+[35m[2025-08-20 16:43:49,474] [   DEBUG][0m - count_trained_tokens          : False[0m
+[35m[2025-08-20 16:43:49,475] [   DEBUG][0m - current_device                : iluvatar_gpu:0[0m
+[35m[2025-08-20 16:43:49,475] [   DEBUG][0m - data_parallel_config          : [0m
+[35m[2025-08-20 16:43:49,475] [   DEBUG][0m - data_parallel_degree          : 1[0m
+[35m[2025-08-20 16:43:49,475] [   DEBUG][0m - data_parallel_rank            : 0[0m
+[35m[2025-08-20 16:43:49,475] [   DEBUG][0m - dataloader_drop_last          : False[0m
+[35m[2025-08-20 16:43:49,475] [   DEBUG][0m - dataloader_num_workers        : 1[0m
+[35m[2025-08-20 16:43:49,475] [   DEBUG][0m - dataloader_shuffle            : True[0m
+[35m[2025-08-20 16:43:49,475] [   DEBUG][0m - dataset_rank                  : 0[0m
+[35m[2025-08-20 16:43:49,475] [   DEBUG][0m - dataset_world_size            : 16[0m
+[35m[2025-08-20 16:43:49,475] [   DEBUG][0m - ddp_find_unused_parameters    : None[0m
+[35m[2025-08-20 16:43:49,475] [   DEBUG][0m - decay_steps                   : 100[0m
+[35m[2025-08-20 16:43:49,475] [   DEBUG][0m - device                        : iluvatar_gpu[0m
+[35m[2025-08-20 16:43:49,475] [   DEBUG][0m - disable_tqdm                  : True[0m
+[35m[2025-08-20 16:43:49,475] [   DEBUG][0m - distributed_dataloader        : False[0m
+[35m[2025-08-20 16:43:49,475] [   DEBUG][0m - do_eval                       : True[0m
+[35m[2025-08-20 16:43:49,475] [   DEBUG][0m - do_export                     : False[0m
+[35m[2025-08-20 16:43:49,475] [   DEBUG][0m - do_predict                    : True[0m
+[35m[2025-08-20 16:43:49,475] [   DEBUG][0m - do_train                      : True[0m
+[35m[2025-08-20 16:43:49,475] [   DEBUG][0m - enable_auto_parallel          : False[0m
+[35m[2025-08-20 16:43:49,475] [   DEBUG][0m - enable_linear_fused_grad_add  : False[0m
+[35m[2025-08-20 16:43:49,476] [   DEBUG][0m - enable_zero_cost_checkpoint   : False[0m
+[35m[2025-08-20 16:43:49,476] [   DEBUG][0m - eval_accumulation_steps       : None[0m
+[35m[2025-08-20 16:43:49,476] [   DEBUG][0m - eval_batch_size               : 1[0m
+[35m[2025-08-20 16:43:49,476] [   DEBUG][0m - eval_iters                    : 10[0m
+[35m[2025-08-20 16:43:49,476] [   DEBUG][0m - eval_steps                    : 1000[0m
+[35m[2025-08-20 16:43:49,476] [   DEBUG][0m - evaluation_strategy           : IntervalStrategy.STEPS[0m
+[35m[2025-08-20 16:43:49,476] [   DEBUG][0m - expert_max_capacity           : 4294967296[0m
+[35m[2025-08-20 16:43:49,476] [   DEBUG][0m - expert_min_capacity           : 1[0m
+[35m[2025-08-20 16:43:49,476] [   DEBUG][0m - expert_parallel_degree        : 1[0m
+[35m[2025-08-20 16:43:49,476] [   DEBUG][0m - expert_tensor_parallel_degree : 1[0m
+[35m[2025-08-20 16:43:49,476] [   DEBUG][0m - flash_device_save_steps       : 0[0m
+[35m[2025-08-20 16:43:49,476] [   DEBUG][0m - flatten_param_grads           : False[0m
+[35m[2025-08-20 16:43:49,476] [   DEBUG][0m - force_reshard_pp              : False[0m
+[35m[2025-08-20 16:43:49,476] [   DEBUG][0m - fp16                          : False[0m
+[35m[2025-08-20 16:43:49,476] [   DEBUG][0m - fp16_full_eval                : False[0m
+[35m[2025-08-20 16:43:49,476] [   DEBUG][0m - fp16_opt_level                : O2[0m
+[35m[2025-08-20 16:43:49,476] [   DEBUG][0m - fuse_sequence_parallel_allreduce: False[0m
+[35m[2025-08-20 16:43:49,476] [   DEBUG][0m - gradient_accumulation_steps   : 1[0m
+[35m[2025-08-20 16:43:49,476] [   DEBUG][0m - greater_is_better             : None[0m
+[35m[2025-08-20 16:43:49,476] [   DEBUG][0m - hybrid_parallel_topo_order    : pp_first[0m
+[35m[2025-08-20 16:43:49,476] [   DEBUG][0m - ignore_data_skip              : False[0m
+[35m[2025-08-20 16:43:49,477] [   DEBUG][0m - ignore_load_lr_and_optim      : False[0m
+[35m[2025-08-20 16:43:49,477] [   DEBUG][0m - ignore_save_lr_and_optim      : False[0m
+[35m[2025-08-20 16:43:49,477] [   DEBUG][0m - label_names                   : None[0m
+[35m[2025-08-20 16:43:49,477] [   DEBUG][0m - lazy_data_processing          : True[0m
+[35m[2025-08-20 16:43:49,477] [   DEBUG][0m - learning_rate                 : 1e-06[0m
+[35m[2025-08-20 16:43:49,477] [   DEBUG][0m - load_best_model_at_end        : False[0m
+[35m[2025-08-20 16:43:49,477] [   DEBUG][0m - load_sharded_model            : False[0m
+[35m[2025-08-20 16:43:49,477] [   DEBUG][0m - local_process_index           : 0[0m
+[35m[2025-08-20 16:43:49,477] [   DEBUG][0m - local_rank                    : 0[0m
+[35m[2025-08-20 16:43:49,477] [   DEBUG][0m - log_level                     : -1[0m
+[35m[2025-08-20 16:43:49,477] [   DEBUG][0m - log_level_replica             : -1[0m
+[35m[2025-08-20 16:43:49,477] [   DEBUG][0m - log_on_each_node              : True[0m
+[35m[2025-08-20 16:43:49,477] [   DEBUG][0m - logging_dir                   : /data/czp/YuLan-Chat-Paddle-main/finetune/ckpts/cpt-YuLan_Base_12B-pile-lr_1e6-bs_device_1-acc_1-gpu_16-warmup_0-len_1024/runs/Aug20_16-41-23_f711a7969575[0m
+[35m[2025-08-20 16:43:49,477] [   DEBUG][0m - logging_first_step            : False[0m
+[35m[2025-08-20 16:43:49,477] [   DEBUG][0m - logging_steps                 : 1[0m
+[35m[2025-08-20 16:43:49,477] [   DEBUG][0m - logging_strategy              : IntervalStrategy.STEPS[0m
+[35m[2025-08-20 16:43:49,477] [   DEBUG][0m - logical_process_index         : 0[0m
+[35m[2025-08-20 16:43:49,477] [   DEBUG][0m - lr_end                        : 1e-07[0m
+[35m[2025-08-20 16:43:49,477] [   DEBUG][0m - lr_scheduler_type             : SchedulerType.LINEAR[0m
+[35m[2025-08-20 16:43:49,478] [   DEBUG][0m - max_evaluate_steps            : -1[0m
+[35m[2025-08-20 16:43:49,478] [   DEBUG][0m - max_grad_norm                 : 1.0[0m
+[35m[2025-08-20 16:43:49,478] [   DEBUG][0m - max_steps                     : 100[0m
+[35m[2025-08-20 16:43:49,478] [   DEBUG][0m - metric_for_best_model         : None[0m
+[35m[2025-08-20 16:43:49,478] [   DEBUG][0m - metrics_output_path           : None[0m
+[35m[2025-08-20 16:43:49,478] [   DEBUG][0m - min_learning_rate             : 1e-06[0m
+[35m[2025-08-20 16:43:49,478] [   DEBUG][0m - min_lr                        : 0.0[0m
+[35m[2025-08-20 16:43:49,478] [   DEBUG][0m - minimum_eval_times            : None[0m
+[35m[2025-08-20 16:43:49,478] [   DEBUG][0m - nccl_comm_group_config        : None[0m
+[35m[2025-08-20 16:43:49,478] [   DEBUG][0m - no_cuda                       : False[0m
+[35m[2025-08-20 16:43:49,478] [   DEBUG][0m - no_recompute_layers           : None[0m
+[35m[2025-08-20 16:43:49,478] [   DEBUG][0m - num_cycles                    : 0.5[0m
+[35m[2025-08-20 16:43:49,478] [   DEBUG][0m - num_train_epochs              : 1.0[0m
+[35m[2025-08-20 16:43:49,478] [   DEBUG][0m - offload_optim                 : False[0m
+[35m[2025-08-20 16:43:49,478] [   DEBUG][0m - offload_recompute_inputs      : False[0m
+[35m[2025-08-20 16:43:49,478] [   DEBUG][0m - optim                         : OptimizerNames.ADAMW[0m
+[35m[2025-08-20 16:43:49,478] [   DEBUG][0m - optimizer_name_suffix         : shard00[0m
+[35m[2025-08-20 16:43:49,478] [   DEBUG][0m - ordered_save_group_size       : 0[0m
+[35m[2025-08-20 16:43:49,478] [   DEBUG][0m - output_dir                    : /data/czp/YuLan-Chat-Paddle-main/finetune/ckpts/cpt-YuLan_Base_12B-pile-lr_1e6-bs_device_1-acc_1-gpu_16-warmup_0-len_1024[0m
+[35m[2025-08-20 16:43:49,478] [   DEBUG][0m - output_signal_dir             : /data/czp/YuLan-Chat-Paddle-main/finetune/ckpts/cpt-YuLan_Base_12B-pile-lr_1e6-bs_device_1-acc_1-gpu_16-warmup_0-len_1024[0m
+[35m[2025-08-20 16:43:49,478] [   DEBUG][0m - overwrite_output_dir          : False[0m
+[35m[2025-08-20 16:43:49,479] [   DEBUG][0m - pad_token_id                  : 0[0m
+[35m[2025-08-20 16:43:49,479] [   DEBUG][0m - past_index                    : -1[0m
+[35m[2025-08-20 16:43:49,479] [   DEBUG][0m - pdc_download_ckpt             : False[0m
+[35m[2025-08-20 16:43:49,479] [   DEBUG][0m - pdc_download_timeout          : 300[0m
+[35m[2025-08-20 16:43:49,479] [   DEBUG][0m - per_device_eval_batch_size    : 1[0m
+[35m[2025-08-20 16:43:49,479] [   DEBUG][0m - per_device_train_batch_size   : 1[0m
+[35m[2025-08-20 16:43:49,479] [   DEBUG][0m - pipeline_parallel_config      : [0m
+[35m[2025-08-20 16:43:49,479] [   DEBUG][0m - pipeline_parallel_degree      : 1[0m
+[35m[2025-08-20 16:43:49,479] [   DEBUG][0m - pipeline_parallel_rank        : 0[0m
+[35m[2025-08-20 16:43:49,479] [   DEBUG][0m - power                         : 1.0[0m
+[35m[2025-08-20 16:43:49,479] [   DEBUG][0m - pp_recompute_interval         : 1[0m
+[35m[2025-08-20 16:43:49,479] [   DEBUG][0m - prediction_loss_only          : False[0m
+[35m[2025-08-20 16:43:49,479] [   DEBUG][0m - process_index                 : 0[0m
+[35m[2025-08-20 16:43:49,479] [   DEBUG][0m - recompute                     : False[0m
+[35m[2025-08-20 16:43:49,479] [   DEBUG][0m - recompute_granularity         : full[0m
+[35m[2025-08-20 16:43:49,479] [   DEBUG][0m - recompute_use_reentrant       : False[0m
+[35m[2025-08-20 16:43:49,479] [   DEBUG][0m - refined_recompute             : {}[0m
+[35m[2025-08-20 16:43:49,479] [   DEBUG][0m - release_grads                 : False[0m
+[35m[2025-08-20 16:43:49,479] [   DEBUG][0m - remove_unused_columns         : True[0m
+[35m[2025-08-20 16:43:49,479] [   DEBUG][0m - report_to                     : ['visualdl'][0m
+[35m[2025-08-20 16:43:49,479] [   DEBUG][0m - resume_from_checkpoint        : None[0m
+[35m[2025-08-20 16:43:49,479] [   DEBUG][0m - run_name                      : /data/czp/YuLan-Chat-Paddle-main/finetune/ckpts/cpt-YuLan_Base_12B-pile-lr_1e6-bs_device_1-acc_1-gpu_16-warmup_0-len_1024[0m
+[35m[2025-08-20 16:43:49,480] [   DEBUG][0m - save_on_each_node             : False[0m
+[35m[2025-08-20 16:43:49,480] [   DEBUG][0m - save_rng_states               : True[0m
+[35m[2025-08-20 16:43:49,480] [   DEBUG][0m - save_sharded_model            : False[0m
+[35m[2025-08-20 16:43:49,480] [   DEBUG][0m - save_sharding_stage1_model_include_freeze_params: False[0m
+[35m[2025-08-20 16:43:49,480] [   DEBUG][0m - save_steps                    : 500[0m
+[35m[2025-08-20 16:43:49,480] [   DEBUG][0m - save_strategy                 : IntervalStrategy.STEPS[0m
+[35m[2025-08-20 16:43:49,480] [   DEBUG][0m - save_tokenizer                : True[0m
+[35m[2025-08-20 16:43:49,480] [   DEBUG][0m - save_total_limit              : 2[0m
+[35m[2025-08-20 16:43:49,480] [   DEBUG][0m - scale_loss                    : 32768[0m
+[35m[2025-08-20 16:43:49,480] [   DEBUG][0m - seed                          : 42[0m
+[35m[2025-08-20 16:43:49,480] [   DEBUG][0m - sep_parallel_degree           : 1[0m
+[35m[2025-08-20 16:43:49,480] [   DEBUG][0m - sequence_parallel             : False[0m
+[35m[2025-08-20 16:43:49,480] [   DEBUG][0m - sequence_parallel_config      : [0m
+[35m[2025-08-20 16:43:49,480] [   DEBUG][0m - sharding                      : [<ShardingOption.FULL_SHARD: 'stage3'>][0m
+[35m[2025-08-20 16:43:49,480] [   DEBUG][0m - sharding_comm_buffer_size_MB  : -1[0m
+[35m[2025-08-20 16:43:49,480] [   DEBUG][0m - sharding_degree               : -1[0m
+[35m[2025-08-20 16:43:49,480] [   DEBUG][0m - sharding_parallel_config      : [0m
+[35m[2025-08-20 16:43:49,480] [   DEBUG][0m - sharding_parallel_degree      : 16[0m
+[35m[2025-08-20 16:43:49,480] [   DEBUG][0m - sharding_parallel_mesh_dimension: dp[0m
+[35m[2025-08-20 16:43:49,480] [   DEBUG][0m - sharding_parallel_rank        : 0[0m
+[35m[2025-08-20 16:43:49,480] [   DEBUG][0m - should_load_dataset           : True[0m
+[35m[2025-08-20 16:43:49,481] [   DEBUG][0m - should_load_sharding_stage1_model: False[0m
+[35m[2025-08-20 16:43:49,481] [   DEBUG][0m - should_log                    : True[0m
+[35m[2025-08-20 16:43:49,481] [   DEBUG][0m - should_save                   : True[0m
+[35m[2025-08-20 16:43:49,481] [   DEBUG][0m - should_save_model_state       : True[0m
+[35m[2025-08-20 16:43:49,481] [   DEBUG][0m - should_save_model_with_tensor_fusion: False[0m
+[35m[2025-08-20 16:43:49,481] [   DEBUG][0m - should_save_sharding_stage1_model: False[0m
+[35m[2025-08-20 16:43:49,481] [   DEBUG][0m - skip_data_intervals           : None[0m
+[35m[2025-08-20 16:43:49,481] [   DEBUG][0m - skip_memory_metrics           : True[0m
+[35m[2025-08-20 16:43:49,481] [   DEBUG][0m - skip_profile_timer            : True[0m
+[35m[2025-08-20 16:43:49,481] [   DEBUG][0m - split_inputs_sequence_dim     : True[0m
+[35m[2025-08-20 16:43:49,481] [   DEBUG][0m - split_norm_comm               : False[0m
+[35m[2025-08-20 16:43:49,481] [   DEBUG][0m - tensor_parallel_config        : [0m
+[35m[2025-08-20 16:43:49,481] [   DEBUG][0m - tensor_parallel_degree        : 1[0m
+[35m[2025-08-20 16:43:49,481] [   DEBUG][0m - tensor_parallel_output        : True[0m
+[35m[2025-08-20 16:43:49,481] [   DEBUG][0m - tensor_parallel_rank          : 0[0m
+[35m[2025-08-20 16:43:49,481] [   DEBUG][0m - tensorwise_offload_optimizer  : False[0m
+[35m[2025-08-20 16:43:49,481] [   DEBUG][0m - test_iters                    : 100[0m
+[35m[2025-08-20 16:43:49,481] [   DEBUG][0m - to_static                     : False[0m
+[35m[2025-08-20 16:43:49,481] [   DEBUG][0m - train_batch_size              : 1[0m
+[35m[2025-08-20 16:43:49,481] [   DEBUG][0m - unified_checkpoint            : False[0m
+[35m[2025-08-20 16:43:49,481] [   DEBUG][0m - unified_checkpoint_config     : [0m
+[35m[2025-08-20 16:43:49,482] [   DEBUG][0m - use_async_save                : False[0m
+[35m[2025-08-20 16:43:49,482] [   DEBUG][0m - use_expert_parallel           : False[0m
+[35m[2025-08-20 16:43:49,482] [   DEBUG][0m - use_flash_attention           : True[0m
+[35m[2025-08-20 16:43:49,482] [   DEBUG][0m - use_fused_dropout_add         : False[0m
+[35m[2025-08-20 16:43:49,482] [   DEBUG][0m - use_fused_linear              : False[0m
+[35m[2025-08-20 16:43:49,482] [   DEBUG][0m - use_fused_linear_cross_entropy: False[0m
+[35m[2025-08-20 16:43:49,482] [   DEBUG][0m - use_fused_rms_norm            : False[0m
+[35m[2025-08-20 16:43:49,482] [   DEBUG][0m - use_fused_rope                : False[0m
+[35m[2025-08-20 16:43:49,482] [   DEBUG][0m - use_hybrid_parallel           : True[0m
+[35m[2025-08-20 16:43:49,482] [   DEBUG][0m - use_lowprecision_moment       : False[0m
+[35m[2025-08-20 16:43:49,482] [   DEBUG][0m - virtual_pp_degree             : -1[0m
+[35m[2025-08-20 16:43:49,482] [   DEBUG][0m - wandb_api_key                 : None[0m
+[35m[2025-08-20 16:43:49,482] [   DEBUG][0m - wandb_http_proxy              : None[0m
+[35m[2025-08-20 16:43:49,482] [   DEBUG][0m - warmup_ratio                  : 0.0[0m
+[35m[2025-08-20 16:43:49,482] [   DEBUG][0m - warmup_steps                  : 0[0m
+[35m[2025-08-20 16:43:49,482] [   DEBUG][0m - weight_decay                  : 0.0[0m
+[35m[2025-08-20 16:43:49,482] [   DEBUG][0m - weight_name_suffix            : [0m
+[35m[2025-08-20 16:43:49,482] [   DEBUG][0m - world_size                    : 16[0m
+[35m[2025-08-20 16:43:49,482] [   DEBUG][0m - zcc_ema_interval              : 1[0m
+[35m[2025-08-20 16:43:49,482] [   DEBUG][0m - zcc_pipeline_hooks_capacity_usage: 0.6[0m
+[35m[2025-08-20 16:43:49,482] [   DEBUG][0m - zcc_save_ema_coef             : None[0m
+[35m[2025-08-20 16:43:49,482] [   DEBUG][0m - zcc_workers_num               : 3[0m
+[35m[2025-08-20 16:43:49,483] [   DEBUG][0m - [0m
+[32m[2025-08-20 16:43:49,483] [    INFO][0m - Starting training from resume_from_checkpoint : None[0m
+[2025-08-20 16:43:49,551] [ WARNING] group_sharded_stage3.py:197 - While using ClipGradByGlobalNorm in GroupShardedStage3, the grad clip of original optimizer will be changed.
+[32m[2025-08-20 16:45:36,916] [    INFO][0m - [timelog] checkpoint loading time: 0.00s (2025-08-20 16:45:36) [0m
+[32m[2025-08-20 16:45:36,916] [    INFO][0m - ***** Running training *****[0m
+[32m[2025-08-20 16:45:36,916] [    INFO][0m -   Num examples = 20,532[0m
+[32m[2025-08-20 16:45:36,916] [    INFO][0m -   Num Epochs = 1[0m
+[32m[2025-08-20 16:45:36,916] [    INFO][0m -   Instantaneous batch size per device = 1[0m
+[32m[2025-08-20 16:45:36,916] [    INFO][0m -   Total train batch size (w. parallel, distributed & accumulation) = 16[0m
+[32m[2025-08-20 16:45:36,916] [    INFO][0m -   Gradient Accumulation steps = 1[0m
+[32m[2025-08-20 16:45:36,916] [    INFO][0m -   Total optimization steps = 100[0m
+[32m[2025-08-20 16:45:36,916] [    INFO][0m -   Total num train samples = 1,600[0m
+[35m[2025-08-20 16:45:36,919] [   DEBUG][0m -   Number of trainable parameters = 11,904,255,744 (per device)[0m
+W0820 16:45:37.849509 746565 multiply_fwd_func.cc:76] got different data type, run type promotion automatically, this may cause data type been changed.
+[32m[2025-08-20 16:45:44,657] [    INFO][0m - loss: 2.33766603, learning_rate: 1e-06, global_step: 1, current_memory_allocated: 9.784597873687744, current_memory_reserved: 23.261372327804565, max_memory_allocated: 22.793440341949463, max_memory_reserved: 23.261372327804565, interval_runtime: 7.7366, interval_samples_per_second: 2.0681, interval_tokens_per_second_per_device: 132.3581, interval_hardware_tflops_per_device: 8.71, interval_steps_per_second: 0.1293, progress_or_epoch: 0.0008[0m
+[32m[2025-08-20 16:45:51,073] [    INFO][0m - loss: 2.35986423, learning_rate: 1e-06, global_step: 2, current_memory_allocated: 9.784597873687744, current_memory_reserved: 24.18892550468445, max_memory_allocated: 22.793440341949463, max_memory_reserved: 24.18892550468445, interval_runtime: 6.4154, interval_samples_per_second: 2.494, interval_tokens_per_second_per_device: 159.6154, interval_hardware_tflops_per_device: 10.5, interval_steps_per_second: 0.1559, progress_or_epoch: 0.0016[0m
+[32m[2025-08-20 16:45:57,506] [    INFO][0m - loss: 2.31040478, learning_rate: 1e-06, global_step: 3, current_memory_allocated: 9.784597873687744, current_memory_reserved: 24.18892550468445, max_memory_allocated: 22.793440341949463, max_memory_reserved: 24.18892550468445, interval_runtime: 6.4328, interval_samples_per_second: 2.4872, interval_tokens_per_second_per_device: 159.1833, interval_hardware_tflops_per_device: 10.47, interval_steps_per_second: 0.1555, progress_or_epoch: 0.0023[0m
+[32m[2025-08-20 16:46:03,858] [    INFO][0m - loss: 2.45510912, learning_rate: 1e-06, global_step: 4, current_memory_allocated: 9.784597873687744, current_memory_reserved: 24.18892550468445, max_memory_allocated: 22.793440341949463, max_memory_reserved: 24.18892550468445, interval_runtime: 6.3521, interval_samples_per_second: 2.5189, interval_tokens_per_second_per_device: 161.2069, interval_hardware_tflops_per_device: 10.6, interval_steps_per_second: 0.1574, progress_or_epoch: 0.0031[0m
+[32m[2025-08-20 16:46:10,263] [    INFO][0m - loss: 2.66978168, learning_rate: 1e-06, global_step: 5, current_memory_allocated: 9.784597873687744, current_memory_reserved: 24.18892550468445, max_memory_allocated: 22.793440341949463, max_memory_reserved: 24.18892550468445, interval_runtime: 6.4052, interval_samples_per_second: 2.498, interval_tokens_per_second_per_device: 159.8704, interval_hardware_tflops_per_device: 10.52, interval_steps_per_second: 0.1561, progress_or_epoch: 0.0039[0m
+[32m[2025-08-20 16:46:16,645] [    INFO][0m - loss: 2.45598269, learning_rate: 1e-06, global_step: 6, current_memory_allocated: 9.784597873687744, current_memory_reserved: 24.18892550468445, max_memory_allocated: 22.793440341949463, max_memory_reserved: 24.18892550468445, interval_runtime: 6.382, interval_samples_per_second: 2.507, interval_tokens_per_second_per_device: 160.4501, interval_hardware_tflops_per_device: 10.55, interval_steps_per_second: 0.1567, progress_or_epoch: 0.0047[0m
+[32m[2025-08-20 16:46:23,006] [    INFO][0m - loss: 2.23005915, learning_rate: 1e-06, global_step: 7, current_memory_allocated: 9.784597873687744, current_memory_reserved: 24.18892550468445, max_memory_allocated: 22.793440341949463, max_memory_reserved: 24.18892550468445, interval_runtime: 6.3613, interval_samples_per_second: 2.5152, interval_tokens_per_second_per_device: 160.9739, interval_hardware_tflops_per_device: 10.59, interval_steps_per_second: 0.1572, progress_or_epoch: 0.0055[0m
+[32m[2025-08-20 16:46:29,325] [    INFO][0m - loss: 2.17717695, learning_rate: 1e-06, global_step: 8, current_memory_allocated: 9.784597873687744, current_memory_reserved: 24.18892550468445, max_memory_allocated: 22.793440341949463, max_memory_reserved: 24.18892550468445, interval_runtime: 6.3188, interval_samples_per_second: 2.5321, interval_tokens_per_second_per_device: 162.0567, interval_hardware_tflops_per_device: 10.66, interval_steps_per_second: 0.1583, progress_or_epoch: 0.0062[0m
+[32m[2025-08-20 16:46:35,699] [    INFO][0m - loss: 2.09885478, learning_rate: 1e-06, global_step: 9, current_memory_allocated: 9.784597873687744, current_memory_reserved: 24.18892550468445, max_memory_allocated: 22.793440341949463, max_memory_reserved: 24.18892550468445, interval_runtime: 6.3739, interval_samples_per_second: 2.5102, interval_tokens_per_second_per_device: 160.6544, interval_hardware_tflops_per_device: 10.57, interval_steps_per_second: 0.1569, progress_or_epoch: 0.007[0m
+[32m[2025-08-20 16:46:42,079] [    INFO][0m - loss: 1.76313806, learning_rate: 1e-06, global_step: 10, current_memory_allocated: 9.784597873687744, current_memory_reserved: 24.18892550468445, max_memory_allocated: 22.793440341949463, max_memory_reserved: 24.18892550468445, interval_runtime: 6.3801, interval_samples_per_second: 2.5078, interval_tokens_per_second_per_device: 160.4996, interval_hardware_tflops_per_device: 10.56, interval_steps_per_second: 0.1567, progress_or_epoch: 0.0078[0m
+[32m[2025-08-20 16:46:48,446] [    INFO][0m - loss: 1.98622239, learning_rate: 1e-06, global_step: 11, current_memory_allocated: 9.784597873687744, current_memory_reserved: 24.18892550468445, max_memory_allocated: 22.793440341949463, max_memory_reserved: 24.18892550468445, interval_runtime: 6.3667, interval_samples_per_second: 2.5131, interval_tokens_per_second_per_device: 160.8368, interval_hardware_tflops_per_device: 10.58, interval_steps_per_second: 0.1571, progress_or_epoch: 0.0086[0m
+[32m[2025-08-20 16:46:54,916] [    INFO][0m - loss: 2.33132553, learning_rate: 1e-06, global_step: 12, current_memory_allocated: 9.784597873687744, current_memory_reserved: 24.18892550468445, max_memory_allocated: 22.793440341949463, max_memory_reserved: 24.18892550468445, interval_runtime: 6.4694, interval_samples_per_second: 2.4732, interval_tokens_per_second_per_device: 158.2827, interval_hardware_tflops_per_device: 10.41, interval_steps_per_second: 0.1546, progress_or_epoch: 0.0094[0m
+[32m[2025-08-20 16:47:01,311] [    INFO][0m - loss: 2.57036757, learning_rate: 1e-06, global_step: 13, current_memory_allocated: 9.784597873687744, current_memory_reserved: 24.18892550468445, max_memory_allocated: 22.793440341949463, max_memory_reserved: 24.18892550468445, interval_runtime: 6.3961, interval_samples_per_second: 2.5015, interval_tokens_per_second_per_device: 160.0975, interval_hardware_tflops_per_device: 10.53, interval_steps_per_second: 0.1563, progress_or_epoch: 0.0101[0m
+[32m[2025-08-20 16:47:07,690] [    INFO][0m - loss: 2.34136844, learning_rate: 1e-06, global_step: 14, current_memory_allocated: 9.784597873687744, current_memory_reserved: 24.18892550468445, max_memory_allocated: 22.793440341949463, max_memory_reserved: 24.18892550468445, interval_runtime: 6.3778, interval_samples_per_second: 2.5087, interval_tokens_per_second_per_device: 160.556, interval_hardware_tflops_per_device: 10.56, interval_steps_per_second: 0.1568, progress_or_epoch: 0.0109[0m
+[32m[2025-08-20 16:47:14,076] [    INFO][0m - loss: 2.11069083, learning_rate: 1e-06, global_step: 15, current_memory_allocated: 9.784597873687744, current_memory_reserved: 24.18892550468445, max_memory_allocated: 22.793440341949463, max_memory_reserved: 24.18892550468445, interval_runtime: 6.3862, interval_samples_per_second: 2.5054, interval_tokens_per_second_per_device: 160.3453, interval_hardware_tflops_per_device: 10.55, interval_steps_per_second: 0.1566, progress_or_epoch: 0.0117[0m
+[32m[2025-08-20 16:47:20,472] [    INFO][0m - loss: 2.25764561, learning_rate: 1e-06, global_step: 16, current_memory_allocated: 9.784597873687744, current_memory_reserved: 24.18892550468445, max_memory_allocated: 22.793440341949463, max_memory_reserved: 24.18892550468445, interval_runtime: 6.3958, interval_samples_per_second: 2.5016, interval_tokens_per_second_per_device: 160.1046, interval_hardware_tflops_per_device: 10.53, interval_steps_per_second: 0.1564, progress_or_epoch: 0.0125[0m
+[32m[2025-08-20 16:47:26,868] [    INFO][0m - loss: 2.1417017, learning_rate: 1e-06, global_step: 17, current_memory_allocated: 9.784597873687744, current_memory_reserved: 24.18892550468445, max_memory_allocated: 22.793440341949463, max_memory_reserved: 24.18892550468445, interval_runtime: 6.3969, interval_samples_per_second: 2.5012, interval_tokens_per_second_per_device: 160.0773, interval_hardware_tflops_per_device: 10.53, interval_steps_per_second: 0.1563, progress_or_epoch: 0.0133[0m
+[32m[2025-08-20 16:47:33,212] [    INFO][0m - loss: 2.22508001, learning_rate: 1e-06, global_step: 18, current_memory_allocated: 9.784597873687744, current_memory_reserved: 24.18892550468445, max_memory_allocated: 22.793440341949463, max_memory_reserved: 24.18892550468445, interval_runtime: 6.3442, interval_samples_per_second: 2.522, interval_tokens_per_second_per_device: 161.4077, interval_hardware_tflops_per_device: 10.62, interval_steps_per_second: 0.1576, progress_or_epoch: 0.014[0m
+[32m[2025-08-20 16:47:39,616] [    INFO][0m - loss: 1.96798682, learning_rate: 1e-06, global_step: 19, current_memory_allocated: 9.784597873687744, current_memory_reserved: 24.18892550468445, max_memory_allocated: 22.793440341949463, max_memory_reserved: 24.18892550468445, interval_runtime: 6.4022, interval_samples_per_second: 2.4991, interval_tokens_per_second_per_device: 159.9447, interval_hardware_tflops_per_device: 10.52, interval_steps_per_second: 0.1562, progress_or_epoch: 0.0148[0m
+[32m[2025-08-20 16:47:46,074] [    INFO][0m - loss: 2.19909143, learning_rate: 1e-06, global_step: 20, current_memory_allocated: 9.784597873687744, current_memory_reserved: 24.18892550468445, max_memory_allocated: 22.793440341949463, max_memory_reserved: 24.18892550468445, interval_runtime: 6.4595, interval_samples_per_second: 2.477, interval_tokens_per_second_per_device: 158.5273, interval_hardware_tflops_per_device: 10.43, interval_steps_per_second: 0.1548, progress_or_epoch: 0.0156[0m
+[32m[2025-08-20 16:47:52,446] [    INFO][0m - loss: 2.33983898, learning_rate: 1e-06, global_step: 21, current_memory_allocated: 9.784597873687744, current_memory_reserved: 24.18892550468445, max_memory_allocated: 22.793440341949463, max_memory_reserved: 24.18892550468445, interval_runtime: 6.3712, interval_samples_per_second: 2.5113, interval_tokens_per_second_per_device: 160.7232, interval_hardware_tflops_per_device: 10.57, interval_steps_per_second: 0.157, progress_or_epoch: 0.0164[0m
+[32m[2025-08-20 16:47:58,840] [    INFO][0m - loss: 2.30745196, learning_rate: 1e-06, global_step: 22, current_memory_allocated: 9.784597873687744, current_memory_reserved: 24.18892550468445, max_memory_allocated: 22.793440341949463, max_memory_reserved: 24.18892550468445, interval_runtime: 6.3927, interval_samples_per_second: 2.5029, interval_tokens_per_second_per_device: 160.1832, interval_hardware_tflops_per_device: 10.54, interval_steps_per_second: 0.1564, progress_or_epoch: 0.0171[0m
+[32m[2025-08-20 16:48:05,228] [    INFO][0m - loss: 2.58252287, learning_rate: 1e-06, global_step: 23, current_memory_allocated: 9.784597873687744, current_memory_reserved: 24.18892550468445, max_memory_allocated: 22.793440341949463, max_memory_reserved: 24.18892550468445, interval_runtime: 6.3888, interval_samples_per_second: 2.5044, interval_tokens_per_second_per_device: 160.2814, interval_hardware_tflops_per_device: 10.54, interval_steps_per_second: 0.1565, progress_or_epoch: 0.0179[0m
+[32m[2025-08-20 16:48:11,553] [    INFO][0m - loss: 2.35958385, learning_rate: 1e-06, global_step: 24, current_memory_allocated: 9.784597873687744, current_memory_reserved: 24.18892550468445, max_memory_allocated: 22.793440341949463, max_memory_reserved: 24.18892550468445, interval_runtime: 6.3254, interval_samples_per_second: 2.5295, interval_tokens_per_second_per_device: 161.8866, interval_hardware_tflops_per_device: 10.65, interval_steps_per_second: 0.1581, progress_or_epoch: 0.0187[0m
+[32m[2025-08-20 16:48:17,968] [    INFO][0m - loss: 2.0465374, learning_rate: 1e-06, global_step: 25, current_memory_allocated: 9.784597873687744, current_memory_reserved: 24.18892550468445, max_memory_allocated: 22.793440341949463, max_memory_reserved: 24.18892550468445, interval_runtime: 6.415, interval_samples_per_second: 2.4942, interval_tokens_per_second_per_device: 159.626, interval_hardware_tflops_per_device: 10.5, interval_steps_per_second: 0.1559, progress_or_epoch: 0.0195[0m
+[32m[2025-08-20 16:48:24,345] [    INFO][0m - loss: 2.21519709, learning_rate: 1e-06, global_step: 26, current_memory_allocated: 9.784597873687744, current_memory_reserved: 24.18892550468445, max_memory_allocated: 22.793440341949463, max_memory_reserved: 24.18892550468445, interval_runtime: 6.3773, interval_samples_per_second: 2.5089, interval_tokens_per_second_per_device: 160.5703, interval_hardware_tflops_per_device: 10.56, interval_steps_per_second: 0.1568, progress_or_epoch: 0.0203[0m
+[32m[2025-08-20 16:48:30,732] [    INFO][0m - loss: 2.75623655, learning_rate: 1e-06, global_step: 27, current_memory_allocated: 9.784597873687744, current_memory_reserved: 24.18892550468445, max_memory_allocated: 22.793440341949463, max_memory_reserved: 24.18892550468445, interval_runtime: 6.3867, interval_samples_per_second: 2.5052, interval_tokens_per_second_per_device: 160.3321, interval_hardware_tflops_per_device: 10.55, interval_steps_per_second: 0.1566, progress_or_epoch: 0.021[0m
+[32m[2025-08-20 16:48:37,125] [    INFO][0m - loss: 2.51744366, learning_rate: 1e-06, global_step: 28, current_memory_allocated: 9.784597873687744, current_memory_reserved: 24.18892550468445, max_memory_allocated: 22.793440341949463, max_memory_reserved: 24.18892550468445, interval_runtime: 6.3933, interval_samples_per_second: 2.5026, interval_tokens_per_second_per_device: 160.1673, interval_hardware_tflops_per_device: 10.54, interval_steps_per_second: 0.1564, progress_or_epoch: 0.0218[0m
+[32m[2025-08-20 16:48:43,504] [    INFO][0m - loss: 2.27314568, learning_rate: 1e-06, global_step: 29, current_memory_allocated: 9.784597873687744, current_memory_reserved: 24.18892550468445, max_memory_allocated: 22.793440341949463, max_memory_reserved: 24.18892550468445, interval_runtime: 6.3783, interval_samples_per_second: 2.5085, interval_tokens_per_second_per_device: 160.544, interval_hardware_tflops_per_device: 10.56, interval_steps_per_second: 0.1568, progress_or_epoch: 0.0226[0m
+[32m[2025-08-20 16:48:49,898] [    INFO][0m - loss: 2.30917954, learning_rate: 1e-06, global_step: 30, current_memory_allocated: 9.784597873687744, current_memory_reserved: 24.18892550468445, max_memory_allocated: 22.793440341949463, max_memory_reserved: 24.18892550468445, interval_runtime: 6.3941, interval_samples_per_second: 2.5023, interval_tokens_per_second_per_device: 160.1466, interval_hardware_tflops_per_device: 10.53, interval_steps_per_second: 0.1564, progress_or_epoch: 0.0234[0m
+[32m[2025-08-20 16:48:56,246] [    INFO][0m - loss: 2.26325655, learning_rate: 1e-06, global_step: 31, current_memory_allocated: 9.784597873687744, current_memory_reserved: 24.18892550468445, max_memory_allocated: 22.793440341949463, max_memory_reserved: 24.18892550468445, interval_runtime: 6.3472, interval_samples_per_second: 2.5208, interval_tokens_per_second_per_device: 161.3301, interval_hardware_tflops_per_device: 10.61, interval_steps_per_second: 0.1575, progress_or_epoch: 0.0242[0m
+LAUNCH INFO 2025-08-20 16:48:57,611 Terminating with signal 2
+LAUNCH INFO 2025-08-20 16:48:58,441 Force quit in 10 seconds...
+LAUNCH INFO 2025-08-20 16:48:58,778 Force quit in 10 seconds...
+LAUNCH INFO 2025-08-20 16:48:59,100 Force quit in 10 seconds...
+LAUNCH INFO 2025-08-20 16:48:59,264 Force quit in 10 seconds...
+LAUNCH INFO 2025-08-20 16:48:59,369 Force quit in 10 seconds...
+LAUNCH INFO 2025-08-20 16:48:59,801 Force quit in 10 seconds...
+LAUNCH INFO 2025-08-20 16:48:59,801 Force quit in 10 seconds...
+LAUNCH INFO 2025-08-20 16:49:00,069 Force quit in 10 seconds...
+LAUNCH INFO 2025-08-20 16:49:00,143 Force quit in 10 seconds...
